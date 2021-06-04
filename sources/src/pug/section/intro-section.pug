@@ -1,0 +1,60 @@
+section.intro-section
+    if(data.type === 'imgAndText')
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs(data.breadcumps, data.breadcumpsCurrent)
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: data.img + '-pc.webp',
+                            img: data.img + '-pc.jpg',
+                            set: data.img + '-mb',
+                            alt: 'Лазерная эпиляция'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: data.title,
+                                class: 'intro-section__title',
+                                subtitle: data.subtitle,
+                                subclass: 'intro-section__subtitle',
+                            })
+                        .intro-section__text
+                             each element in data.text
+                                p #{element}
+                        .intro-section__list-wrapper
+                            .intro-section__list-title #{data.listTitle}
+                            ul.intro-section__list-data
+                                each element in data.list
+                                    li #{element}
+    if(data.type === 'numberText')
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs(data.breadcumps, data.breadcumpsCurrent)
+                .intro-section__inner
+                    .intro-section__data.data-flex
+
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: data.title,
+                                class: 'intro-section__title title-none',
+                                subtitle: data.subtitle,
+                                subclass: 'intro-section__subtitle subtitle--big',
+                            })
+
+                        .intro-section__list-wrapper
+                            .intro-section__list-title #{data.listTitle}
+                            .intro-section__list-inner
+                                ol.intro-section__list-data
+                                    each element in data.list0
+                                        li !{element}
+                                ol.intro-section__list-data.intro-section__list-data-none
+                                    each element in data.list1
+                                        li !{element}
+                                .intro-section__list-btn.active
+                                    button
+                                        span.active Читать больше
+                                        span.no-active Свернуть
+                            .intro-section__message !{data.message}

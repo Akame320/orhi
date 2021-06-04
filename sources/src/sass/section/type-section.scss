@@ -1,0 +1,150 @@
+.type-section {
+
+  &__wrapper {
+
+  }
+  
+  &__title{
+    @media screen and (max-width: $table-screen) {
+      text-align: center;
+    }
+  }
+
+  &__data {
+    width: 100%;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+
+    margin-top: 4rem;
+
+    @media screen and (max-width: $table-screen) {
+      flex-wrap: wrap;
+
+      margin-left: 0;
+      margin-right: 0;
+
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__col {
+    width: 100%;
+    max-width: 50%;
+
+    padding: 0 1.5rem;
+
+    @media screen and (max-width: $table-screen) {
+      max-width: 100%;
+      padding: 3.5rem 0;
+    }
+
+  }
+
+  &__col-wrapper{
+    position: relative;
+    height: 100%;
+
+    @media screen and (max-width: $table-screen) {
+      &:after{
+        content: "";
+        display: block;
+
+        height: 5rem;
+
+        border-radius: 3rem;
+
+        background: $main-gradient;
+
+        position: absolute;
+        z-index: 1;
+        top: -2rem;
+        left: 3rem;
+        right: 3rem;
+      }
+    }
+  }
+
+  &__col-inner {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+
+    height: 100%;
+
+    padding: 6rem;
+
+    border-radius: 3rem;
+
+    position: relative;
+
+    background-color: #fff;
+
+    position: relative;
+    z-index: 10;
+
+    @media screen and (max-width: $table-screen) {
+      padding: 4.5rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      padding: 3.7rem;
+    }
+  }
+
+  &__col-text {
+    font-size: 1.8rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 1.7rem;
+    }
+
+    h3 {
+      font-size: 3rem;
+      font-weight: 700;
+
+      color: $color-main;
+
+      margin-top: 0;
+      margin-bottom: 3rem;
+
+      @media screen and (max-width: $table-screen) {
+        font-size: 2.3rem;
+        margin-bottom: 2rem;
+      }
+
+      @media screen and (max-width: $mobile-screen) {
+        font-size: 2.9rem;
+      }
+    }
+
+    p {
+      font-size: inherit;
+
+      margin-bottom: 1rem;
+
+      &.list-title {
+        margin-top: 5rem;
+
+        opacity: 1;
+
+        font-weight: 700;
+
+        color: black;
+
+        @media screen and (max-width: $mobile-screen) {
+          margin: 2rem 0;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__col-list {
+  }
+}

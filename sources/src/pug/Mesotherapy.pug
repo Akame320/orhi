@@ -1,0 +1,217 @@
+extends base/_layout
+block head
+    title Мезотерапия в Пензе. Мезотерапия кожи лица, тела и волосистой части головы - "Orhi"
+    meta(property="og:title" content='Мезотерапия в Пензе. Мезотерапия кожи лица, тела и волосистой части головы - "Orhi"')
+    meta(name="keywords" content='мезотерапия, пенза, мезотерапия цена')
+    meta(name="description" content='Мезотерапия в Пензе. Омоложение лица и тела ✅ Мгновенный результат ✅ Доступные цены ✅ Консультация косметолога. Узнай на сайте!')
+    meta(property="og:description" content='Мезотерапия в Пензе. Омоложение лица и тела ✅ Мгновенный результат ✅ Доступные цены ✅ Консультация косметолога. Узнай на сайте!')
+    meta(property="og:url" content='https://orhi-epil.ru/Mesotherapy.html')
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}, {text: 'Инъекционная косметология', link: 'InjectionCosmetology.html'}], 'МЕзотерапия')
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/Mesotherapy/0-pc.webp',
+                            img: 'images/content/intro-section/Mesotherapy/0-pc.jpg',
+                            set: 'images/content/intro-section/Mesotherapy/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Мезотерапия?',
+                                class: 'intro-section__title',
+                                subtitle: 'Что такое',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p Это косметологическая процедура, которая подразумевает проведение инъекции препаратов для устранения конкретных проблем кожи.
+                            p В средний слой кожи вводятся индивидуально подобранные коктейли, которые состоят из минералов, коллагена, витаминов, аминокислот и других веществ.
+                            p Для инъекции используется тонкая игла, проникающая на глубину от 1,5 до 3,9 мм .
+                            p Процедура позволяет повысить микроциркуляцию кожи, улучшить эластичность и тонус в зоне введения инъекций.
+                            p Специалисты нашего мед. центра работают на высококачественных итальянских препаратах фирмы «IBSA Farmaceutici».
+                            p «Viscoderm SKINKO»  и «SKINKO E» предназначены для коррекции первых признаков и выраженных признаков старения, лечения акне и себореи, улучшения состояния волос и кожи волосистой части головы.
+                            p <span class="text-uppercase">Средний курс</span> мезотерапии подбирается индивидуально после консультации.
+                            p Однако средний курс обычно включает в себя 5-8 процедур с интервалом 7-10дней.
+
+    // Собираем тело карточки
+    - var cartList1    = 'Фотостарение'
+    - var cartList2    = 'Тусклость кожи'
+    - var cartList3    = 'Реабилитация после операций'
+    - var cartList4    = 'Характерные признаки старения'
+    - var cartList5    = 'Морщины'
+    - var cartList6    = 'Себорейный дерматит'
+    - var cartList7    = 'Угревая сыпь'
+    - var cartList8    = 'Носогубные складки'
+    - var cartList9    = 'Отеки и темные круги вокруг глаз'
+    - var cartList10    = 'Пигментация'
+    - var cartList11    = 'Наличие шрамов и рубцов'
+    - var cartList12    = 'Купероз'
+    - var cartList     = [cartList1, cartList2, cartList3, cartList4, cartList5, cartList6, cartList7, cartList8, cartList9, cartList10, cartList11, cartList12]
+    - var cartTitle     = 'Показания'
+    - var cartSubtitle  = 'к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ'
+
+    // Собираем карточку
+    - var cartText      = [cartText1, cartText2]
+    // Добавляем карточку
+    - var cart1         = [{title: cartTitle, subtitle: cartSubtitle, lists: cartList, styleType: 'check'}]
+    // Собираем тело карточки
+    - var cartTitle     = 'противоПоказания'
+    - var cartSubtitle  = 'к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ'
+    - var cartList1     = 'Беременность'
+    - var cartList2     = 'Грудное вскармливание'
+    - var cartList3     = 'Онкология'
+    - var cartList3     = 'Почечная недостаточность'
+    - var cartList4     = 'В период острых инфекционных заболеваний'
+    - var cartList5     = 'Употребление кроворазжижающих препаратов'
+    - var cartList6     = 'Раны, ссадины, ожоги в месте проведения процедуры'
+    - var cartList7     = 'Чувствительность по отношению к компонентам препарата'
+    - var cartList      = [cartList1, cartList2, cartList3, cartList4, cartList5, cartList6, cartList7]
+    // Добавляем карточку
+    - var cart2         = [{title: cartTitle, subtitle: cartSubtitle, styleType: 'close', lists: cartList,}]
+    // Собираем тело карточки
+    - var cartTitle     = 'Рекомендации'
+    - var cartSubtitle  = 'и уход за кожей после'
+    - var text1         = 'В день процедуры стоит воздержаться от приема лекарств, алкогольных напитков. Также постарайтесь избегать яркого солнечного света. Если у вас есть какая-либо аллергия, обязательно скажите об этом специалисту.'
+    - var text2         = 'Также важно придерживаться определенных правил после процедуры. В частности, в первые сутки не пользуйтесь косметикой – это может сильно навредить результату. Избегайте прямого действия солнечных лучей. Также запрещено посещать бани и сауны, солярий, бассейн.'
+    - var texts         = [text1, text2]
+    - var cart3         = [{title: cartTitle, subtitle: cartSubtitle, texts: texts}]
+
+    - var cartsData     = [cart1, cart2, cart3]
+    include section/cart-section
+
+    section.questions-section.style-2
+        .container
+            .questions-section__wrapper
+                .questions-section__inner
+                    .questions-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Какой эффект',
+                            subtitle: 'вы получите от мезотерапии',
+                            class: 'questions-section__title',
+                            subclass: 'questions-section__subtitle'
+                        })
+                    .questions-section__text
+                        p Нужно понимать, что применение масок или кремов улучшает состояние кожного покрова, но такие средства не способны к глубокому проникновению. А вот процедура мезотерапии доставляет полезные вещества глубоко в дерму.
+                        p Какой эффект она даёт для кожи:
+                        ul.list-mark
+                            +yesList({text: 'Устранение морщин. Чтобы убрать складки на лице, специалисты вводят коктейли, в составе которых есть гиалуроновая кислота. Такие средства предоставляют чудесное увлажнение.'})
+                            +yesList({text: 'Устранение сосудов, которые близко расположены. Для этого специалист предложит коктейли со сложным составом.'})
+                            +yesList({text: 'Улучшение оттенка кожи. Для этого необходимо использовать препараты с антиоксидантами и витаминами.'})
+                            +yesList({text: 'Подтяжка кожного покрова. В составе средства должны быть коллаген и эластин.'})
+                            +yesList({text: 'Устранение пигментных пятен и веснушек. В препарате должны быть отбеливающие кислоты.'})
+                            +yesList({text: 'Ликвидация угревой сыпи. Для этого нужно обратить внимание на лекарственные коктейли.'})
+                            +yesList({text: 'Борьба с рубцами, шрамами. Для этой цели подойдет гликолевая кислота.'})
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость процедур',
+                            subtitle: 'Мезотерапия',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data.style-3
+                        // item - BOLD
+                        +priceRowClean({
+                            left: '<span class="text-bold">Лицо (омоложение, лифтинг кожи)</span>'
+                        })
+                        // item - REGULAR
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">1900 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko E</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">2500 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Shine (Pluryal) </span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Refresh (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Tight (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        // item - BOLD
+                        +priceRowClean({
+                            left: '<span class="text-bold">Кожа головы</span> '
+                        })
+                        // item - REGULAR
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">1900 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Hair (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        // item - BOLD
+                        +priceRowClean({
+                            left: '<span class="text-bold">Акне, постакне, стрии, растяжки</span> '
+                        })
+                        // item - REGULAR
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Clear (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">1900 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko E</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">2500 ₽</span>'
+                        })
+                        // item - BOLD
+                        +priceRowClean({
+                            left: '<span class="text-bold">Липолитики</span>'
+                        })
+                        // item - REGULAR
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Bodyfirm (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">1400 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Bodycontour (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">1400 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Facecontour (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">4100 ₽</span>'
+                        })
+mixin priceRow(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-center !{object.center}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}
+mixin yesList(object)
+    li.close
+        img(src="images/yes-check--white.png").icon
+        span !{object.text}
+

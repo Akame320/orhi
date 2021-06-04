@@ -1,0 +1,93 @@
+mixin contactsCol(object)
+    .contacts-section__col
+        .contacts-section__title #{object.title}
+        if(object.link)
+            a(href=object.link).contacts-section__text-wrapper
+                +svgIcon({name: object.icon})
+                .contacts-section__text #{object.text}
+        else
+        if(object.subtext)
+            .contacts-section__text-wrapper
+                +svgIcon({name: object.icon})
+                .contacts-section__text-inner
+                    .contacts-section__text #{object.text}
+                    .contacts-section__subtext #{object.subtext}
+
+mixin contactsColSocial(object)
+    .contacts-section__col
+        .contacts-section__title #{object.title}
+        .contacts-section__subwrapper
+            a(href=object.link).contacts-section__text-wrapper
+                +svgIcon({name: object.icon})
+                .contacts-section__text.text-flex #{object.text}
+            .contacts-section__link-wrapper
+                a(href='https://vk.com/orhi_penza' target='_blank').contacts-section__link
+                    img(src='images/vk.png')
+                a(href='https://www.instagram.com/orhi.penza' target='_blank').contacts-section__link
+                    img(src='images/inst.png')
+
+section.contacts-section
+    .container
+        .contacts-section__slider-wrapper
+            .contacts-section__slider-arrow
+                .arrow-slick.arrow-prev.contacts-section__arrow-prev
+                    +svgIcon({name: 'arrow--transparent'})
+                .arrow-slick.arrow-next.contacts-section__arrow-next
+                    +svgIcon({name: 'arrow--transparent'})
+            .contacts-section__slider
+                a.contacts-section__slide
+                    +setImg({
+                        webp: 'images/content/contacts-section/0.webp',
+                        img: 'images/content/contacts-section/0.jpg',
+                        set: 'images/content/contacts-section/0',
+                        alt: 'Лазерная эпиляция'
+                    })
+                a.contacts-section__slide
+                    +setImg({
+                        webp: 'images/content/contacts-section/1.webp',
+                        img: 'images/content/contacts-section/1.jpg',
+                        set: 'images/content/contacts-section/1',
+                        alt: 'Инъекционная косметология'
+                    })
+                a.contacts-section__slide
+                    +setImg({
+                        webp: 'images/content/contacts-section/2.webp',
+                        img: 'images/content/contacts-section/2.jpg',
+                        set: 'images/content/contacts-section/2',
+                        alt: 'Эстетическая косметология'
+                    })
+                a.contacts-section__slide
+                    +setImg({
+                        webp: 'images/content/contacts-section/3.webp',
+                        img: 'images/content/contacts-section/3.jpg',
+                        set: 'images/content/contacts-section/3',
+                        alt: 'Эстетическая косметология'
+                    })
+                a.contacts-section__slide
+                    +setImg({
+                        webp: 'images/content/contacts-section/4.webp',
+                        img: 'images/content/contacts-section/4.jpg',
+                        set: 'images/content/contacts-section/4',
+                        alt: 'Эстетическая косметология'
+                    })
+            .contacts-section__data
+                +contactsCol({
+                    title: 'Адрес',
+                    text: 'г.Пенза, ул. Максима-Горького, 41',
+                    icon: 'adress',
+                    subtext: 'Медицинский центр «Orhi»'
+                })
+                +contactsCol({
+                    title: 'Режим работы',
+                    text: 'с 9:00 до 21:00',
+                    icon: 'clock',
+                    subtext: 'Ежедневно'
+                })
+                +contactsColSocial({
+                    title: 'Контакты',
+                    text: '+7 (8412) 99-41-31',
+                    link: 'tel: +78412994131',
+                    icon: 'tel-2',
+                })
+
+

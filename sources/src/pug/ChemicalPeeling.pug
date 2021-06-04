@@ -1,0 +1,182 @@
+extends base/_layout
+block head
+    title Пилинг лица в Пензе. Какие пилинги мы делаем -> Orhi
+    meta(property="og:title" content='Пилинг лица в Пензе. Какие пилинги мы делаем -> Orhi')
+    meta(name="keywords" content='пилинг лица, химический пилинг лица, пилинг лица Пенза')
+    meta(name="description" content='Медицинский цент Orhi. Самые выгодные цены на пилиг лица. Гарантия качества. Нам 2 года! тел: 8 (8412) 99-41-31')
+    meta(property="og:description" content='Медицинский цент Orhi. Самые выгодные цены на пилиг лица. Гарантия качества. Нам 2 года! тел: 8 (8412) 99-41-31')
+    meta(property="og:url" content='https://orhi-epil.ru/ChemicalPeeling.html')
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}, {
+                        text: 'Эстетическая косметология',
+                        link: 'Aesthetic.html'
+                    }], 'Химический пилинг')
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/ChemicalPeeling/0-pc.webp',
+                            img: 'images/content/intro-section/ChemicalPeeling/0-pc.jpg',
+                            set: 'images/content/intro-section/ChemicalPeeling/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'химический пилинг',
+                                class: 'intro-section__title',
+                                subtitle: 'ДЛЯ ЧЕГО ОН НУЖЕН, КАКИМ БЫВАЕТ И КОМУ ЕГО СТОИТ СДЕЛАТЬ',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p Сегодня всё больше девушек и женщин уделяют особое внимание состоянию кожи лица, и эта тенденция не может не радовать.
+                            p Свежий вид, гладкая юная кожа, невидимые поры – всё это более чем реально при правильном комплексном уходе.
+                            p Сегодня мы хотим подробнее рассказать непосредственно о такой косметологической процедуре, как химический пилинг.
+                            h3 ЧТО ТАКОЕ ХИМИЧЕСКИЙ ПИЛИНГ?
+                            p Химический пилинг кожи лица, по сути – это воздействие на кожу специальным препаратом, в ходе которого происходит активный процесс отшелушивания верхнего слоя эпидермиса, стимулирование естественного процесса обновления кожи.
+                            p С помощью пилинга удаётся добиться потрясающего эффекта улучшения качества кожи: исчезают мимические морщины, сужаются поры, кожа приходит в тонус, улучшается ее тон, уходят пигментация и следы от акне.
+                            p В «Orhi» врачи-косметологи выполняют процедуры химических пилингов на профессиональной косметологической косметике. Это испанская косметика фирм Sesderma и TimeCode.
+
+    - var cartTitle = 'Показания'
+    - var cartSubtitle = 'к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ'
+
+    - var list1 = 'Фотостарение'
+    - var list2 = 'Наличие мелких морщин'
+    - var list3 = 'Пигментные пятна'
+    - var list4 = 'Следы пост-акне'
+    - var list5 = 'Потеря тонуса кожи'
+    - var list6 = 'Расширенные поры'
+    - var list7 = 'Пигментация'
+    - var list8 = 'Угревая сыпь'
+    - var list9 = 'Кератоз'
+    - var list10 = 'Неровный тон кожи'
+    - var list = [list1, list2, list3, list4, list5, list6, list7, list8, list9, list10]
+
+    - var cart1 = [{lists: list, title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}]
+
+    - var cartTitle = 'противоПоказания'
+    - var cartSubtitle = 'к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ'
+
+    - var list1 = 'Наличие новообразований на коже (бородавки, родинки)'
+    - var list2 = 'Наличие раздражений и повреждений'
+    - var list3 = 'Вирус герпеса (в активной стадии)'
+    - var list4 = 'Сверхчувствительность кожи'
+    - var list5 = 'Присутствие аллергических реакций на препараты, применяемые при пилинге'
+    - var list6 = 'Склонность к появлению  келоидных рубцов'
+    - var list7 = 'Период обострения угревой сыпи'
+    - var list8 = 'Употребление некоторых лекарств'
+    - var list9 = 'Период воспалительных процессов организма '
+    - var list = [list1, list2, list3, list4, list5, list6, list7, list8, list9]
+
+    - var cart2 = [{lists: list, title: cartTitle, subtitle: cartSubtitle, styleType: 'close'}]
+
+    - var cartTitle = 'Реакция кожи'
+    - var cartSubtitle = 'что стоит учесть?'
+
+    - var text1 = 'Ощущение жжения кожи. Носит слабый или умеренный характер, проходит в течение пары часов после процедуры.'
+    - var text2 = 'Покраснение поверхности кожи. Это нормальная реакция кожи на применения химического состава. В зависимости от типа пилинга может держаться от нескольких часов до нескольких недель. Если в планируете важное мероприятие – уточните у косметолога, в течение какого времени обычно проходит покраснение кожи.'
+    - var text3 = 'Зуд. Обычно наступает спустя пару дней после процедуры и является предвестником шелушения.'
+    - var text4 = 'Шелушение. Это ожидаемая реакция кожи на химическое воздействие.'
+    - var text = [text1, text2, text3, text4]
+
+    - var cart3 = [{texts: text, title: cartTitle, subtitle: cartSubtitle}]
+
+    - var cartsData = [cart1, cart2, cart3]
+
+    include section/cart-section
+
+    section.list-section
+        .container
+            .list-section__wrapper
+                .list-section__inner
+                    .list-section__titles-wrapper
+                        h2.title.title--center Подготовка к процедуре
+                    .list-section__data
+                        ul
+                            li За 14 дней откажитесь от «инъекций красоты» : ботулинотерапия, мезотерапия, биоревитализация
+                            li За 2 недели до процедуры не скрабировать кожу
+                            li Откажитесь от использования косметических средств, в состав которых входят фруктовые кислоты
+                            li Воздержаться от загара и солярия на период, рекомендованный вашим косметологом, но не менее, чем на 14 дней до и после процедуры
+                            li В течение этого же времени – используйте крем с защитой SPF не менее 30
+                            li Откажитесь от эпиляции на лице на срок 14 дней до и после процедуры
+                            li При частом обострении герпеса – врач может назначить профилактический прием противовирусных препаратов
+
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость <span class="remove--mobile">процедур</span>',
+                            subtitle: 'Чистка лица',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data.style-3
+                        +priceRowClean({
+                            left: '<span class="text-bold">Пилинг Time Code (Испания):</span>',
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Light Classic</span>',
+                            center: '20 мин',
+                            right: '<span class="active-color">1830 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Пилинг желтый BASIC</span>',
+                            center: '20 мин',
+                            right: '<span class="active-color">3100 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Пилинг желтый BASIC + Light Classic</span>',
+                            center: '20 мин',
+                            right: '<span class="active-color">4200 ₽</span>'
+                        })
+                        +priceRowClean({
+                            left: '<span class="text-bold">Пилинг Mediderma (Испания):</span>',
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Salipeel lic</span>',
+                            center: '30 мин',
+                            right: '<span class="active-color">2100 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Azelac</span>',
+                            center: '30 мин',
+                            right: '<span class="active-color">2100 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Ferulac</span>',
+                            center: '30 мин',
+                            right: '<span class="active-color">2300 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mandelac</span>',
+                            center: '30 мин',
+                            right: '<span class="active-color">2300 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="text-bold">Пилинг Биорепил - BioRePeelC13 (Италия)</span>',
+                            center: '20 мин',
+                            right: '<span class="active-color">3050 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="text-bold">Пилинг Джесснера</span>',
+                            center: '20 мин',
+                            right: '<span class="active-color">2940 ₽</span>'
+                        })
+
+
+
+
+
+mixin priceRow(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-center !{object.center}
+        .price-section__col.price-section__col-right !{object.right}
+
+mixin priceRowClean(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}

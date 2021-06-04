@@ -1,0 +1,10 @@
+.popup(id='popup-region')
+    .popup__wrapper
+        .popup__close.close-popup-region
+            +svgIcon({name: 'close'})
+        .popup__inner
+            form.popup__form
+                h2.popup__title Выберите город
+                .popup__input
+                    input(type='text' placeholder='Ваш город').input-text
+                ul.popup__list.out-cities

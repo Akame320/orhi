@@ -1,0 +1,41 @@
+extends base/_layout
+block head
+    title Лазерная эпиляция | Все преимущества -> Orhi
+    meta(property="og:title" content='Лазерная эпиляция | Все преимущества -> Orhi')
+    meta(name="keywords" content='лазерная эпиляция, лазерная, эпиляция')
+    meta(name="description" content='Самые доступные цены на лазерную эпиляцию. Гарантия качества. Нам 2 года! тел: 8 (8412) 99-41-31')
+    meta(property="og:description" content='Самые доступные цены на лазерную эпиляцию. Гарантия качества. Нам 2 года! тел: 8 (8412) 99-41-31')
+    meta(property="og:url" content='https://orhi-epil.ru/laser-ep.html')
+block page
+    - var breadcumps    = [{text: 'Главная', link: 'index.html'}]
+    - var breadcumpsCurrent = 'Лазерная эпиляция'
+    - var cur           = 'лазерная эпиляция'
+    - var title         = 'что это такое?'
+    - var subtitle      = 'лазерная эпиляция'
+    - var text0         = 'Лазерная эпиляция – это радикальный способ удаления волос. Каждая девушка или парень рано или поздно задумываются о том, как избавиться от лишних волос. С помощью современных медицинских лазеров это можно сделать быстро и безболезненно - и закрыть вопрос нежелательной растительности на теле.'
+    - var text1         = 'Длительность курса на александритовом лазере в среднем составляет 6-7 процедур.'
+    - var text2         = 'Длительность круса на диодном лазере – 9-10 процедур.'
+    - var text3         = 'Количество процедур курса может варьироваться в зависимости от индивидуальных особенностей вашего организма.'
+    - var text4         = 'Количество процедур курса может варьироваться в зависимости от индивидуальных особенностей вашего организма.'
+    - var text          = [text0, text1, text2, text3, text4]
+    - var img           = 'images/content/intro-section/0'
+    - var list0         = 'Эффективно'
+    - var list1         = 'Безболезненно'
+    - var list2         = 'Исключены порезы, воспаления и раздражения'
+    - var list3         = 'Отсутствуют вросшие волосы'
+    - var list4         = 'Безопасно'
+    - var list          = [list0, list1, list2, list3, list4]
+    - var listTitle     = 'Преимущества лазерной эпиляции:'
+
+    - var data = {type: 'imgAndText', breadcumps: breadcumps, breadcumpsCurrent: breadcumpsCurrent, cur: cur, img: img, text: text, title: title, subtitle: subtitle, list: list, listTitle: listTitle}
+    include section/intro-section
+    include section/list-section
+    include section/zone-section
+    - var data = true
+    include section/equipment-section
+
+    - item1 = {text: 'Лазерная эпиляция подмышек', link: "ArmpitLaserHairRemoval.html"}
+    - item2 = {text: 'Лазерная эпиляция бикини', link: "laserHairRemovalForBikiniArea.html"}
+    - items = [item1, item2]
+    - data = {items: items}
+    include section/more-section

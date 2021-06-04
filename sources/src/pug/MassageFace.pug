@@ -1,0 +1,106 @@
+extends base/_layout
+block head
+    title Массаж лица в Пензе. Какой массаж в - Orhi
+    meta(property="og:title" content='Массаж лица в Пензе. Какой массаж в - Orhi')
+    meta(name="keywords" content='массаж, лица, пенза')
+    meta(name="description" content='Испанский миоструктурный массаж (классический) ➤ Orhi ➤ Профессиональные мастера массажа, индивидуальный подход.')
+    meta(property="og:description" content='Испанский миоструктурный массаж (классический) ➤ Orhi ➤ Профессиональные мастера массажа, индивидуальный подход.')
+    meta(property="og:url" content='https://orhi-epil.ru/MassageFace.html')
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}, {
+                        text: 'Эстетическая косметология',
+                        link: 'Aesthetic.html'
+                    }], 'Массаж лица')
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/MassageFace/0-pc.webp',
+                            img: 'images/content/intro-section/MassageFace/0-pc.jpg',
+                            set: 'images/content/intro-section/MassageFace/0-mb'
+                        })
+                        .intro-section__img-text
+                            p <span class="text-uppercase">Эффект после:</span> ваше лицо будет выглядеть свежим, сияющим,   с выраженным овалом.
+                            p <span class="text-uppercase"> Количество процедур в курсе:</span> определяется специалиситом, исходя из особенностей и состояния вашей кожи.
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'массаж лица',
+                                class: 'intro-section__title',
+                                subtitle: 'Кому необходим',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p Массаж лица активно применяется для ухода за кожей. Массаж стимулирует кровоток, движение лимфы и обменные процессы, улучшает газообмен в клетках, придает коже упругость и эластичность, помогает справиться с морщинами.
+                            p Сегодня есть много техник, которые дают возможность омолодить кожу, справиться с отеками и устранить другие недостатки. В борьбе за идеальным состоянием кожи массаж хорош и как дополнение к уходовым процедурам, и как самостоятельный уход.
+                            p Массаж лица – это универсальная процедура, которая благотворно влияет на кожу в любом возрасте. Это прекрасная возможность не только предотвратить преждевременное старение, но и просто расслабиться и получить удовольствие.
+                            h4 Выполняем услугу испанского миоструктурного массажа.
+                            p Эта техника предполагает работу с зоной декольте, шеей, мышцами лица и лимфодренаж. В ходе массажа удается добиться таких эффектов, как:
+                            ul.intro-section__list-data
+                                li Активизация точек молодости
+                                li Оздоровление, повышение упругости и подтянутости кожи
+                                li Укрепление эластичности мышц
+                                li Усиление выработки коллагена
+                                li Повышение тургора кожи
+                            p Правильные движения помогают расслабить мышцы лица, тщательно проработать все мышечные зажимы, проникнуть в глубинные слои дермы. Всё это способствует насыщению кожи кислородом, улучшению микроциркуляции, повышению работы лимфодренажной системы.
+                            .intro-section__img-text.active-mobile
+                                p <span class="text-uppercase">Эффект после:</span> ваше лицо будет выглядеть свежим, сияющим,   с выраженным овалом.
+                                p <span class="text-uppercase"> Количество процедур в курсе:</span> определяется специалиситом, исходя из особенностей и состояния вашей кожи.
+    section.list-section
+        .container
+            .list-section__wrapper.bg-wrapper
+                .list-section__inner.bg-inner
+                    .list-section__titles-wrapper
+                        .list-section__title противоПоказания
+                        .list-section__subtitle к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ
+                    .list-section__data
+                        ul.list-section__list
+                            li
+                                img(src='images/no-check.png').icon
+                                | Наличие на коже острых инфекционно-аллергических высыпаний (экземы, пиодермии, герпес и др.)
+                            li
+                                img(src='images/no-check.png').icon
+                                | Многочисленные родинки (невусы) и папилломатозные образования
+                            li
+                                img(src='images/no-check.png').icon
+                                | Нарушение целостности кожного покрова (царапины, ссадины, порезы)
+                        ul.list-section__list
+                            li
+                                img(src='images/no-check.png').icon
+                                | Повышенная ломкость поверхностных сосудов кожи
+                            li
+                                img(src='images/no-check.png').icon
+                                | Недавнее проведение (менее двух недель назад) контурной пластики лица, инъекций ботулотоксина, срединных и глубоких пилингов лица
+                            li
+                                img(src='images/no-check.png').icon
+                                | Беременность 1 триместр
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость <span class="remove--mobile">процедур</span>',
+                            subtitle: 'Массаж лица',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data.style-3
+                        +priceRow({
+                            left: 'Испанский миоструктурный (классический) массаж лица',
+                            center: '30 мин',
+                            right: '<span class="active-color">800 ₽</span>'
+                        })
+                        +priceRow({
+                            left: 'Испанский миоструктурный (классический) массаж лица + уход',
+                            center: '1 ч',
+                            right: '<span class="active-color">1100 ₽</span>'
+                        })
+mixin priceRow(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-center !{object.center}
+        .price-section__col.price-section__col-right !{object.right}

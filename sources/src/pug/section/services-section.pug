@@ -1,0 +1,58 @@
+section.services-section
+    .container
+        +sectionTitle({
+            subtitle: 'Что мы можем вам предложить?',
+            subclass: 'services-section__subtitle',
+            title: 'Наши услуги',
+            class: 'services-section__title'
+        })
+    .services-section__data-wrapper
+        .services-section__arrow
+            .container
+                .services-section__arrow-inner
+                    .arrow-slick.arrow-prev.services-section__arrow-prev
+                        +svgIcon({name: 'arrow'})
+                    .arrow-slick.arrow-next.services-section__arrow-next
+                        +svgIcon({name: 'arrow'})
+        .container
+            .services-section__data
+                +cartImgTitleText({
+                    title: 'Лазерная эпиляция',
+                    text: 'Современный, эффективный и безопасный метод удаления волос на диодном и александритовом медицинских лазерах',
+                    subtextType: 'link',
+                    link: 'Laser-ep.html',
+                    webp: 'images/content/services-section/0.webp',
+                    img: 'images/content/services-section/0.jpg',
+                    set: 'images/content/services-section/0',
+                    alt: 'Эффективный и безопасный метод удаления волос на диодном лазере'
+                })
+                +cartImgTitleText({
+                    title: 'Инъекционная косметология',
+                    text: 'Мы можем предложить вам следующие инъекционные процедуры: контурная пластика, мезотерапия, биоревитализация, ботулинотерапия',
+                    subtextType: 'link',
+                    link: 'InjectionCosmetology.html',
+                    webp: 'images/content/services-section/1.webp',
+                    img: 'images/content/services-section/1.jpg',
+                    set: 'images/content/services-section/1',
+                    alt: 'Инъекционные процедуры: контурная пластика, мезотерапия, биоревитализация, ботулинотерапия'
+                })
+                +cartImgTitleText({
+                    title: 'Эстетическая косметология',
+                    text: 'Мы предоставляем широкий спектр косметологических услуг для кожи лица: чистки, профессиональные уходы, пилинги, мезотерапия и многое другое.',
+                    subtextType: 'link',
+                    link: 'Aesthetic.html',
+                    webp: 'images/content/services-section/2.webp',
+                    img: 'images/content/services-section/2.jpg',
+                    set: 'images/content/services-section/2',
+                    alt: 'Спектр косметологических услуг для кожи лица'
+                })
+                +cartImgTitleText({
+                    title: 'Лазерная косметология',
+                    text: 'Удаление сосудистых сеточек на лице и теле с помощью неодимового лазера',
+                    subtextType: 'link',
+                    link: 'RemovalBloodVessels.html',
+                    webp: 'images/content/services-section/3.webp',
+                    img: 'images/content/services-section/3.jpg',
+                    set: 'images/content/services-section/3',
+                    alt: 'Удаление сосудистых сеточек на лице и теле'
+                })

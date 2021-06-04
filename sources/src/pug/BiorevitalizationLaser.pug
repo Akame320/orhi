@@ -1,0 +1,131 @@
+extends base/_layout
+block head
+    title Лазерное омоложение (биоревитализация) Elit+
+    meta(property="og:title" content='О нашем центре в Пензе - Orhi')
+
+    meta(name="keywords" content='orhi, пенза orhi, орхи, лазерная эпиляция, центр orhi, салон orhi, отзывы об orhi, orhi отзывы, медицинский центр, косметология')
+
+    meta(name="description" content='Orhi - это врачи с высшим медицинским образованием. Самые безопасные и мощные системы лазерной эпиляции. Скидочные карты - карта даёт скидку на весь прайс 70%.')
+    meta(property="og:description" content='Orhi - это врачи с высшим медицинским образованием. Самые безопасные и мощные системы лазерной эпиляции. Скидочные карты - карта даёт скидку на весь прайс 70%.')
+
+    meta(property="og:url" content='https://orhi-epil.ru/About.html')
+
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}], 'о нашщем центре')
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/BiorevitalizationLaser/0-pc.webp',
+                            img: 'images/content/BiorevitalizationLaser/0-pc.jpg',
+                            set: 'images/content/BiorevitalizationLaser/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Лазерное омоложение',
+                                class: 'intro-section__title',
+                                subtitle: '(биоревитализация) Elit+.',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p Современная косметология предоставляет широкий спектр возможностей для сохранения и продления молодости кожи лица. Но не каждая девушка или женщина готова терпеть боль от инъекций и идти на радикальные меры, чтобы поддержать тонус и красоту. Уколы, хирургические методики, агрессивные воздействия лазерными аппаратами – подчас это внушает страх и ужас. <br> К счастью, прогресс не стоит на месте. <br> С помощью современных медицинских лазерных систем – стало доступно безболезненное и эффективное омоложение кожи. Как раз такую процедуру мы оказываем в клинике «Orhi».
+                            h3 Лазерное омоложение без уколов и боли.
+                            p Это действительно уникальная процедура лазерного омоложения. Она выполняется на американском неодимовом лазере Elite+.
+                            p В ходе процедуры происходит воздействие лазерного луча на низкомолекулярную гиалуроновую кислоту, которая предварительно наносится на лицо. Таким образом препарат попадает в глубокие слои кожи. А благодаря прогреву тканей – достигается особый эстетический эффект, который заметен сразу после процедуры.
+                            h3 Как проходит сеанс омоложения.
+                            p Врач проводит процедуру демакияжа и дезинфекции кожи. Сразу после – наносит на кожу гель с гиалуроновой кислотой. <br> Перед процедурой пациент в строго обязательном порядке надевает специальные защитные очки на глаза. <br> После предварительной подготовки – начинается непосредственная работа лазера. <br> Вы чувствуете приятное тепло, умеренный прогрев. <br> Процедура лазерного омоложения занимает в общей сложности около 20 минут.
+
+    - var cartTitle = 'Когда виден эффект?'
+    - var cartSubtitle = ''
+
+    - var text1 = 'Эффект от проведенной процедуры заметен уже после первого сеанса.'
+    - var text2 = 'Более того, ее можно выполнять «на выход» - перед важными мероприятиями, к примеру.'
+    - var text3 = 'После работы лазера кожа становится ровной, подтянутой, с легким румянцем, напитанной, увлажненной, светящейся.'
+    - var text4 = 'Но все же лазерное омоложение рекомендуется выполнять курсом, чтобы продлит и усилить эффект.'
+    - var text5 = 'Средний курс составляет 5-10 процедур с интервалом 1-2 недели.'
+    - var texts = [text1, text2, text3, text4, text5]
+
+    - var cart1 = [{texts: texts, title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}]
+
+    - var cartTitle = 'Показания'
+    - var cartSubtitle = 'к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ'
+
+    - var list1 = 'фотостарение'
+    - var list2 = 'морщины'
+    - var list3 = 'повышенная сухость кожи'
+    - var list4 = 'повышенная жирность кожи'
+    - var list5 = 'расширенные поры'
+    - var list6 = 'тусклый цвет лица'
+    - var list7 = 'потребность в быстрой регенерации кожи (после пилингов, шлифовок и т.д.)'
+    - var text1 = 'Во время сеанса вы  не почувствуете никакого дискомфорта - только приятное умеренное тепло.'
+    - var text2 = 'А по окончании - коже не грозит шелушение и негативное воздействие ультрафиолета.'
+    - var list = [list1, list2, list3, list4, list5, list6, list7]
+    - var texts = [text1, text2]
+
+    - var cart2 = [{lists: list, texts: texts, title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}]
+
+    - var cartTitle = 'Преимущества'
+    - var cartSubtitle = 'Лазерного омоложение Elit+'
+
+    - var list1 = 'без боли'
+    - var list2 = 'без уколов'
+    - var list3 = 'без папул'
+    - var list4 = 'без шелушения'
+    - var list5 = 'без восстановления'
+    - var list = [list1, list2, list3, list4, list5]
+
+    - var cart3 = [{lists: list, texts: texts, title: cartTitle, subtitle: cartSubtitle, styleType: 'close'}]
+
+    - var cartsData = [cart1, cart2, cart3]
+
+    include section/cart-section
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-4.style-3
+                .price-section__table-inner
+                    .price-section__data-wrapper.style-4
+                        .price-section__data-col.mobile-100
+                            .price-section__titles-wrapper
+                                +sectionTitle({
+                                    title: 'омоложение ELIT+',
+                                    subtitle: 'ЛАЗЕРНОЕ ',
+                                    class: 'price-section__title',
+                                    subclass: 'price-section__subtitle'
+                                })
+                            .price-section__data.style-4.style-3
+                                +priceRow4({
+                                    left: '<span>Лицо</span>',
+                                    right: '<span class="active-color">4800 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Лицо + шея</span>',
+                                    right: '<span class="active-color">7200 ₽</span>'
+                                })
+                        .price-section__data-col.mobile-100
+                            .price-section__titles-wrapper
+                                +sectionTitle({
+                                    title: 'АКНЕ ELIT+',
+                                    subtitle: 'ЛАЗЕРНОЕ лечение',
+                                    class: 'price-section__title',
+                                    subclass: 'price-section__subtitle'
+                                })
+                            .price-section__data.style-4.style-3
+                                +priceRow4({
+                                    left: '<span>Единичный элемент</span>',
+                                    right: '<span class="active-color">300 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Лицо полностью</span>',
+                                    right: '<span class="active-color">2100 ₽</span>'
+                                })
+mixin priceRow4(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean4(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}

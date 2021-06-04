@@ -1,0 +1,235 @@
+extends base/_layout
+block head
+    title Биоревитализация в Пензе. Что такое биоревитализация - "Orhi"
+    meta(property="og:title" content='Биоревитализация в Пензе. Что такое биоревитализация - "Orhi"')
+
+    meta(name="keywords" content='биоревитализация, пенза')
+
+    meta(name="description" content='Инновационная процедура для омоложения кожи лица. Эффективно и Качественно ➤ Центр косметологии Orhi. Подробнее.')
+    meta(property="og:description" content='Инновационная процедура для омоложения кожи лица. Эффективно и Качественно ➤ Центр косметологии Orhi. Подробнее.')
+
+    meta(property="og:url" content='https://orhi-epil.ru/Biorevitalization.html')
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}, {
+                        text: 'Инъекционная косметология',
+                        link: 'InjectionCosmetology.html'
+                    }], 'Биоревитализация')
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/Biorevitalization/0-pc.webp',
+                            img: 'images/content/intro-section/Biorevitalization/0-pc.jpg',
+                            set: 'images/content/intro-section/Biorevitalization/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Биоревитализация',
+                                class: 'intro-section__title',
+                                subtitle: 'Что такое',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p Биоревитализация лица – это процедура внутрикожного введения высоких концентраций активных веществ, позволяющая значительно улучшить внешний вид кожи, увеличить ее упругость, а также добиться лифтинг-эффекта и уменьшения глубины морщин.
+                            p Чаще всего для этого используется гиалуроновая кислота, витамины, микроэлементы, аминокислоты, а в более зрелом возрасте – компоненты для интенсивного лифтинга кожи, например, пептиды, ДНК-РНК комплексы.
+                            h3 КАК ПОДБИРАЕТСЯ СОСТАВ ДЛЯ ПРОЦЕДУРЫ?
+                            p Состав препарата для каждого пациента подбирается индивидуально.
+                            p Для этого учитывается множество факторов: возраст пациента, состояние кожи лица, тип старения кожи. К примеру, при мелкоморщинистом и деформационном типах старения будут показаны совершенно различные препараты.
+
+    // Собираем тело карточки
+    - var list1      = 'Терапия биологического старения кожи'
+    - var list2      = 'Терапия фотостарения (включая гиперпигментации и купероз)'
+    - var list3      = 'Профилактика старения'
+    - var list4      = 'Морщины, истончение, снижение упругости, сухость кожи'
+    - var list5      = 'Ухудшение состояния кожи в результате курения (включая появление небольших вертикальных морщин на губах)'
+    - var text1      =     'Таким образом, методика биоревитализации позволит вам улучшить цвет и текстуру кожи, повысить ее эластичность, уменьшить глубину морщин, добиться эффекта лифтинга кожи. '
+    - var text2      = 'Дополнительными эффектами этой процедуры может быть коррекция гиперпигментаций, уменьшение выраженности купероза, а также воспалительных элементов акне. Выраженность того или иного эффекта будет напрямую зависеть от состава выбранного препарата.'
+    - var texts     = [text1, text2]
+    - var lists     = [list1, list2, list3, list4, list5]
+
+    - var cartTitle     = 'Показания'
+    - var cartSubtitle  = 'к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ'
+    - var cartText      = [cartText1, cartText2]
+    // Добавляем карточку
+    - var cart1         = [{title: cartTitle, subtitle: cartSubtitle, lists: lists, styleType: 'check'}, {texts: texts}]
+    // Собираем тело карточки
+    - var text1    = '1. Если в анамнезе ранее у вас был герпес - перед процедурой начните приём противовирусных средств («Ацикловир») в профилактической дозировке. За 2 дня до процедуры, в день и 2 дня после.'
+    - var text2    = '2. Не рекомендуем вам проводить контурную пластику губ во время менструации, так как повышается чувствительность, а также риск появления синяков.'
+    - var text3    = '3. Исключите приём кроверазжижающих препаратов за несколько дней до процедуры'
+    - var texts     = [text1, text2, text3]
+    - var cartTitle     = 'Рекомендации'
+    - var cartSubtitle  = 'до ПРОЦЕДУРЫ'
+
+    // Добавляем карточку
+    - var cart2         = [{title: cartTitle, subtitle: cartSubtitle, texts: texts}]
+    - var cartTitle     = 'противоПоказания'
+    - var cartSubtitle  = 'к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ'
+    - var list1         = 'Индивидуальная непереносимость препаратов, используемых для процедуры'
+    - var list2         = 'Дерматологические заболевания вне зависимости от локализации'
+    - var list3         = 'Онкология'
+    - var list4         = 'Воспалительные процессы в месте проведения манипуляции'
+    - var list5         = 'Беременность и период кормления грудью'
+    - var list6         = 'Острые вирусные, инфекционные, воспалительные заболевания'
+    - var list7         = 'Аутоиммунные патологии'
+    - var list8         = 'Хронические недуги в стаи обострения'
+    - var list9         = 'Герпетическая инфекция в острой фазе'
+    - var list10         = 'Пониженная свертываемость крови либо прием антикоагулянтов'
+    - var list11         = 'Склонность к образованию келоидных рубцов'
+    - var lists         = [list1, list2, list3, list4, list5, list6, list7, list8, list9, list10, list11]
+    - var cart2         = [{title: cartTitle, subtitle: cartSubtitle, lists: lists, styleType: 'close'}]
+
+
+    // Добавляем карточку
+    - var cartTitle     = 'Рекомендации'
+    - var cartSubtitle  = 'и уход за кожей после'
+    - var list1         = 'Два дня после процедуры обеспечьте для лица «неприкосновенность»'
+    - var list2         = 'Не пользуйтесь средствами декоративной косметики'
+    - var list3         = 'Используйте кремы, прописанные специалистом'
+    - var list4         = 'При наличии гематом можно применять средства на основе арники'
+    - var list5         = 'Первые семь дней не занимайтесь спортом, не ходите в баню или сауну'
+    - var list6         = 'Две недели не посещайте солярий и не пребывайте долгое время под прямыми солнечными лучами.'
+    - var list7         = 'Для сохранения эффекта не рекомендуется пить алкоголь хотя бы первое время, так как он способствует выведению жидкости из организма'
+    - var lists         = [list1, list2, list3, list4, list5, list6, list7]
+    - var cart3         = [{title: cartTitle, subtitle: cartSubtitle, lists: lists}]
+
+    - var cartsData     = [cart1, cart2, cart3]
+    include section/cart-section
+
+    section.questions-section.style-2
+        .container
+            .questions-section__wrapper
+                .questions-section__inner
+                    .questions-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Какой эффект',
+                            subtitle: 'вы получите после',
+                            class: 'questions-section__title',
+                            subclass: 'questions-section__subtitle'
+                        })
+                    .questions-section__text
+                        p Биоревитализация кожи лица – процедура предсказуемая в плане ожидаемых эффектов. В результате вы заметите:
+                        ul.list-mark
+                            +yesList({text: 'Глубокое увлажнение кожи сразу же после первой процедуры'})
+                            +yesList({text: 'Улучшение обменных процессов и как следствие – насыщение эпидермиса питательными веществами'})
+                            +yesList({text: 'Повышение тургора, улучшение цвета, восстановление эластичности'})
+                            +yesList({text: 'Видимое омоложение: разглаживаются морщинки, улучшается овал лица'})
+                            +yesList({text: 'Исчезновение «синяков» и темных кругов под глазами, отёков, куперозных звездочек и пигментных пятен'})
+                            +yesList({text: 'Пропадает угревая сыпь, сужаются расширенные поры, исчезают рубцы и шрамы'})
+
+    section.questions-section.padding-top.padding-bottom
+        .container
+            .questions-section__wrapper
+                .questions-section__inner
+                    .questions-section__titles-wrapper.titles-reverce
+                        +sectionTitle({
+                            title: 'На каких препаратах',
+                            subtitle: 'мы делаем процедуру биоревитализации в «Orhi»',
+                            class: 'questions-section__title',
+                            subclass: 'questions-section__subtitle'
+                        })
+                    .questions-section__text
+                        p Препаратов для проведения процедуры биоревитализации немало. Их все объединяет гиалуроновая кислота, которая лежит в основе состава гелей. <br>
+                        p Именно она активно способствует увлажнению кожи. <br>
+                        p Гиалуроновая кислота – совершенно безопасна для организма. Более того, она является естественным компонентном биологических жидкостей человека, а также входит в состав соединительной, нервной и эпителиальной ткани. Организм сам синтезирует и расщепляет гиалуроновую кислоту ежедневно. <br>
+                        p Современные ж методики медицинской косметологии позволяют использовать ее точечно, для естественной и безопасной эстетической коррекции. <br>
+                        p Помимо гиалуроновой кислоты, в состав биоревитализантов входят:
+                        p витамины, микроэлементы, аминокислоты, пептиды, антиоксиданты.
+                        p В зависимости от ваших показаний, возраста и состояние кожи – врач-косметолог подберет для вас необходимый препарат.
+                        p.text-bold Обратите внимание!
+                        p Препарат для биоревитализации должен быть вскрыт врачом при вашем присутствии, непосредственно перед процедурой! <br>
+                        p Один шприц ни в коем случае не должен делиться между несколькими пациентами! <br>
+                        p Все препараты-биоревитализанты, которые мы используем в медицинском центре «Orhi» - сертифицированы и разрешены к использованию на территории РФ. <br>
+                        p Кроме того, каждый из них – прекрасно зарекомендовал себя на косметологическом рынке и имеет качественный и предсказуемый эстетический результат. <br>
+                        p Для своих пациентов мы выбираем только самые лучшие препараты, потому что качество и безопасность процедур для нас – самый главный приоритет. <br>
+                        p <span class="text-bold">Средний курс</span> биоревитализации - 3-5 процедур с интервалом 2-3 недели. Длительность курса меняется в зависимости от препарата. <br>
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-4.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость <span class="remove--mobile">процедур</span>',
+                            subtitle: 'Биоревитализация',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data-wrapper.style-4.slider-data-1
+                        .price-section__data-col
+                            .price-section__data.style-4.style-3
+                                +priceRow4({
+                                    left: '<span>Aquashine 2 мл</span>',
+                                    right: '<span class="active-color">8400 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Aquashine BR 2 мл</span>',
+                                    right: '<span class="active-color">8400 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Belotero Hydro 1мл</span>',
+                                    right: '<span class="active-color">7900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>HYALUFORM 1% 1,5мл</span>',
+                                    right: '<span class="active-color">4300 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Innea 2мл</span>',
+                                    right: '<span class="active-color">8200 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Meso-Wharton 1.5 мл</span>',
+                                    right: '<span class="active-color">9900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Meso-Xantin 1.5 мл</span>',
+                                    right: '<span class="active-color">9900 ₽</span>'
+                                })
+                        .price-section__data-col
+                            .price-section__data.style-4.style-3
+                                +priceRow4({
+                                    left: '<span>NCTF 135 (Filorga) 3 мл</span>',
+                                    right: '<span class="active-color">3400 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>NCTF 135HA (Filorga) 3 мл</span>',
+                                    right: '<span class="active-color">5400 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Profhilo 2 мл</span>',
+                                    right: '<span class="active-color">14900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Revi Silk 1 мл</span>',
+                                    right: '<span class="active-color">10900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Revi Silk 2 мл</span>',
+                                    right: '<span class="active-color">14900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Revi Strong 2 мл</span>',
+                                    right: '<span class="active-color">16900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Постинъекционная маска</span>',
+                                    right: '<span class="active-color">750 ₽</span>'
+                                })
+                    .price-section__dots.slider-data-1
+
+mixin priceRow4(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean4(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}
+
+
+mixin yesList(object)
+    li.close
+        img(src="images/yes-check--white.png").icon
+        span !{object.text}

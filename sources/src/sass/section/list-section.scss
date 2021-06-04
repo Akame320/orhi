@@ -1,0 +1,124 @@
+.list-section{
+  padding: 4.5rem 0;
+  margin: 0;
+
+  @media screen and (max-width: $table-screen) {
+    padding: 0 0;
+  }
+
+  &__wrapper{
+
+  }
+
+  &__titles-wrapper{
+    margin-bottom: 3rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      margin-bottom: 1rem;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__title{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2.7rem;
+    }
+  }
+
+  &__subtitle{
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.3rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      text-align: center;
+      font-size: 1.9rem;
+    }
+  }
+
+  &__data{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+    @media screen and (max-width: $mobile-screen) { 
+        flex-wrap: wrap;
+    }
+  }
+
+  &__list{
+    padding-left: 0;
+
+    margin-bottom: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: 50%;
+
+    @media screen and (max-width: $mobile-screen) {
+      width: 100%;
+    }
+
+    li{
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      width: 100%;
+
+      text-align: left;
+      font-size: 1.8rem;
+      font-weight: 400;
+
+      list-style-type: none;
+
+      margin-bottom: 2rem;
+      padding-right: 7rem;
+
+      @media screen and (max-width: $table-screen) {
+        padding-right: 2rem;
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+      }
+
+      @media screen and (max-width: $mobile-screen) {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .icon{
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-right: 2rem;
+
+      @media screen and (max-width: $table-screen) {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

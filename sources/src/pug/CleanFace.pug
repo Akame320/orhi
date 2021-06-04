@@ -1,0 +1,78 @@
+extends base/_layout
+block head
+    title Чистка лица в Пензе | Атравматическая и механическая | Orhi
+    meta(property="og:title" content='Чистка лица в Пензе | Атравматическая и механическая | Orhi')
+    meta(name="keywords" content='чистка лица пенза, чистка лица, лицо, чистка')
+    meta(name="description" content='Чистка лица в Orhi. Безопасно и качественно. Профессиональная чистка лица. Консультация бесплатно ➦Подробнее на сайте.')
+    meta(property="og:description" content='Чистка лица в Orhi. Безопасно и качественно. Профессиональная чистка лица. Консультация бесплатно ➦Подробнее на сайте.')
+    meta(property="og:url" content='https://orhi-epil.ru/CleanFace.html')
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}, {
+                        text: 'Эстетическая косметология',
+                        link: 'Aesthetic.html'
+                    }], 'чистка лица')
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/CleanFace/0-pc.webp',
+                            img: 'images/content/intro-section/CleanFace/0-pc.jpg',
+                            set: 'images/content/intro-section/CleanFace/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'базовый уход за кожей',
+                                class: 'intro-section__title',
+                                subtitle: 'чистка лица - это',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p Основа основ ухода за кожей лица – это чистка. Именно правильное очищение кожи способствует тому, чтобы кожа выглядела подтянутой, свежей и юной.
+                            p В центре «Orhi» врачи-косметологи выполняют атравматичную чистку лица по типу кожи. При необходимости по показанием возможно проведение механической чистки.
+                            h4 ЭФФЕКТ ОТ ПРОЦЕДУРЫ
+                            p Предварительная подготовка, комплексное воздействие на кожу, длительный разогревающий эффект, отсутствие воздействия на мелкие сосуды, антисептический, увлажняющий и регенерирующий эффекты, восстановление защитной функции кожи – все это обеспечивают яркий, стойкий и выраженный эстетический эффект, который проявляется сразу после проведения процедуры и сохраняется в течение длительного времени.
+                            p Медицинский центр «Orhi» выполняет процедуры чистки лица на профессиональной израильской косметике Holy Land.
+    include section/type-section
+    section.list-section
+        .container
+            .list-section__wrapper
+                .list-section__inner
+                    .list-section__titles-wrapper
+                        h2.title.title--center Противопоказания
+                    .list-section__data
+                        ul
+                            li Индивидуальная непереносимость к компонентам используемой косметики
+                            li Наличие ран и порезов на лице
+                            li Эритема
+                            li Аллергические кожные реакции
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость <span class="remove--mobile">процедур</span>',
+                            subtitle: 'Чистка лица',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data.style-3
+                        +priceRow({
+                            left: 'Чистка лица атравматичная (Holy Land)',
+                            center: '1 ч 40 мин',
+                            right: '<span class="active-color">1750 ₽</span>'
+                        })
+                        +priceRow({
+                            left: 'Чистка лица атравматическая + механическая (Holy Land)',
+                            center: '2 ч',
+                            right: '<span class="active-color">2150 ₽</span>'
+                        })
+mixin priceRow(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-center !{object.center}
+        .price-section__col.price-section__col-right !{object.right}

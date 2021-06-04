@@ -1,0 +1,29 @@
+extends base/_layout
+block head
+    title Медицинский цент Orhi - Пенза
+    meta(property="og:title" content='Медицинский цент Orhi - Пенза')
+    meta(name="keywords" content='адрес orhi, телефон orhi, пенза orhi')
+    meta(name="description" content='Удобное расположение в самом центре города. Пенза, ул. Максима Горького, д. 41, тел. +78412994131')
+    meta(property="og:description" content='Удобное расположение в самом центре города. Пенза, ул. Максима Горького, д. 41, тел. +78412994131')
+    meta(property="og:url" content='https://orhi-epil.ru/ContactsConta.html')
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}], 'Контакты')
+                .intro-section__titles-wrapper
+                    +sectionTitle({
+                        title: 'Контакты',
+                        class: 'intro-section__title',
+                    })
+                .intro-section__inner
+                    .intro-section__text
+                        p Клиника находится в центре города, на пересечении ул. Московской и ул. Максима Горького.
+                        p Ближайшие парковки: ТЦ «Высшая Лига»; многоуровневый паркинг на ул. Кураева; ТЦ «Империя»; ТЦ «Арбат»; здание администрации на ул. Пушкина.
+    section.map-section
+        .container
+            .map-section__wrapper
+                .map-section__inner
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2390.417081699457!2d45.01314861597226!3d53.192435793929334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414100580bba8691%3A0x77e5782e0dbeff74!2z0YPQuy4g0JzQsNC60YHQuNC80LAg0JPQvtGA0YzQutC-0LPQviwgNDEsINCf0LXQvdC30LAsINCf0LXQvdC30LXQvdGB0LrQsNGPINC-0LHQuy4sIDQ0MDAwMA!5e0!3m2!1sru!2sru!4v1617727849165!5m2!1sru!2sru" width="1650" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+

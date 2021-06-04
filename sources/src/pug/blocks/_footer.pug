@@ -1,0 +1,49 @@
+include ../section/contacts-section
+include ../section/ceilart-section
+.footer
+    .container
+        .footer__inner
+            .footer__data
+                .footer__logo
+                    a(href="index.html").logo
+                        +svgIcon({name: 'logo'})
+                        span
+                            | Медицинский центр
+                            | лазерной эпиляции
+                            | и косметологии
+                .footer__navigation
+                    .footer__navigation-col
+                        .footer__navigation-title
+                            | Наши услуги:
+                        nav.footer__navigation-data
+                            a(href='Laser-ep.html').footer__navigation-item Лазерная эпиляция
+                            a(href='InjectionCosmetology.html').footer__navigation-item Инъекционная косметология
+                            a(href='Aesthetic.html').footer__navigation-item Эстетическая косметология
+                            a(href='RemovalBloodVessels.html').footer__navigation-item Лазерная косметология
+                    .footer__navigation-col
+                        .footer__navigation-title
+                            | Наши услуги:
+                        nav.footer__navigation-data
+                            a(href="About.html").footer__navigation-item О компании
+                            a(href="Team.html").footer__navigation-item Наши специалисты
+                            a(href="Contacts.html").footer__navigation-item Контакты
+                    .footer__navigation-col
+                        .footer__navigation-title
+                            | Лояльность:
+                        nav.footer__navigation-data
+                            a.footer__navigation-item.open-price-popup.open-price-popup Скидочные карты
+                            a(href="Sertificat.html").footer__navigation-item Подарочные сертификаты
+
+            .footer__bg
+                +setImg({
+                    webp: 'images/content/footer/bg-pc.webp',
+                    img: 'images/content/footer/bg-pc.jpg',
+                    set: 'images/content/footer/bg-mb',
+                    alt: ''
+                })
+    .footer__bot
+        .container
+            .footer__bot-inner
+                .footer__bot-text ООО «Орхи», ОГРН 1175835018028
+                .footer__bot-text.position-absolute.footer__bot-text--small27 Лицензия №ЛО-58-01-002118 от 26.06.2018
+                .footer__bot-text.footer__bot-text--small24 Copyright © 2020 ORHI™. Все права защищены.

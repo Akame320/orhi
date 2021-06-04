@@ -1,0 +1,1101 @@
+@import "normalize";
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "sprite_generated";
+//@import "../../libs/slick-carousel/slick/slick";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:active,
+:focus,
+:hover {
+  outline: 0;
+}
+
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  line-height: 1.2;
+  overflow-y: scroll;
+
+  &.scroll-lock {
+    body {
+      overflow: hidden;
+    }
+  }
+
+  @include r(1600px) {
+    font-size: .8vw;
+  }
+  @include r($table-screen) {
+    font-size: 1.2vw;
+  }
+  @include r($mobile-screen) {
+    font-size: 2.2vw;
+  }
+
+}
+
+body {
+  display: block;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  background-color: $base-bg;
+  color: $base-color;
+  font-family: $font-default;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+.layout {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  cursor: pointer;
+}
+
+p {
+  margin: 15px 0;
+}
+
+p:empty {
+  display: none;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.svg-store {
+  display: none;
+  height: 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: $container-w + 2*$cp;
+  padding: 0 $cp;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  @include r($table-screen) {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+.icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.blue {
+  color: $color-main;
+}
+
+.text-center {
+  text-align: center;
+  justify-content: center;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+.section-default {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 10rem 0 14rem;
+
+  &.section-default-dark {
+    color: $white;
+    background: $dark;
+
+    .text-block {
+      color: $text-grey;
+    }
+  }
+
+  .section-default__bg-img {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    opacity: .1;
+  }
+}
+
+.section__title {
+  display: block;
+  font-size: 3.6rem;
+  line-height: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 2.5rem;
+}
+
+
+.text-block {
+  display: block;
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+
+  & > * {
+    margin: 0 0 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.remove--mobile {
+  @media screen and (max-width: $mobile-screen) {
+    display: none !important;
+  }
+}
+
+.subtitle,
+.title {
+  text-align: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  max-width: inherit;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 6rem;
+  text-transform: uppercase;
+
+  @media screen and (max-width: $desctop-xs) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: $table-screen) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (max-width: $mobile-screen) {
+    font-size: 3.5rem;
+  }
+}
+
+.title--small .title {
+  font-size: 3rem;
+
+  @media screen and (max-width: $table-screen) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: $mobile-screen) {
+    font-size: 2.7rem;
+  }
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: $desctop-xs) {
+    font-size: 2.1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  @media screen and (max-width: $table-screen) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: $mobile-screen) {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+}
+
+
+.subtitle--small .subtitle {
+  font-size: 1.7rem;
+
+  @media screen and (max-width: $desctop-xs) {
+    margin-bottom: 0.9rem;
+  }
+}
+
+section {
+  margin: 4.5rem 0;
+}
+
+
+.cart {
+
+  &__col {
+    width: 50%;
+    padding: 2rem 4rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      padding: 1rem 2rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      width: max-content;
+    }
+
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 25rem;
+      height: 84.5%;
+      background: linear-gradient(140.34deg, #E6026B -12.76%, #790C3B 117.7%);
+      border: 1px solid #EEEEEE;
+      box-sizing: border-box;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 2rem;
+      position: absolute;
+      left: -1.7rem;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+
+      @media screen and (max-width: $table-screen) {
+        border-radius: 1rem;
+      }
+
+      @media screen and (max-width: $mobile-screen) {
+        top: -1.7rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+
+  &__inner {
+    background: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 3rem;
+    height: 100%;
+
+    display: flex;
+    align-items: stretch;
+
+    height: 100%;
+
+    padding: 3.5rem;
+
+    position: relative;
+    z-index: 10;
+
+    @media screen and (max-width: $table-screen) {
+      padding: 1.5rem;
+      border-radius: 2rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      flex-direction: column;
+      padding: 2.4rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 333 / 730 * 100%;
+
+    @media screen and (max-width: $desctop-xs) {
+      max-width: 250 / 730 * 100%;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      width: 17.5rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    img,
+    source {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 397 / 730 * 100%;
+    padding-left: 3rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      max-width: 480 / 730 * 100%;
+      padding-left: 1rem;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      padding-left: 1rem;
+      max-width: 24.5rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      max-width: 100%;
+      padding: 0;
+      padding-top: 2rem;
+    }
+
+  }
+
+  &__title {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: 700;
+    color: $color-main;
+
+    @media screen and (max-width: $desctop-xs) {
+      margin-top: 0rem;
+      margin-bottom: 1rem;
+      font-size: 2.3rem;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.4rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $text-color;
+    margin: 0;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.1rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__data-subtext {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: $desctop-xs) {
+      margin-top: 1rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2rem;
+    }
+
+    &:hover a {
+      color: $color-main;
+    }
+
+    &:hover .icon {
+      fill: $color-main;
+    }
+
+    a {
+      font-size: 1.8rem;
+      transition: all 0.05s linear;
+
+      @media screen and (max-width: $table-screen) {
+        font-size: 1.3rem;
+      }
+
+      @media screen and (max-width: $mobile-screen) {
+        padding: 2rem 6.6rem;
+        border: 1px solid #343434;
+        border-radius: 1000px;
+        font-size: 2.6rem;
+      }
+    }
+
+    .icon {
+      fill: $text-color;
+      transition: all 0.05s linear;
+
+      width: 2.7rem;
+      height: 1.3rem;
+      margin-left: 1rem;
+
+      @media screen and (max-width: $table-screen) {
+        width: 2rem;
+        height: 1rem;
+        margin-left: 0.5rem;
+      }
+
+      @media screen and (max-width: $mobile-screen) {
+        display: none;
+      }
+    }
+  }
+}
+
+.arrow-slick {
+  width: 3.7rem;
+  height: 2.8rem;
+  opacity: 0.5;
+  cursor: pointer;
+
+  &.arrow-prev {
+    transform: scale(-1, -1);
+  }
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: inherit;
+  text-align: inherit;
+
+  @media screen and (max-width: $desctop-xs) {
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+  }
+
+  @media screen and (max-width: $mobile-screen) {
+    font-size: 1.7rem;
+  }
+}
+
+.slick-dots {
+
+  button {
+    cursor: pointer;
+  }
+}
+
+.active-mobile {
+  display: none !important;
+
+  @media screen and (max-width: $mobile-screen) {
+    display: block !important;
+  }
+}
+
+.input-text {
+  width: 100%;
+  height: 100%;
+
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid $text-color;
+
+  &:active,
+  &:focus {
+    border-color: $color-main;
+  }
+}
+
+.b-breadcrumbs {
+  padding-bottom: 2rem;
+
+  @media screen and (max-width: $mobile-screen) {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+}
+
+.b-breadcrumbs__link {
+  color: #A9A9A9;
+  transition: all 0.1s linear;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $color-main;
+  }
+}
+
+.b-breadcrumbs__text {
+  color: black;
+  text-transform: uppercase;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.8rem;
+
+  color: rgba(52, 52, 52, 0.7);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: $desctop-xs) {
+    font-size: 1.4rem;
+  }
+
+  &.text-tablet-small {
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.bg {
+
+  &-wrapper {
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 3rem;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      max-width: 11.1rem;
+      border-radius: 3rem;
+      background: linear-gradient(140.34deg, #E6026B -12.76%, #790C3B 117.7%);
+      position: absolute;
+      z-index: 1;
+      left: -2rem;
+      bottom: 4rem;
+      top: 4rem;
+
+      @media screen and (max-width: $table-screen) {
+        left: -1.5rem;
+        top: 2rem;
+        bottom: 2rem;
+      }
+
+      @media screen and (max-width: $mobile-screen) {
+        left: 3.5rem;
+        right: 3.5rem;
+        bottom: auto;
+        top: -2rem;
+        height: 8rem;
+        max-width: none;
+        width: auto;
+      }
+    }
+  }
+
+  &-inner {
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    padding: 6rem;
+    border-radius: 3rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      padding: 3rem;
+    }
+    @media screen and (max-width: $mobile-screen) {
+      padding: 4.5rem 2rem;
+    }
+  }
+}
+
+.b-breadcrumbs__link {
+
+  span.mobile-active {
+    display: none;
+
+    @media screen and (max-width: $mobile-screen) {
+      display: inline;
+    }
+  }
+
+  @media screen and (max-width: $mobile-screen) {
+    //display: none;
+
+    &:first-child {
+      display: inline;
+    }
+  }
+}
+
+.dots {
+  width: 1.3rem;
+  height: 1.3rem;
+
+  line-height: 0;
+
+  background-color: #8F8F8F;
+
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+
+  font-size: 0;
+  display: block;
+
+  border-radius: 50%;
+
+  &.active {
+    background: $main-gradient;
+  }
+}
+
+.message {
+  margin: 4rem 0;
+  width: 100%;
+
+  & * {
+    font-size: 1.8rem;
+    font-weight: inherit;
+
+    color: #343434;
+    opacity: 0.7;
+
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.title--white,
+.subtitle--white {
+  color: white;
+}
+
+.title--center {
+  @media screen and (max-width: $mobile-screen) {
+    text-align: center;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 2rem;
+  font-size: 1.8rem;
+
+  &.list-mark {
+    @media screen and (max-width: $mobile-screen) {
+      padding-left: 1rem;
+    }
+
+    .icon {
+      width: 3rem;
+      height: 2.5rem;
+
+      margin-right: 2rem;
+
+      @media screen and (max-width: $mobile-screen) {
+        width: 2.8rem;
+        height: 2.3rem;
+
+        margin-right: 1rem;
+      }
+    }
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      list-style-type: none;
+
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  li {
+    margin-bottom: 1rem;
+    font-size: inherit;
+
+    @media screen and (max-width: $mobile-screen) {
+      margin-bottom: 2rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.padding-left {
+  padding-left: 2rem;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.margin-top {
+  margin-top: 2.6rem;
+
+  @media screen and (max-width: $mobile-screen) {
+    margin: 2rem 0 !important;
+  }
+}
+
+.visible-none {
+  opacity: 0;
+  visibility: hidden;
+  tab-index: -1;
+}
+
+.toggle-block {
+  @media screen and (max-width: $mobile-screen) {
+    display: none;
+  }
+}
+
+.img-link {
+  font-size: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.padding-bottom {
+  margin-bottom: 4.5rem;
+}
+
+.padding-top {
+  padding-top: 4.5rem;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.max-40 {
+  max-width: 148rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: $desctop-xs) {
+    max-width: 98rem;
+    margin-bottom: 4rem !important;
+  }
+}
+
+.mobile-center {
+  @media screen and (max-width: $mobile-screen) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.mb-5 {
+  margin-bottom: 5rem !important;
+
+  @media screen and (max-width: $desctop-xs) {
+    margin-bottom: 4rem !important;
+  }
+}
+
+.titles-reverce{
+  display: flex!important;
+  flex-direction: column-reverse!important;
+}
+
+.fz-small{
+  @media screen and (max-width: $mobile-screen) {
+    font-size: 1.7rem!important;
+  }
+}
+
+.slick-disabled{
+  opacity: 0.2;
+}
+
+.map-section__inner{
+  padding-top: 2rem;
+  border-radius: 3rem;
+
+  overflow: hidden;
+}
+
+.map-section{
+  margin: 0;
+}
+
+
+.select-region{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000000000000000000000;
+  margin-top: 0;
+  transform: translate(3rem, 2rem);
+
+  //background-color: #fff;
+
+  width: 100%;
+  max-width: max-content;
+
+  padding: 3rem;
+
+  border-radius: 3rem;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  &.active{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media screen and (max-width: $desctop-xs) {
+    padding: 3.5rem;
+
+    transform: translate(3rem, 1.5rem);
+  }
+
+  @media screen and (max-width: $mobile-screen) {
+    transform: translate(0, 1.5rem);
+
+    width: 100%;
+    max-width: 33.7rem;
+  }
+
+  &__row{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+
+    font-size: 1.6rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      color: black;
+    }
+
+    .icon{
+      width: 1.8rem;
+      height: 2.2rem;
+
+      margin-right: 1.5rem;
+
+      @media screen and (max-width: $mobile-screen) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &__text-out{
+    font-weight: 700;
+  }
+
+  &__text{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin-left: 2rem;
+
+    @media screen and (max-width: $mobile-screen) {
+        color: black;
+    }
+  }
+
+  &__button-yes{
+    background: $main-gradient;
+    color: white;
+
+    padding: 2rem 4rem;
+
+    border-radius: 1000px;
+
+    font-size: 2rem;
+
+    margin-top: 2rem;
+
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    transition: all 0.2s linear;
+
+    position: relative;
+
+    overflow: hidden;
+
+    &:after{
+      content: "";
+
+      display: block;
+
+      background-color: black;
+
+      transition: all 0.2s linear;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      width: 100%;
+
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:hover:after{
+      visibility: visible;
+      opacity: 0.2;
+    }
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+  }
+
+  &__button-no{
+    padding: 2rem;
+
+    background-color: #E0E0E0;
+
+    color: #343434;
+
+    border-radius: 1000px;
+
+    font-size: 2rem;
+
+    margin-top: 2rem;
+
+    margin-left: 2rem;
+
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    transition: all 0.2s linear;
+
+    position: relative;
+
+    overflow: hidden;
+
+    &:after{
+      content: "";
+
+      display: block;
+
+      background-color: black;
+
+      transition: all 0.2s linear;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      width: 100%;
+
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:hover:after{
+      visibility: visible;
+      opacity: 0.2;
+    }
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 1.5rem;
+      margin-left: 1rem;
+      margin-top: 1rem;
+    }
+
+  }
+
+}
+
+.button-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}

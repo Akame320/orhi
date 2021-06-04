@@ -1,0 +1,230 @@
+extends base/_layout
+block head
+    title Контурная пластика лица в Пензе. В чем заключается процедура - Orhi
+    meta(property="og:title" content='Контурная пластика лица в Пензе. В чем заключается процедура - Orhi')
+    meta(name="keywords" content='контурная, пластика, пенза')
+    meta(name="description" content='Контурная пластика в Пензе. Скорректировать лицо, нос, скулы, носогубные складки. Подробнее на сайте.')
+    meta(property="og:description" content='Контурная пластика в Пензе. Скорректировать лицо, нос, скулы, носогубные складки. Подробнее на сайте.')
+    meta(property="og:url" content='https://orhi-epil.ru/ContourPlastic.html')
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}, {text: 'Инъекционная косметология', link: 'InjectionCosmetology.html'}], 'Контурная пластика')
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/ContourPlastic/0-pc.webp',
+                            img: 'images/content/intro-section/ContourPlastic/0-pc.jpg',
+                            set: 'images/content/intro-section/ContourPlastic/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'контурной пластики?',
+                                class: 'intro-section__title',
+                                subtitle: 'В чем заключается процедура',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p.
+                                Пожалуй, возможности современной косметологии для эстетики практически безграничны. То, что раньше можно было исправить лишь с помощью пластической хирургии - теперь можно сделать с гораздо более меньшими материальными и временными затратами, а также с меньшим риском для здоровья.
+                                Сделать скулы более выраженными, овал лица - более очерченным, губы - более пухлыми, носогубки - менее выраженными.
+                                Давайте разберёмся подробнее, что из себя представляют эти процедуры.
+                            p.
+                                Процедура подразумевает инъекционное введение в глубокие слои эпидермиса активного вещества натурального происхождения.
+                                Препараты, которые вводятся под кожу - называются филлерами
+                            p.text-bold Самые популярные виды контурной пластики лица:
+                            ul
+                                li увеличение губ и коррекция их формы;
+                                li коррекция естественной формы скул (их визуальное увеличение/уменьшение);
+                                li устранение мимических морщин и носогубных складок;
+                                li выравнивание складок кожи в области губ, носа и подбородка;
+                                li коррекция морщин;
+                                li устранение асимметрии лица.
+    // Собираем тело карточки
+    - var cartList1     = 'Признаки старения: мимические морщины, выраженные носогубные складки'
+    - var cartList2     = 'Чрезмерная пигментация кожных покровов'
+    - var cartList3     = 'Неэстетичная форма подбородка, скул, губ'
+    - var cartList4     = 'Слишком тонкие и бледные губы'
+    - var cartList5     = 'Возрастные изменения овала лица'
+    - var cartList      = [cartList1, cartList2, cartList3, cartList4, cartList5]
+    - var cartTitle     = 'Показания'
+    - var cartSubtitle  = 'к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ'
+    - var cartTitle2    = 'Сколько процедур?'
+    - var text1         = 'Количество процедур - строго индивидуально из зависит от: желаемого эффекта, препарата, техники врача, индивидуальных особенностей организма.'
+    - var text2         = 'Важно знать, что препараты для контурной пластики имеют свойство рассасываться и полностью выводится организмом. Поэтому для поддержания эффекта время от времени требуются коррекционные процедуры. В среднем они повторяются раз в 8-12 месяцев.'
+    - var texts         = [text1, text2]
+
+    // Собираем карточку
+    - var cartText      = [cartText1, cartText2]
+    // Добавляем карточку
+    - var cart1         = [{title: cartTitle, subtitle: cartSubtitle, lists: cartList, styleType: 'check'}, {title: cartTitle2, texts: texts}]
+
+
+
+    - var cartTitle     = 'противоПоказания'
+    - var cartSubtitle  = 'к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ'
+    - var list1         = 'Возраст до 18 лет'
+    - var list2         = 'Беременность или период кормления грудью'
+    - var list3         = 'Приём препаратов, воздействующих на свёртываемость крови'
+    - var list4         = 'Любые заболевания крови'
+    - var list5         = 'Иммунодефицит (в том числе заболевание ВИЧ/СПИДом)'
+    - var list6         = 'Онкологические заболевания любой степени тяжести'
+    - var list7         = 'Гемофилия'
+    - var list8         = 'Предрасположенность к образованию келлоидных рубцов'
+    - var list9         = 'Любые болезни бактериального, грибкового или вирусного характера'
+    - var list10        = 'Предварительная процедура лазерной шлифовки кожи'
+    - var list11        = 'Индивидуальная непереносимость препарата'
+    - var lists         = [list1, list2, list3, list4, list5, list6, list7, list8, list9, list10, list11]
+    - var cart2         = [{title: cartTitle, subtitle: cartSubtitle, lists: lists, styleType: 'close'}]
+    // Добавляем карточку
+
+    // Собираем тело карточки
+    - var cartTitle     = 'Рекомендации'
+    - var cartSubtitle  = 'и уход за кожей после'
+    - var list1         = 'Пить не менее 2 литров чистой питьевой воды в сутки'
+    - var list2         = 'Не использовать скрабы, пилинги для кожи в течение 10 дней после процедуры'
+    - var list3         = 'Не посещать спортзал, избегать сильной физической нагрузки в течение 10 дней после процедуры'
+    - var list4         = 'Отказаться от посещения общественных бассейнов, бань и сауны на тот же срок'
+    - var list5         = 'Запрещено загорать, ходить в солярий, принимать солнечные ванны'
+    - var list6         = 'При появлении осложнений - тут же обращаться за помощью к врачу, проводившему вам процедуру'
+    - var lists         = [list1, list2, list3, list4, list5, list6]
+    - var cart3         = [{title: cartTitle, subtitle: cartSubtitle, lists: lists}]
+    - var cartsData     = [cart1, cart2, cart3]
+    include section/cart-section
+
+    section.questions-section.style-2
+        .container
+            .questions-section__wrapper
+                .questions-section__inner
+                    .questions-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Принцип воздействия',
+                            subtitle: 'на организм',
+                            class: 'questions-section__title',
+                            subclass: 'questions-section__subtitle'
+                        })
+                    .questions-section__text
+                        p.
+                            Благодаря своей хорошей усвояемости и гипоаллергенности, филлеры хорошо переносятся организмом.
+                            Активное вещество попадает внутриклеточно и в скорейшие сроки начинает действовать:
+                            овал лица, губы и скулы приобретают более чёткие формы.
+                        p.text-bold Стойкость оказанного эффекта зависит от следующих факторов:
+                        ul
+                           li Возраст пациента
+                           li Общее состояние кожи
+                           li Наличие вредных привычек: курения, употребления алкоголя
+                           li Образ жизни, питания
+                           li Наследственности
+
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-4.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость <span class="remove--mobile">процедур</span>',
+                            subtitle: 'Контурная пластика',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data-wrapper.style-4.slider-data-1
+                        .price-section__data-col
+                            .price-section__data.style-4.style-3
+                                +priceRow4({
+                                    left: '<span>Belotero Balance 1 мл</span>',
+                                    right: '<span class="active-color">11900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Belotero Intense 1 мл</span>',
+                                    right: '<span class="active-color">12900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Belotero Lips Contour 0,6 мл</span>',
+                                    right: '<span class="active-color">8900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Belotero Soft 1 мл</span>',
+                                    right: '<span class="active-color">10900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Belotero Volume 1 мл</span>',
+                                    right: '<span class="active-color">13600 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Juvederm Ultra 3 - 1 мл</span>',
+                                    right: '<span class="active-color">11900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Juvederm Ultra 4 - 1 мл</span>',
+                                    right: '<span class="active-color">12400 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Juvederm ULTRA Smile - 0,55 мл</span>',
+                                    right: '<span class="active-color">8800 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Juvederm Volbella - 1 мл</span>',
+                                    right: '<span class="active-color">14850 ₽</span>'
+                                })
+                        .price-section__data-col
+                            .price-section__data.style-4.style-3
+                                +priceRow4({
+                                    left: '<span>Juvederm Volume - 1 мл</span>',
+                                    right: '<span class="active-color">14900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Neauvia Intense lips - 1 мл</span>',
+                                    right: '<span class="active-color">13600 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Neauvia Intense lv - 1 мл</span>',
+                                    right: '<span class="active-color">13900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Radiesse - 1,5мл</span>',
+                                    right: '<span class="active-color">16900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Success Derm - 1мл</span>',
+                                    right: '<span class="active-color">8500 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Success Touch - 1мл</span>',
+                                    right: '<span class="active-color">7900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Success Ultimate - 1 мл</span>',
+                                    right: '<span class="active-color">9100 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Лонгидаза 1 зона</span>',
+                                    right: '<span class="active-color">2100 ₽</span>'
+                                })
+                                .price-section__row.visible-none
+                                    .price-section__col     sdfsdfsd
+                    .price-section__dots.slider-data-1
+
+
+mixin priceRow(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-center !{object.center}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}
+mixin priceRow4(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean4(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}
+mixin yesList(object)
+    li.close
+        img(src="images/yes-check--white.png").icon
+        span !{object.text}
+

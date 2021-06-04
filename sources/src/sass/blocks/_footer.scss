@@ -1,0 +1,318 @@
+.footer {
+  background-color: #E0E0E0;
+  padding: 4.5rem 0;
+  padding-bottom: 0;
+
+  @media screen and (max-width: $table-screen) {
+    padding-top: 2rem;
+  }
+
+  @media screen and (max-width: $mobile-screen) {
+    padding: 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 147 / 1680 * 100%;
+    position: relative;
+
+    @media screen and (max-width: $mobile-screen) {
+      order: 2;
+      padding: 3rem 0;
+      background-color: #292929;
+      color: white;
+      max-width: 100%;
+      display: flex;
+      justify-content: flex-start;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10000px;
+        height: 100%;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #292929;
+      }
+    }
+
+    .logo {
+      flex-direction: column;
+      align-items: flex-start;
+
+      @media screen and (max-width: $mobile-screen) {
+        position: relative;
+        z-index: 10;
+        transform: translate(0, 0);
+        left: 0;
+        top: 0;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 31rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .icon {
+      padding: 0;
+      margin: 0;
+      fill: black;
+      margin-bottom: 0.9rem;
+
+      @media screen and (max-width: $mobile-screen) {
+        fill: white;
+        width: 8rem;
+        height: 6rem;
+      }
+    }
+
+    span {
+      @media screen and (max-width: $mobile-screen) {
+        position: relative;
+        color: white;
+        display: block;
+        font-size: 1.8rem;
+        max-width: 20rem;
+        line-height: 1.8rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__data {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1347 / 1680 * 100%;
+
+    @media screen and (max-width: $table-screen) {
+      max-width: none;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      flex-direction: column;
+    }
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    max-width: 335 / 1680 * 100%;
+    margin-top: -4.5rem;
+
+    @media screen and (max-width: $table-screen) {
+      display: none;
+    }
+
+    img, source {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  &__navigation {
+    width: 100%;
+    max-width: 1200 / 1680 * 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media screen and (max-width: $desctop-xs) {
+      max-width: 82%;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      justify-content: flex-end;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      order: 1;
+      max-width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  &__navigation-col {
+    width: 33.3333333333333333333%;
+    position: relative;
+
+    @media screen and (max-width: $table-screen) {
+      width: 32%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      width: 100%;
+      padding: 4rem 0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 10000px;
+      height: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #343434;
+      opacity: 0.2;
+      top: auto;
+      bottom: 0;
+      display: none;
+
+      @media screen and (max-width: $mobile-screen) {
+        display: block;
+      }
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+  }
+
+  &__navigation-data {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__navigation-title {
+    margin-bottom: 2.4rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      margin-bottom: 1.4rem;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__navigation-item {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    display: inline-block;
+    width: max-content;
+    position: relative;
+
+    @media screen and (max-width: $desctop-xs) {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.2rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      margin-bottom: 1.8rem;
+      font-size: 1.8rem;
+    }
+
+    &:hover:after {
+      visibility: visible;
+      bottom: -4px;
+      opacity: 1;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      top: auto;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      transition: all 0.1s linear;
+      background-color: #C4C4C4;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__bot {
+    background-color: #292929;
+    padding: 1.3rem 0;
+    position: relative;
+    margin-top: -0.5rem;
+
+    @media screen and (max-width: $table-screen) {
+      margin-top: 2rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      margin-top: 0;
+    }
+  }
+
+  &__bot-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    @media screen and (max-width: $mobile-screen) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__bot-text {
+    color: #FFFFFF;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1rem;
+    }
+    
+    @media screen and (max-width: $mobile-screen) {
+      margin-bottom: 2.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+      max-width: 31rem;
+      font-weight: 200;
+
+      &:last-child{
+        margin-bottom: 4rem;
+      }
+
+      &--small24{
+        max-width: 24rem;
+      }
+
+      &--small27{
+        max-width: 27rem;
+      }
+    }
+  }
+}

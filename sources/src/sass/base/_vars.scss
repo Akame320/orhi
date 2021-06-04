@@ -1,0 +1,48 @@
+ // Grid
+$width_lg: 1600px;
+$width_md: 991px;
+$width_xs: 767px;
+$width_mob: 500px;
+
+$grid-width: 1600px;
+$grid-gutter: 30px;
+$grid-columns: 12;
+
+$container-w: 168rem;
+$cp: 5rem;
+
+//colors
+$color-main: #b90658;
+$color-main-2: #fff;
+$text-color: #343434;
+$text-grey: rgba(0, 0, 0, 0.55);
+$dark: #272733;
+$base-color: $text-color;
+$base-bg: #fff;
+$sub-bg: $text-color;
+$header-bg: #10101d;
+$dark-blue: #286690;
+
+$footer-bg: #3d4050;
+$footer-link-main: #fefefe;
+$footer-link-alter: #c3c3c3;
+
+$white: #fff;
+
+$input-bg: #dfdfe1;
+$input-file-bg: #f4f4f5;
+
+
+$ff-lato: 'Muller';
+$font-default: $ff-lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+
+// custom grid
+$full-hd: 1600px;
+$desctop-xs: 1600px;
+$table-screen: 1023px;
+$mobile-screen: 767px;
+
+$anim:0.3s;
+
+$main-gradient: linear-gradient(140.34deg, #E6026B -12.76%, #790C3B 117.7%);

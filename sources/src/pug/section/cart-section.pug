@@ -1,0 +1,44 @@
+mixin cartItem(object)
+    .cart-section__col
+        .cart-section__col-wrapper.bg-vertical__wrapper
+            .cart-section__col-inner.bg-vertical__inner
+                each element in object
+                    if (element.title)
+                        .cart-section__col-title #{element.title}
+                    if (element.subtitle)
+                        .cart-section__col-subtitle #{element.subtitle}
+                    if (element.texts)
+                        each subelement in element.texts
+                            .cart-section__col-text !{subelement}
+                    if (element.lists)
+                        if(element.listTitle)
+                            .cart-section__col-listTitle !{element.listTitle}
+                        ul.cart-section__col-list
+                            each subelement in element.lists
+                                if (!element.styleType)
+                                    li #{subelement}
+                                else if(element.styleType === 'close')
+                                    li.close
+                                        img(src="images/no-check.png").icon
+                                        span #{subelement}
+                                else if(element.styleType === 'check')
+                                    li.close
+                                        img(src="images/yes-check.png").icon
+                                        span #{subelement}
+                .cart-section__col-bg
+                    img(src="images/icons/alert.jpg")
+section.cart-section
+    .container
+        .cart-section__wrapper
+            .cart-section__inner
+                each element in cartsData
+                    +cartItem(element)
+
+// CART SECTION SETTINGS
+// cartsData - Global Arr
+// cart title
+// cart subtitle
+// cart texts
+// cart lists
+// cart listStyle
+// out "cartsData" = [[{},{}], [{},{}] .... [{},{}]]

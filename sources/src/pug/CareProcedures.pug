@@ -1,0 +1,123 @@
+extends base/_layout
+block head
+    title Уходовые косметологические процедуры в Пензе | Orhi
+    meta(property="og:title" content='Уходовые косметологические процедуры в Пензе | Orhi')
+    meta(name="keywords" content='уходовые процедуры, уходовые процедуры для лица, уходовые процедуры по лицу')
+    meta(name="description" content='В центре «Orhi» врачи-косметологи выполняют процедуры на профессиональной израильской косметике «Holy Land». Цены - от 640 руб.')
+    meta(property="og:description" content='В центре «Orhi» врачи-косметологи выполняют процедуры на профессиональной израильской косметике «Holy Land». Цены - от 640 руб.')
+    meta(property="og:url" content='https://orhi-epil.ru/CareProcedures.html')
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}, {
+                        text: 'Эстетическая косметология',
+                        link: 'Aesthetic.html'
+                    }], 'Уходовые процедуры ')
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/CareProcedures/0-pc.webp',
+                            img: 'images/content/intro-section/CareProcedures/0-pc.jpg',
+                            set: 'images/content/intro-section/CareProcedures/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'процедуры',
+                                class: 'intro-section__title',
+                                subtitle: 'Уходовые',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p Каждый, кто ухаживает за своей кожей и заботится о ее молодости, не понаслышке знает о большом значении профессиональных уходовых процедур для кожи.
+
+                            p Уходы обладают высокой эффективностью и имеют накопительный эффект. Выработав полезную привычку регулярно посещать кабинет косметолога – вам удастся надолго сохранить красоту и молодость кожи.
+
+                            h4 ЭФФЕКТ ОТ УХОДОВЫХ ПРОЦЕДУР
+                            ul.intro-section__list
+                                li мгновенное преображение кожи – она становится более гладкой и мягкой
+                                li восстановление кожи от воздействия внешних факторов
+                                li улучшение внешнего вида кожи – ухоженный и здоровый вид
+                                li нормализация работы сальных желез
+                                li сужение пор
+                                li выравнивание кожи
+                                li омоложение
+                                li коррекция воспалений и пост-акне
+    section.questions-section
+        .container
+            .questions-section__wrapper.bg-wrapper
+                .questions-section__inner.bg-inner
+                    .questions-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'ЗАМЕНИТЬ ДОМАШНИМ УХОДОМ?',
+                            subtitle: 'МОЖНО ЛИ ПРОФЕССИОНАЛЬНЫЕ ПРОЦЕДУРЫ',
+                            class: 'questions-section__title title--small',
+                            subclass: 'questions-section__subtitle subtitle--small',
+                        })
+                    .questions-section__text
+                        p Нет, невозможно. И сейчас мы объясним, почему.
+                        p Домашний уход, безусловно, необходим: ежедневное очищение, питание, тонизация кожи. Однако, профессиональные уходовые процедуры это не заменит.
+                        p Во-первых, профессиональная косметологическая косметика содержат большие концентрации активных веществ. Использовать их самостоятельно, не имея должного образования, не только не нужно, но и довольно опасно.
+                        p Во-вторых, профессиональные уходовые программы – это целый комплекс средств и процедур, которые дополняют и усиливают друг друга. В зависимости от состояния кожи, применяется обширная линейка разных препаратов. Эффект, которые они оказывают на кожу, просто невозможно достичь дома, даже если вы потратите на это больше времени и приобретете дорогостоящие средства.
+                        p В третьих, средства и для домашнего ухода также должен подобрать специалист с медицинским образованием, врач косметолог-дерматолог. Составлять программу домашнего ухода необходимо исключительно после детальной диагностики кожи. Возможно, потребуется проверка и других органов и систем организма. Ведь многие проблемы кожи, от незначительных до серьезных, могут быть связаны с внутренними заболеваниями. В этих случаях без консультации врача любые усилия будут бесполезны, так как сначала нужно устранить причину.
+                        p В клинике «Orhi» все косметологические процедуры выполняют сотрудники с медицинским образованием. А также, при необходимости, вы можете получить консультацию врача-дерматолога по вопросам, связанным с кожей лица.
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/CareProcedures/1-pc.webp',
+                            img: 'images/content/intro-section/CareProcedures/1-pc.jpg',
+                            set: 'images/content/intro-section/CareProcedures/1-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'В «ORHI»',
+                                class: 'intro-section__title',
+                                subtitle: 'УХОДЫ',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p.text-tablet-small В цетре «Orhi» врачи-косметологи выполняют процедуры на профессиональной израильской косметике «Holy Land».
+                            p.text-uppercase.margin-top Реабилитация
+                            p.text-tablet-small Процедура по восстанавлению кожи после пилингов, ожогов, обветриваний и прочим интенсивным/агрессивным воздействиям на кожу. К примеру, она очень популярна среди клиентов, только что вернувшихся с поездки на море – после активного южного загара кожа нуждается в реабилитации.
+                            p.text-uppercase.margin-top BIO-Repair
+                            p.text-tablet-small Процедура, направленная на интенсивное увлажнение, успокоение, восстановление кожи. Актуальна после пилингов, шлифовок, а также в качестве профилактики купероза. Идеально подходит для чувствительной кожи.
+                            p.text-uppercase.margin-top Eyelight+Ginseng+Carrot
+                            p.text-tablet-small Универсальная уходовая процедура для всех типов кожи. Очищение, питание и восстановление кожи, повышение тонуса, выравнивание структуры, насыщение витаминами.
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость процедур',
+                            subtitle: 'Уходовые процедуры',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data.style-3
+                        +priceRow({
+                            left: 'Bio Repair (антикупероз)',
+                            center: '1 ч 30 мин',
+                            right: '<span class="active-color">1920 ₽</span>'
+                        })
+                        +priceRow({
+                            left: 'Eyelight + Ginseng&Carrot',
+                            center: '1 ч',
+                            right: '<span class="active-color">1280 ₽</span>'
+                        })
+                        +priceRow({
+                            left: 'Реабилитация',
+                            center: '40 мин',
+                            right: '<span class="active-color">720 ₽</span>'
+                        })
+mixin priceRow(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-center !{object.center}
+        .price-section__col.price-section__col-right !{object.right}

@@ -1,0 +1,146 @@
+mixin priceCol(object)
+    .price-section__col
+        .price-section__col-wrapper
+            .price-section__col-inner
+                .price-section__col-img
+                    +svgIcon({name: object.iconName})
+                .price-section__col-data
+                    each element in object.price
+                        .price-section__col-row
+                            .price-section__col-title !{element.colTitle}
+                            .price-section__col-price
+                                span !{element.priceNoCart}
+                                span !{element.priceYesCart}
+mixin tableData(object)
+    .price-section__table-row
+        .price-section__table-text !{object.title}
+        .price-section__table-price
+            .price-section__table-price-col
+                span.no-cart #{object.price1}
+            .price-section__table-price-col
+                span.yes-cart #{object.price2}
+mixin mobileRow(object)
+    .price-section__mobile-row
+        .price-section__mobile-title !{object.title}
+        .price-section__mobile-data
+            .price-section__mobile-col
+                span.no-cart !{object.price1}
+                span.yes-cart !{object.price2}
+            .price-section__mobile-col
+                span.no-cart !{object.price3}
+                span.yes-cart !{object.price4}
+
+section.price-section
+    .container
+        if(data.type === 'col')
+            .price-section__wrapper
+                .price-section__inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость процедур',
+                            subtitle: 'Лазерная эпиляция подмышек',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data
+
+                        +priceCol({
+                            iconName: 'men',
+                            price: [{
+                                colTitle: 'Диодный лазер',
+                                priceNoCart: '<span class="no-cart">Без карты: 2300 ₽</span>',
+                                priceYesCart: '<span class="yes-cart">По карте: 690 ₽</span>'
+                            }, {
+                                colTitle: 'александритовый лазер',
+                                priceNoCart: '<span class="no-cart">Без карты: 4600 ₽</span>',
+                                priceYesCart: '<span class="yes-cart">По карте: 1380 ₽</span>'
+                            }]
+                        })
+
+                        +priceCol({
+                            iconName: 'women',
+                            price: [{
+                                colTitle: 'Диодный лазер',
+                                priceNoCart: '<span class="no-cart">Без карты: 2000 ₽</span>',
+                                priceYesCart: '<span class="yes-cart">По карте: 600 ₽</span>'
+                            }, {
+                                colTitle: 'александритовый лазер',
+                                priceNoCart: '<span class="no-cart">Без карты: 4000 ₽</span>',
+                                priceYesCart: '<span class="yes-cart">По карте: 1200 ₽</span>'
+                            }]
+                        })
+
+                        .price-section__dots
+                            .price-section__dots-wrapper
+                                .price-section__dots-inner
+                                    button.price-section__dots-button.no-cart
+                                        .dots
+                                        span Без карты
+                                    button.price-section__dots-button.yes-cart
+                                        .dots
+                                        span По скидочной карте
+        if(data.type === 'table')
+            .price-section__table
+                .price-section__titles-wrapper
+                    +sectionTitle({
+                        title: 'Стоимость процедур',
+                        subtitle: 'Лазерная эпиляция подмышек',
+                        class: 'price-section__title',
+                        subclass: 'price-section__subtitle'
+                    })
+
+                .price-section__table-wrapper
+                    .price-section__table-col
+                        .price-section__table-title
+                            | Диодный лазер
+                        .price-section__table-item
+                            .price-section__table-inner
+                                each element in data.price
+                                    +tableData({title: element.title, price1: element.price1, price2: element.price2})
+                    .price-section__table-col
+                        .price-section__table-title
+                            | Александиритовый лазер
+                        .price-section__table-item
+                            .price-section__table-inner
+                                each element in data.price
+                                    +tableData({title: element.title, price1: element.price3, price2: element.price4})
+                .price-section__dots.yes
+                    .price-section__dots-wrapper
+                        .price-section__dots-inner
+                            button.price-section__dots-button.no-cart
+                                .dots
+                                span Без карты
+                            button.price-section__dots-button.yes-cart
+                                .dots
+                                span По скидочной карте
+                .price-section__table-message
+                    | <span>*</span> В процедуру “Глубокое бикини” входит: половые губы, лобок, межъягодичная складка + неглубокое бикини.
+            .price-section__mobile
+                .price-section__titles-wrapper
+                    +sectionTitle({
+                        title: 'Стоимость процедур',
+                        subtitle: 'Лазерная эпиляция подмышек',
+                        class: 'price-section__title',
+                        subclass: 'price-section__subtitle'
+                    })
+                .price-section__mobile-wrapper
+                    .price-section__mobile-row.price-section__mobile-row--title
+                        .price-section__mobile-col
+                            | Диодный
+                        .price-section__mobile-col
+                            | Александритовый
+                    each element in data.price
+                        +mobileRow({title: element.title, price1: element.price1, price2: element.price2, price3: element.price3, price4: element.price4})
+                .price-section__dots.yes
+                    .price-section__dots-wrapper
+                        .price-section__dots-inner
+                            button.price-section__dots-button.no-cart
+                                .dots
+                                span Без карты
+                            button.price-section__dots-button.yes-cart
+                                .dots
+                                span По скидочной карте
+                .price-section__table-message
+                    | <span>*</span> В процедуру “Глубокое бикини” входит: половые губы, лобок, межъягодичная складка + неглубокое бикини.
+
+

@@ -1,0 +1,55 @@
+.reviews-section
+    .container
+        .reviews-section__header
+            .reviews-section__titles-wrapper
+                +sectionTitle({
+                    title: 'Наши клиенты',
+                    subtitle: 'Что о нас говорят',
+                    class: 'reviews-section__title',
+                    subclass: 'reviews-section__subtitle',
+                })
+            .reviews-section__arrow.remove--mobile
+                .arrow-slick.arrow-prev.reviews-section__arrow-prev
+                    +svgIcon({name: 'line-arrow'})
+                .arrow-slick.arrow-next.reviews-section__arrow-next
+                    +svgIcon({name: 'line-arrow'})
+
+        .reviews-section__slider-wrapper
+            .reviews-section__arrow.active-mobile
+                .arrow-slick.arrow-prev.reviews-section__arrow-prev.silver-icon
+                    +svgIcon({name: 'arrow-line-v2'})
+                .arrow-slick.arrow-next.reviews-section__arrow-next.silver-icon
+                    +svgIcon({name: 'arrow-line-v2'})
+            .reviews-section__slider
+                +cartImgTitleText({
+                    text: 'Прошло полтора месяца - и я прошла третью процедуру лазерной эпиляции в центре «Orhi». Волосы растут гораздо медленнее, их стало меньше! Эффект впечатляет! Теперь подключаю новые зоны.',
+                    webp: 'images/content/reviews-section/0.webp',
+                    img: 'images/content/reviews-section/0.jpg',
+                    set: 'images/content/reviews-section/0-mb',
+                    alt: 'Эпиляция "Orhi" отзывы',
+                    subtext: 'Яна Вишневская'
+                })
+                +cartImgTitleText({
+                    text: 'Мне советовали кучу мест для лазерной эпиляции, но я знала, что приду именно сюда! Потому что тут есть лицензия, работают только врачи и на медицинских аппаратах! А уж какой сервис - это отдельная любовь. Ходим всей семьей)))',
+                    webp: 'images/content/reviews-section/1.webp',
+                    img: 'images/content/reviews-section/1.jpg',
+                    set: 'images/content/reviews-section/1-mb',
+                    alt: 'Эпиляция "Orhi" отзывы',
+                    subtext: 'Лобачева Виктория'
+                })
+                +cartImgTitleText({
+                    text: 'Сегодня центр <a href="https://www.instagram.com/orhi.penza">@orhi.penza</a> сделал мой день! Давно задумывалась о лазерной эпиляции,потому что шугаринг для меня просто каторга. Как я рада, что решилась! Быстро, не больно! Теперь жду эффекта. Спасибо!',
+                    webp: 'images/content/reviews-section/2.webp',
+                    img: 'images/content/reviews-section/2.jpg',
+                    set: 'images/content/reviews-section/2-mb',
+                    alt: 'Эпиляция "Orhi" отзывы',
+                    subtext: 'Ольга Голубева'
+                })
+                +cartImgTitleText({
+                    text: 'Место шикарное. Договор, медицинская карта, согласие на процедуру. Как положено. После первой же процедуры я увидела результат. Разве не бомба? Эпилирую теперь все тело - и всем искренне советую делать так же! И только тут!',
+                    webp: 'images/content/reviews-section/3.webp',
+                    img: 'images/content/reviews-section/3.jpg',
+                    set: 'images/content/reviews-section/3-mb',
+                    alt: 'Эпиляция "Orhi" отзывы',
+                    subtext: 'Юлия Бутусова'
+                })

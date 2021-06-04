@@ -1,0 +1,140 @@
+extends base/_layout
+block head
+    title Ботулинотерапия в Пензе. Что такое ботулинотерапия - "Orhi"
+    meta(property="og:title" content='Ботулинотерапия в Пензе. Что такое ботулинотерапия - "Orhi"')
+
+    meta(name="keywords" content='ботулинотерапия, пенза')
+
+    meta(name="description" content='Ботулинотерапия в Пензе. Чистое и ухоженное лицо ✅ Мгновенный результат ✅ Лучшие специалисты ✅ Подробнее на сайте.')
+    meta(property="og:description" content='Ботулинотерапия в Пензе. Чистое и ухоженное лицо ✅ Мгновенный результат ✅ Лучшие специалисты ✅ Подробнее на сайте.')
+
+    meta(property="og:url" content='https://orhi-epil.ru/BotulinumTherapy.html')
+
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}, {
+                        text: 'Инъекционная косметология',
+                        link: 'InjectionCosmetology.html'
+                    }], 'Ботулинотерапия')
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/BotulinumTherapy/0-pc.webp',
+                            img: 'images/content/intro-section/BotulinumTherapy/0-pc.jpg',
+                            set: 'images/content/intro-section/BotulinumTherapy/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Ботулинотерапия?',
+                                class: 'intro-section__title',
+                                subtitle: 'Что такое',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p Ботулинотерапия – это процедура инъекционного введения токсина ботулизма (ботулотоксина) типа А. Уколы этого токсина расслабляют мышцы, разглаживая таким образом морщины. Новых морщин в зоне введения препарата в период его действия не появляется.
+                            p Сначала ботулотоксин типа А применялся только в терапевтических целях. Со временем появилась эстетическая ботулинотерапия, направленная на борьбу с морщинами и гипергидрозом, который находится на стыке косметологии и медицины. Для лечения гипергидроза ботулотоксин вводится в подмышки, ладони, стопы.
+                            p Ботулотоксин вводится микроиглами внутримышечно, реже – подкожно. Процедура позволяет устранять морщины на лице, шее, декольте. Благодаря очень тонким иглам, почти нет следов от уколов, а процедура проходит практически без боли. Но последнее больше зависит не от толщины иглы, а от индивидуального болевого порога.
+
+    // Собираем тело карточки
+    - var list1      = 'Морщины между бровями и на лбу вертикальные и горизонтальные'
+    - var list2      = 'Складки на спинке носа'
+    - var list3      = 'Морщины вокруг глаз'
+    - var list4      = 'Тяжи на шее'
+    - var list5      = 'Губоподбородочные морщины'
+    - var list6      = 'Мимические морщины в любой зоне лица'
+    - var list7      = 'Опущенные уголки губ'
+    - var list8      = 'Возрастные изменения области декольте'
+    - var list9      = 'Нечеткий овал лица'
+    - var list10      = 'Асимметрия лица'
+    - var list11      = 'Слишком широкие крылья носа и опущенный кончик'
+    - var list12      = 'Асимметрия бровей по высоте'
+    - var list13      = 'Гипергидроз'
+    - var lists     = [list1, list2, list3, list4, list5, list6, list7, list8, list9, list10,list11, list12, list13]
+    - var cartTitle     = 'Показания'
+    - var cartSubtitle  = 'к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ'
+    - var cart1         = [{title: cartTitle, subtitle: cartSubtitle, lists: lists, styleType: 'check'}]
+
+    - var list1      =  'Индивидуальная непереносимость препарата или любых компонентов  препарата'
+    - var list2      =  'Заболевания с нарушениями нервно-мышечной передачи(миастения,мистеноподобный синдром)'
+    - var list3      =  'Повышение температуры тела'
+    - var list4      =  'Острые инфекционные и неинфекционные заболевания, обострение хронических инфекционных заболеваний'
+    - var list5      =  'Онкологические, аутоиммунные заболевания '
+    - var list6      =  'Наличие воспалительного процесса в месте предполагаемой инъекции препарата'
+    - var list7      =  'Выраженный гравитационный птоз тканей лица'
+    - var list8      =  'Нарушение свёртываемости крови'
+    - var list9      =  'Нарушение свёртываемости крови'
+    - var list10      = 'Беременность'
+    - var list11      = 'Лактация'
+    - var lists     = [list1, list2, list3, list4, list5, list6, list7, list8, list9, list10, list11]
+    - var cartTitle     = 'противоПоказания'
+    - var cartSubtitle  = 'к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ'
+    - var cart2         = [{title: cartTitle, subtitle: cartSubtitle, lists: lists, styleType: 'close'}]
+
+    - var list1      = 'Рекомендуется в течение 4-х часов оставаться в вертикальном положении'
+    - var list2      = 'В течение 20-30 минут после процедуры активно совершать движения мышцами, в которые были проведены инъекции нейропротеина'
+    - var list3      = 'До процедуры за сутки и после процедуры, в течение 7 дней нельзя пить алкоголь'
+    - var list4      = 'Нельзя посещать баню,сауну,солярий в течении 14 дней'
+    - var list5      = 'Ограничить активные физические нагрузки:спортзал,наклоны,бассейн на 7 дней'
+    - var list6      = 'Лекарства,которые не следует принимать после инъекций нейропротеина: антибиотики (тетрациклины, аминогликозиды, эритромицин); миорелаксанты; витамины группы В'
+    - var lists     = [list1, list2, list3, list4, list5, list6]
+    - var cartTitle     = 'Что нужно знать'
+    - var cartSubtitle  = 'пациенту при проведении ботулинотерапии'
+    - var cart3         = [{title: cartTitle, subtitle: cartSubtitle, lists: lists}]
+
+    - var cartsData     = [cart1, cart2, cart3]
+    include section/cart-section
+
+    section.questions-section.style-2
+        .container
+            .questions-section__wrapper
+                .questions-section__inner
+                    .questions-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Какой эффект',
+                            subtitle: 'вы получите от ботулинотерапии',
+                            class: 'questions-section__title',
+                            subclass: 'questions-section__subtitle'
+                        })
+                    .questions-section__text
+                        p С помощью иньекций ботулинотерапии удается достигнуть эффекта омоложения – разгладить имеющиеся морщины и предотвратить появление новых.
+                        p Первый эффект от процедуры в среднем заметен через 2-3 дня. Однако своего пика он достигает через 10-14 дней. Сохраняется достигнутый эффект от 3 до 12 месяцев, в зависимости от зоны обработки, дозы, препарата и индивидуальных особенностей организма. На подвижных участках лица подвижность мышц восстанавливается за 4 месяца.
+                        p Специалисты центра выполняют процедуру на препарате «Релатокс». Этот препарат разработан и производится в России фирмой «НПО Микроген». На рынок он поступил в 2014 году - и с тех пор успел получить хорошие отзывы косметологов и пациентов. Медикамент прошел все необходимые клинические исследования, в которых была доказана его безопасность.
+                        p.text-bold Важно!
+                        p Объём необходимого препарата и курс процедур назначаются индивидуально при очной консультации!
+
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-3.style-5
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость <span class="remove--mobile">процедур</span>',
+                            subtitle: 'Ботулинотерапия',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                        .price-section__data.style-3.style-5
+                            +priceRow({
+                                left: '<span>Внутримышечное введение препарата <span class="text-bold">«Релатокс»</span> (коррекция морщин) 1 ед.</span>',
+                                right: '<span class="active-color">260 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span>Внутримышечное введение препарата <span class="text-bold">«Ксеомин»</span> (коррекция морщин) 1 ед.</span>',
+                                right: '<span class="active-color">280 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span>Лечение гипергидроза (повышенная потливость) препаратом <span class="text-bold">«Диспорт»</span></span>',
+                                right: '<span class="active-color">14000 - 21000 ₽</span>'
+                            })
+
+mixin priceRow(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}

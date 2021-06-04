@@ -1,0 +1,63 @@
+extends base/_layout
+block head
+    title Подарочный сертификат - Orhi
+    meta(property="og:title" content='Подарочный сертификат - Orhi')
+    meta(name="keywords" content='подарочные сертификаты, сертификат, подарочная карта, подарить курс лазерной эпиляции')
+    meta(name="description" content='Подарочный сертификат в центр косметологии и лазерной эпиляции Orhi - это подходящий подарок на различные случаи жизни.')
+    meta(property="og:description" content='Подарочный сертификат в центр косметологии и лазерной эпиляции Orhi - это подходящий подарок на различные случаи жизни.')
+    meta(property="og:url" content='https://orhi-epil.ru/Sertificat.html')
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}], 'Наши специалисты')
+                .intro-section__inner.sertificat-smal
+                    .intro-section__data
+                        .intro-section__titles-wrapper.intro-section__titles-reverce
+                            +sectionTitle({
+                                title: 'Подарок <br><span class="sertificat-small">который точно понравится!</span>',
+                                class: 'intro-section__title sertificat-smal',
+                                subclass: 'intro-section__subtitle sertificat-smal',
+                                subtitle: 'Подарочный сертификат в медицинский центр «Orhi»',
+                            })
+                        .intro-section__btn.sertificat-smal
+                            a.btn.btn--pink Купить онлайн
+                    .intro-section__img.intro-section__img--big
+                        +setImg({
+                            webp: 'images/content/intro-section/Sertificat/0-pc.webp',
+                            img: 'images/content/intro-section/Sertificat/0-pc.jpg',
+                            set: 'images/content/intro-section/Sertificat/0-mb'
+                        })
+    include section/advantages-section
+    include section/sertificate-section
+    section.intro-section.margin-top
+        .container
+            .intro-section__wrapper
+                .intro-section__titles-wrapper.active-mobile
+                    +sectionTitle({
+                        title: 'не нужно <br> никуда ехать!',
+                        class: 'intro-section__title',
+                        subtitle: 'За сертификатом',
+                        subclass: 'intro-section__subtitle'
+                    })
+                .intro-section__inner.max-40
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/Sertificat-page/0-pc.webp',
+                            img: 'images/content/Sertificat-page/0-pc.jpg',
+                            set: 'images/content/Sertificat-page/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper.remove--mobile
+                            +sectionTitle({
+                                title: 'не нужно <br> никуда ехать!',
+                                class: 'intro-section__title',
+                                subtitle: 'За сертификатом',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p.mb-5 Его можно купить онлайн - и мы сами доставим его для вас по городу с курьером совершенно бесплатно!
+                        .intro-section__btn.mobile-center
+                            a.btn.btn--pink Купить с доставкой
+    include section/allservices-section

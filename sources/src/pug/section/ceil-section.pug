@@ -1,0 +1,38 @@
+.ceil-section
+    .container
+        .ceil-section__inner
+
+            .ceil-section__cart-wrapper
+                .ceil-section__cart
+                    .ceil-section__cart-title
+                        | Подарочный сертификат
+                    .ceil-section__cart-img
+                        picture
+                            source(srcset='images/content/ceil-section/0.webp' media="(min-width: 767px)" alt='Скидки на эпиляцию' type='image/webp')
+                            source(srcset='images/content/ceil-section/0' + '.webp' media="(min-width: 0) and (max-width: 767px)" alt='Скидки на эпиляцию' type='image/webp')
+                            img(src='images/content/ceil-section/0.png' srcset='images/content/ceil-section/0' + '.jpg' + ' 767w' alt='Скидки на эпиляцию')
+                    .ceil-section__cart-data
+                        .ceil-section__cart-text.text--uppercase
+                            | У нас вы можете
+                        .ceil-section__cart-offer
+                            | Подарить красоту
+                        .ceil-section__cart-suboffer
+                            | Своим Близким и друзьям
+                        .ceil-section__cart-text
+                            | Покупка онлайн, бесплатная доставка курьером по городу.
+                    .ceil-section__btn
+                        a(href='Sertificat.html').btn.btn--ceil Подробнее
+            .ceil-section__cart-wrapper
+                .ceil-section__cart
+                    .ceil-section__cart-title
+                        | Скидочная карта
+                    .ceil-section__cart-imgText
+                        | -70%
+                    .ceil-section__cart-data
+                        .ceil-section__cart-offer.big--offer
+                            | На лазерную эпиляцию
+                        .ceil-section__cart-text
+                            | Скидочная карта дает скидку на весь прайс лазерной эпиляции -70%. Например: бикини глубокое - 4600 руб, цена по карте 1380 руб.
+                    .ceil-section__btn
+                        a.btn.btn--ceil.open-price-popup Как получить
+

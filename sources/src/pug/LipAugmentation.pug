@@ -1,0 +1,150 @@
+extends base/_layout
+block head
+    title Увеличение губ в Пензе.  Что вы должны знать?! -> "Orhi"
+    meta(property="og:title" content='Увеличение губ в Пензе.  Что вы должны знать?! -> "Orhi"')
+    meta(name="keywords" content='увеличение, губ')
+    meta(name="description" content='Увеличение губ в Пензе. Исправление асимметрии ✅ Фото до и после ✅ Доступные цены ✅ Консультация косметолога. Подробнее на сайте!')
+    meta(property="og:description" content='Увеличение губ в Пензе. Исправление асимметрии ✅ Фото до и после ✅ Доступные цены ✅ Консультация косметолога. Подробнее на сайте!')
+    meta(property="og:url" content='https://orhi-epil.ru/LipAugmentation.html')
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}, {
+                        text: 'Инъекционная косметология',
+                        link: 'InjectionCosmetology.html'
+                    }], 'Увеличение губ')
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/LipAugmentation/0-pc.webp',
+                            img: 'images/content/intro-section/LipAugmentation/0-pc.jpg',
+                            set: 'images/content/intro-section/LipAugmentation/0-mb'
+                        })
+                        .intro-section__img-link.remove--mobile
+                            a(href='https://www.youtube.com/watch?v=O3i6WwmcySs').img-link.video-open
+                                +setImg({
+                                    webp: 'images/content/intro-section/LipAugmentation/1-pc.webp',
+                                    img: 'images/content/intro-section/LipAugmentation/1-pc.jpg',
+                                    set: 'images/content/intro-section/LipAugmentation/1-mb'
+                                })
+                    .intro-section__data
+                        .intro-section__titles-wrapper.intro-section__titles-reverce
+                            +sectionTitle({
+                                title: 'увеличение губ?',
+                                class: 'intro-section__title',
+                                subtitle: 'всё, что вы должны знать, Прежде чем решиться',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            div
+                                p 1. Современные препараты для аугментации губ – должны быть на базе гиалуроновой кислоты. Никаких гелей и биополимеров! Если вам предлагают такое – бегите оттуда без оглядки. Выбирайте только рассасывающиеся препараты!
+                                p 2. Процедура не может стоить дешево! Если вам предлагают «уколоться» за 5-7 тысяч рублей – то тут явно что-то не так.
+                                p 3. Эффект от увеличения губ сохраняется 4-8 месяцев. Но гарантии вам никто не даст. Когда придет время «докалывать» - зависит от индивидуальных особенностей вашего организма.
+                                p 4. В первые сутки оценить результат невозможно. Да и на вторые – тоже. В первые дни после увеличения присутствует большая отечность, которая может достигнуть своего пика на третий день. НЕ стоит этого пугаться.
+                                p 5. Никакого ощущения «инородности» вы ощущать не будете. Губы будут мягкими и нежными, как и прежде.
+                                p 6. Во время процедуры вы можете испытывать чувство «распирания» - это нормально.
+                            div.toggle-block
+                                p 7. После процедуры могут появиться синяки, которые в скором времени пройдут. Это реакция сосудов на уколы – и ничего страшного в этом нет.
+                                p 8. Если у вас время от времени появляется герпес на губах – то процедура увеличения губ может его спровоцировать. Следует принять противогерпесный препарат в профилактических дозах.
+                                p 9. Если после первой процедуры вам захочется добавить объем – то это не составит проблем. Объем можно легко добавить, главное – не переборщить!
+                                p 10. Эффект «утиных губ» и «пельменей» - давно вышел из моды и является моветоном. Чтобы этого не случилось – выбирайте профессиональный медицинский центр и врача с нужной квалификацией!
+                                p 11. Шприц для инъекции врач должен вскрыть при вас!
+                                p 12. Никаких «докалываний» другому пациенту и «делений» шприца с подружкой быть категорически не может! Так поступают только недобросовестные клиники и врачи, которые ничего не боятся. В том числе – нанести вред своему пациенту.
+                                p 13. Чаще всего филлеры для увеличения губ идут в объеме 1 мл. Если вы посчитаете, что такого объема вам будет много – есть шприцы в меньшей дозировке.
+                                p 14. Перед процедурой вам на губы нанесут обезболивающий крем. Неприятные ощущения будут сведены к минимуму.
+                                p 15. На всю процедуру, включая нанесение анестезии – уйдет около часа.
+                            p.text-bold.intro-section__list-btn Читать больше
+                        .intro-section__img-link.active-mobile
+                            a(href='https://www.youtube.com/watch?v=O3i6WwmcySs').img-link.video-open
+                                +setImg({
+                                    webp: 'images/content/intro-section/LipAugmentation/1-pc.webp',
+                                    img: 'images/content/intro-section/LipAugmentation/1-pc.jpg',
+                                    set: 'images/content/intro-section/LipAugmentation/1-mb'
+                                })
+
+    include section/portfolio-section
+
+    // Собираем тело карточки
+    - var text1    = '<span class="text-bold">Какой максимальный объём можно ввести за 1 раз?</span> Не более 2 шприцев по 1 мл, то есть не более 2 мл.'
+    - var text2    = '<span class="text-bold">Можно ли спустя время делать другой филлер или обязательно тот же?</span> Если прошло более полугода года, то можно вводить другой филлер. Но необходимо знать, какой препарат вводился до этого.'
+    - var text3    = '<span class="text-bold">От чего зависит, как долго гиалуронка пробудет в губах?</span> В среднем препарат держится в тканях 4-8 месяцев. А еще - длительность эффекта зависит от индивидуальных особенностей организма и образа жизни (у любителей бани/сауны/солярия, а также - поклонников активных физических нагрузок - препарат выводится быстрее).'
+    - var texts     = [text1, text2, text3]
+    - var cartTitle     = 'Популярные'
+    - var cartSubtitle  = 'вопросы'
+    // Собираем карточку
+    - var cartText      = [cartText1, cartText2]
+    // Добавляем карточку
+    - var cart1         = [{title: cartTitle, subtitle: cartSubtitle, texts: texts}]
+    // Собираем тело карточки
+    - var text1    = '1. Если в анамнезе ранее у вас был герпес - перед процедурой начните приём противовирусных средств («Ацикловир») в профилактической дозировке. За 2 дня до процедуры, в день и 2 дня после.'
+    - var text2    = '2. Не рекомендуем вам проводить контурную пластику губ во время менструации, так как повышается чувствительность, а также риск появления синяков.'
+    - var text3    = '3. Исключите приём кроверазжижающих препаратов за несколько дней до процедуры'
+    - var texts     = [text1, text2, text3]
+    - var cartTitle     = 'Рекомендации'
+    - var cartSubtitle  = 'до ПРОЦЕДУРЫ'
+    // Добавляем карточку
+    - var cart2         = [{title: cartTitle, subtitle: cartSubtitle, texts: texts}]
+    - var cartTitle     = 'Рекомендации'
+    - var cartSubtitle  = 'после процедуры'
+    - var text1         = '1. Исключите посещение тепловых процедур (бани/сауны/солярии). '
+    - var text2         = '2. Исключить первые 3 дня употребление горячего (чай/кофе, супы и др.), а также приём алкоголя.'
+    - var text3         = '3. Ограничьте мимику в области губ на 3-5 дней. '
+    - var text4         = '4. Исключите нанесение декоративной косметики в течение 24 часов.'
+    - var text5         = '5. Избегайте давления и трения в местах введения филлера в течение 2х недель. '
+    - var text6         = '6. Использовать заживляющие крема («Траумель», «Арнигель»). '
+    - var texts         = [text1, text2, text3, text4, text5, text6]
+    - var cart3         = [{title: cartTitle, subtitle: cartSubtitle, texts: texts}]
+    - var cartsData     = [cart1, cart2, cart3]
+    include section/cart-section
+
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-4.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость <span class="remove--mobile">процедур</span>',
+                            subtitle: 'Увеличение губ',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data-wrapper.style-4.slider-data-1
+                        .price-section__data-col
+                            .price-section__data.style-4.style-3
+                                +priceRow4({
+                                    left: '<span>Juvederm ULTRA Smile - 0,55 мл</span>',
+                                    right: '<span class="active-color">8800 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Juvederm Ultra 3 - 1 мл</span>',
+                                    right: '<span class="active-color">11900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Neauvia Intense lips - 1 мл</span>',
+                                    right: '<span class="active-color">13600 ₽</span>'
+                                })
+                        .price-section__data-col
+                            .price-section__data.style-4.style-3
+                                +priceRow4({
+                                    left: '<span>Neauvia Intense lv - 1 мл</span>',
+                                    right: '<span class="active-color">13900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Belotero Lips Contour 0,6 мл</span>',
+                                    right: '<span class="active-color">8900  ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Belotero Balance 1 мл </span>',
+                                    right: '<span class="active-color">11900 ₽</span>'
+                                })
+                    .price-section__dots.slider-data-1
+
+mixin priceRow4(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean4(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}

@@ -1,0 +1,166 @@
+.about-section {
+  padding: 4.5rem 0rem;
+
+  &__titles-wrapper {
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    color: $color-main;
+    display: flex;
+    align-items: center;
+
+    min-width: max-content;
+
+    @media screen and (max-width: $mobile-screen) {
+      text-align: center;
+      flex-direction: column;
+    }
+
+    &:after {
+      content: 'профессиональный медицинский центр лазерной эпиляции и косметологии в Пензе';
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-left: 2rem;
+      color: black;
+      max-width: 42.9rem;
+      display: block;
+
+      @media screen and (max-width: $table-screen) {
+        font-size: 1.2rem;
+        margin-left: 1.3rem;
+        max-width: 26rem;
+      }
+
+      @media screen and (max-width: $mobile-screen) {
+        font-size: 2rem;
+        max-width: 33rem;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+  }
+
+  &__text-wrapper {
+    color: $text-color;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+
+    @media screen and (max-width: $table-screen) {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  }
+
+  &__data {
+    width: 100%;
+    max-width: 982 / 1680 * 100%;
+
+    @media screen and (max-width: $table-screen) {
+        max-width: 100%;
+    }
+  }
+
+  &__advantages {
+    width: 100%;
+    max-width: 694 / 1680 * 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $table-screen) {
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+        flex-direction: column;
+    }
+  }
+
+  &__advantages-col {
+    width: 50%;
+    padding: 1.5rem;
+
+    @media screen and (max-width: $table-screen) {
+        width: 25%;
+    }
+  }
+
+  &__advantages-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__advantages-img {
+    width: 14rem;
+    height: 14rem;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      width: 10rem;
+      height: 10rem;
+      margin-bottom: 1.8rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      width: 17rem;
+      height: 17rem;
+    }
+  }
+
+  &__advantages-title {
+    margin-bottom: 0.6rem;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 2.1rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2.9rem;
+    }
+  }
+
+  &__advantages-text {
+    font-size: 1.8rem;
+    width: 23rem;
+    text-align: center;
+    opacity: 0.5;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2.2rem;
+      width: 30rem;
+    }
+  }
+
+  &__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: $table-screen) {
+      margin-top: 2rem;
+    }
+  }
+
+}

@@ -1,0 +1,8 @@
+section.info-section
+    .container
+        .info-section__wrapper.bg-wrapper
+            .info-section__inner.bg-inner
+                each element in data.info
+                    .info-section__row
+                        .info-section__row-title #{element.title}
+                        .info-section__row-message #{element.text}

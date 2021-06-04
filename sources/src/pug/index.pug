@@ -1,0 +1,17 @@
+extends base/_layout
+block head
+    title Лазерная эпиляция в Пензе | Скидки до 70% - Orhi
+    meta(name="description" content='Центр косметологии с медицинской лицензией. Подмышки - 600 руб,. Бикини - 990 руб,. Специалисты с мед. образованием.')
+    meta(name="keywords" content='orhi, орхи, лазерная, эпиляция')
+    meta(property="og:title" content='Лазерная эпиляция в Пензе | Скидки до 70% - Orhi')
+    meta(property="og:description" content='Центр косметологии с медицинской лицензией. Подмышки - 600 руб,. Бикини - 990 руб,. Специалисты с мед. образованием.')
+    meta(property="og:url" content='https://orhi-epil.ru/')
+block page
+    include section/main-section
+    include section/services-section
+    include section/about-section
+    - var data = {description: false}
+    include section/equipment-section
+    include section/what-section
+    include section/ceil-section
+    include section/reviews-section

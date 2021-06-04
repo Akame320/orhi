@@ -1,0 +1,35 @@
+.alert-section {
+  color: white;
+  margin: 0;
+
+  &__wrapper {
+    padding: 6rem;
+
+    background: $main-gradient;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+
+    border-radius: 3rem;
+
+    @media screen and (max-width: $table-screen) {
+      padding: 4rem;
+    }
+  }
+
+  p {
+    color: inherit;
+    font-size: 1.8rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__inner {
+
+    span {
+      @media screen and (max-width: $mobile-screen) {
+        font-weight: 700;
+      }
+    }
+  }
+}

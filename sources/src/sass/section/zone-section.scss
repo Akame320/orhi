@@ -1,0 +1,232 @@
+.zone-section {
+  padding: 4.5rem 0;
+  margin-top: 0;
+  margin: 0;
+
+  &__inner {
+
+  }
+
+  &__titles-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__title {
+    @media screen and (max-width: $table-screen) {
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    @media screen and (max-width: $table-screen) {
+      text-align: center;
+    }
+  }
+
+  &__img-wrapper {
+    width: 45%;
+
+    position: relative;
+
+    @media screen and (max-width: $desctop-xs) {
+      width: 30%;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      width: 40%;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    width: 50%;
+  }
+
+  &__img {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+
+    margin-top: -15rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      margin-top: -10rem;
+
+      display: block;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      margin: -2rem auto 0;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      margin: 0 auto;
+    }
+
+    picture {
+      width: 50%;
+
+      @media screen and (max-width: $desctop-xs) {
+        width: 100%;
+      }
+    }
+
+    img, source {
+      width: 100%;
+      height: auto;
+      padding: 0 0.5rem;
+
+      @media screen and (max-width: $desctop-xs) {
+        padding: 0;
+        max-width: 78%;
+      }
+
+      @media screen and (max-width: $mobile-screen) {
+        max-width: 85%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        display: block;
+      }
+    }
+  }
+
+  &__data {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @media screen and (max-width: $mobile-screen) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__text {
+    padding-right: 2rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      width: 60%;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      width: 100%;
+      padding: 0;
+      margin-top: 4rem;
+    }
+
+    p {
+      @media screen and (max-width: $table-screen) {
+        font-size: 1.4rem;
+      }
+      @media screen and (max-width: $mobile-screen) {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  &__text-title {
+    font-weight: 700;
+    margin-bottom: 1.4rem;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 1.7rem;
+    }
+  }
+
+  .padding-left {
+    padding-left: 2rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      padding-left: 0;
+    }
+  }
+
+  &__img-wrapper {
+
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+
+    top: auto;
+    bottom: 0;
+
+    left: 0;
+    right: 0;
+
+    visibility: hidden;
+
+    display: none;
+
+    @media screen and (max-width: $desctop-xs) {
+      display: flex;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      max-width: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+
+    .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      transition: all 0.1s linear;
+
+      stroke: #3f3f3f;
+
+      @media screen and (max-width: $table-screen) {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      @media screen and (max-width: $mobile-screen) {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      &:hover {
+        stroke: $color-main;
+      }
+    }
+
+    &-next {
+      -webkit-tap-highlight-color: transparent;
+
+      transform: rotate(-90deg);
+
+      cursor: pointer;
+
+      visibility: visible;
+    }
+
+    &-prev {
+      -webkit-tap-highlight-color: transparent;
+
+      transform: rotate(90deg);
+
+      cursor: pointer;
+
+      visibility: visible;
+    }
+  }
+}
+

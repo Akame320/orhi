@@ -1,0 +1,128 @@
+extends base/_layout
+block head
+    title Лазерное удаление сосудов - Пенза | Orhi
+    meta(property="og:title" content='Лазерное удаление сосудов - Пенза | Orhi')
+    meta(name="keywords" content='сосудистые звездочки, удаление сосудов лазером, лазерное удаление сосудистых звездочек')
+    meta(name="description" content='Сосудистые сеточки или звездочки – это расширение мелких внутрикожных сосудов. Удаление  - от 300 руб. Медицинская лицензия.')
+    meta(property="og:description" content='Сосудистые сеточки или звездочки – это расширение мелких внутрикожных сосудов. Удаление  - от 300 руб. Медицинская лицензия.')
+    meta(property="og:url" content='https://orhi-epil.ru/RemovalBloodVessels.html')
+block page
+    - var breadcumps    = [{text: 'Главная', link: 'index.html'}]
+    - var breadcumpsCurrent = 'Удаление сосудов'
+
+    - var title         = 'что это такое?'
+    - var subtitle      = 'Удаление сосудов'
+
+    - var img           = 'images/content/intro-section/RemovalBloodVessels/0-bg'
+
+    - var text1         = 'Сосудистые сеточки или звездочки – это расширение мелких внутрикожных сосудов. На коже это проявляется в виде замысловатого сплетения капилляров ярко-красного, фиолетового или синего цвета. Такой проблемой страдают, в основном женщины.'
+    - var text2         = 'Возникают сосудистые сеточки в основном на лице (в области щек, крыльев и кончика носа) и на ногах (в области голеностопных суставов и бедер). Но могут появиться и на других участках тела.'
+    - var text          = [text1, text2]
+
+    - var list1         = 'Гормональный дисбаланс (в том числе беременность, менопауза, прием ОК и др.)'
+    - var list2         =  'Аллергические реакции'
+    - var list3         = 'Избыток принятия ультрафиолетовых ванн (загар на солнце или в солярии)'
+    - var list4         = 'Вредные привычки'
+    - var list5         = 'Большая спортивная нагрузка.'
+
+    - var listTitle     = 'Причин их появления может быть много:'
+
+    - var list          = [list1, list2, list3, list4, list5]
+
+    - var data = {type: 'imgAndText', breadcumps: breadcumps, breadcumpsCurrent: breadcumpsCurrent, cur: cur, title: title, subtitle: subtitle, text: text, list: list, img: img}
+    include section/intro-section
+
+    // Собираем тело карточки
+    - var cartList1    = 'Исключить термические и химические воздействия на кожу не менее, чем на две недели (в том числе пилинги).'
+    - var cartList2    = 'Не посещать солярий в течение недели до и после процедуры, а также исключить загар под прямыми солнечными лучами.'
+    - var cartList     = [cartList2, cartList1]
+
+    - var cartTitle     = 'Подготовка'
+    - var cartSubtitle  = 'к процедуре'
+
+    - var cartText1     = 'Специальной подготовки перед воздействием лазера не требуется.'
+    - var cartText2     = 'Однако нужно выполнить следующие рекомендации:'
+
+    // Собираем карточку
+    - var cartText      = [cartText1, cartText2]
+
+    // Добавляем карточку
+    - var cart1         = [{title: cartTitle, subtitle: cartSubtitle, lists: cartList, texts: cartText}]
+
+    // Собираем тело карточки
+    - var cartTitle     = 'противоПоказания'
+    - var cartSubtitle  = 'к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ'
+
+    - var cartList1     = 'Инфекционные и воспалительные заболевания, особенно в активной фазе'
+    - var cartList2     = 'Свежий загар'
+    - var cartList3     = 'Свежий загар'
+    - var cartList4     = 'Нарушение свертываемости крови'
+    - var cartList5     = 'Беременность'
+    - var cartList6     = 'Возраст младше 18 лет'
+    - var cartList7     = 'Открытые раны и воспалительные процессы на участках воздействия лазером'
+    - var cartList8     = 'Онкология'
+    - var cartList9     = 'Эпилепсия'
+    - var cartList10    = 'Сахарный диабет'
+    - var cartList11    = 'Склонность к образованию рубцов'
+    - var cartList12    = 'Прием препаратов, способствующих увеличению световой чувствительности кожи (в том числе антибиотики)'
+    - var cartList13    = 'Прием системных ретиноидов (Акнекутан, Сотрет)'
+
+    // Собираем карточку
+    - var cartList      = [cartList1, cartList2, cartList3, cartList4, cartList5, cartList6, cartList7, cartList8, cartList9, cartList10, cartList11, cartList12, cartList13]
+
+    // Добавляем карточку
+    - var cart2         = [{title: cartTitle, subtitle: cartSubtitle, styleType: 'close', lists: cartList}]
+
+
+    // Собираем тело карточки
+    - var cartTitle     = 'Рекомендации'
+    - var cartSubtitle  = 'после процедуры'
+
+    - var listTitle     = 'В течение одной недели:'
+    - var cartList1     = 'Исключить загар'
+    - var cartList2     = 'Не посещать бани, сауны и не принимать горячие ванны'
+    - var cartList3     = 'Не заниматься физическими нагрузками'
+    - var cartList4     = 'Не делать массаж в обрабатываемой зоне'
+
+    - var listTitle2    = 'А также:'
+    - var cartList20    = 'В течение одних суток исключить употребление алкоголя'
+
+    - var cartList      = [cartList1, cartList2, cartList3, cartList4]
+    - var cartList202   = [cartList20]
+
+    - var cart3         = [{title: cartTitle, subtitle: cartSubtitle, listTitle: listTitle, lists: cartList}, {listTitle: listTitle2, lists: cartList202}]
+
+
+    - var cartsData = [cart1, cart2, cart3]
+    include section/cart-section
+    include section/how-section
+
+    section.alert-section
+        .container
+            .alert-section__wrapper
+                .alert-section__inner
+                    h2.title.title--white.title--center Важно
+                    p После процедуры удаления сосудов неодимовым лазером возможно покраснение, появление синяка. <span>Это нормальная реакция кожи – этого не стоит пугаться.</span>
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость процедур',
+                            subtitle: 'Удаление сосудов',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data.style-3
+                        +priceRow({left: 'Крылья носа', center: '10 минут', right: '<span class="active-color">1080 ₽</span>'})
+                        +priceRow({left: 'Нос полностью', center: '10 минут', right: '<span class="active-color">2160 ₽</span>'})
+                        +priceRow({left: 'Щека', center: '10 минут', right: '<span class="active-color">2880 ₽</span>'})
+                        +priceRow({left: 'Одиночный сосуд (1 см)', center: '10 минут', right: '<span class="active-color">360 ₽</span>'})
+                        +priceRow({left: 'Локальный участок (1 см2)', center: '10 минут', right: '<span class="active-color">720 ₽</span>'})
+mixin priceRow(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-center !{object.center}
+        .price-section__col.price-section__col-right !{object.right}
+

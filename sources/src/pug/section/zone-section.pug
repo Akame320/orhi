@@ -1,0 +1,43 @@
+section.zone-section
+    .container
+        .zone-section__wrapper
+            .zone-section__inner
+                .zone-section__titles-wrapper
+                    +sectionTitle({
+                        title: 'Зоны лазерной эпиляции',
+                        subtitle: 'Подготовка до и  рекомендации после',
+                        class: 'zone-section__title',
+                        subclass: 'zone-section__subtitle'
+                    })
+                .zone-section__data
+                    .zone-section__text
+                        p Исключите нанесение кремов, дезодорантов и других косметических средств в день процедуры. От косметики, в состав которой входит спирт, следует отказаться на 3 дня до и после процедуры.
+                        p Если вы лечились антибиотиками тетрацеклиновой группы, а также употребляли препараты, относящиеся к фторхинолонам, - то к нам на процедуры приходите не ранее, чем через 14 дней после завершения лечения.
+                        p За 2-3 недели до процедуры нужно исключить все виды эпиляции, кроме бритья. На время курса также можно пользоваться только бритвой! Воск/шугаринг/эпилятор могут снизить эффект от процедуры!
+                        p В течение 24 часов после сеанса нельзя посещать сауну и баню, принимать горячую ванну, а также купаться в бассейне и открытых водоёмах.
+                        .zone-section__text-title На диодном лазере:
+                            p.padding-left Выбранную для лазерной эпиляции зону нужно тщательно выбрить за 1 день до процедуры. Волоски отращивать не нужно! если у вас нет раздражения - зону для эпиляции можно побрить в день процедуры.
+                            p.padding-left 14 дней до и после процедуры следует исключить загар в солярии и на активном солнце - то есть, на пляже.
+                        .zone-section__text-title На александритовом лазере
+                            p.padding-left Длина волосков должна быть 1-2 мм. То есть, волоски должны быть видны, но в то же время их длина должна составлять не более 2 мм. Это важно!
+                            p.padding-left Загар строго исключён на 30 дней до и после процедуры.
+                    .zone-section__img-wrapper
+                        .zone-section__img
+                            +setImg({
+                                webp: 'images/content/zone-section/0-pc.webp',
+                                img: 'images/content/zone-section/0-pc.jpg',
+                                set: 'images/content/zone-section/0-mb',
+                                alt: 'Зоны лазерной эпиляции'
+                            })
+                            +setImg({
+                                webp: 'images/content/zone-section/1-pc.webp',
+                                img: 'images/content/zone-section/1-pc.jpg',
+                                set: 'images/content/zone-section/1-mb',
+                                alt: 'Зоны лазерной эпиляции'
+                            })
+                        .zone-section__arrow
+                            .zone-section__arrow-prev
+                                +svgIcon({name: 'arrow--transparent'})
+                            .zone-section__arrow-next
+                                +svgIcon({name: 'arrow--transparent'})
+

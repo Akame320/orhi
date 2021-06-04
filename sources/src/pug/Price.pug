@@ -1,0 +1,1053 @@
+extends base/_layout
+block head
+    title Лазерная эпиляция и косметология цены в Пензе | Orhi
+    meta(property="og:title" content='Лазерная эпиляция и косметология цены в Пензе | Orhi')
+    meta(name="keywords" content='цена лазерная эпиляция, цена косметология, прайс orhi')
+    meta(name="description" content='Самые низкие цена на лазерную эпиляцию и косметологию!  тел: 8 (8412) 99-41-31. Гарантия качества.')
+    meta(property="og:description" content='Самые низкие цена на лазерную эпиляцию и косметологию!  тел: 8 (8412) 99-41-31. Гарантия качества.')
+    meta(property="og:url" content='https://orhi-epil.ru/Price.html')
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}], 'Прайс')
+    section.more-section
+        .container
+            .more-section__wrapper.slider
+                .more-section__inner
+                    .more-section__slider-wrapper
+                        .more-section__arrow
+                            .arrow-slider-1111-prev
+                                +svgIcon({name: 'arrow'})
+                            .arrow-slider-1111-next
+                                +svgIcon({name: 'arrow'})
+                        .more-section__data.slider.slider-1.slider-data-111
+                            +colData({all: 'section', active: 'section-1', text: 'Лазерная эпиляция'})
+                            +colData({all: 'section', active: 'section-2', text: 'Лазерная косметлогия'})
+                            +colData({all: 'section', active: 'section-3', text: '<span>Эстетическая</span> <span class="text-regular">косметология</span>'})
+                            +colData({all: 'section', active: 'section-4', text: '<span>Инъекционная</span> <span class="text-regular">косметология</span>'})
+                .more-section__dots.click-js.slider-1.slider-data-111-dots
+    .section.section-1
+        .intro-section.margin-none
+            .container
+                .intro-section__wrapper
+                    .intro-section__titles-wrapper.active-mobile
+                        +sectionTitle({
+                            title: 'новым клиентам',
+                            subtitle: 'Акция',
+                            class: 'intro-section__title ceil',
+                            subclass: 'intro-section__subtitle',
+                        })
+                    .intro-section__inner.style-2
+                        .intro-section__data
+                            .intro-section__titles-wrapper.remove--mobile
+                                +sectionTitle({
+                                    title: 'новым клиентам  ',
+                                    subtitle: 'Акция',
+                                    class: 'intro-section__title',
+                                    subclass: 'intro-section__subtitle',
+                                })
+                            .intro-section__text
+                                p Если вы собираетесь к нам в первый раз - мы подарим 70% скидки.
+                                    p.intro-section__list-title Популярные зоны:
+                                    ul.active-mobile
+                                        li Зона белой линии живота <br> - <span class='no-price'> 1400 руб </span>   &nbsp; <span class="active-color"> 420 руб</span>
+                                        li Зона подмышек <br> - <span class="no-price">2000 руб</span> &nbsp;   <span class="active-color"> 600 руб</span>
+                                        li Зона глубокого бикини <br> - <span class="no-price">4600 руб</span>&nbsp;    <span class="active-color"> 1380 руб</span>
+                                        li Зона рук полностью <br> - <span class="no-price">4400 руб</span>    &nbsp; <span class="active-color"> 1320 руб</span>
+                                        li Зона ног полностью <br> - <span class="no-price">9500 руб</span>&nbsp;    <span class="active-color"> 2850 руб</span>
+                                    ul.remove--mobile
+                                        li Зона белой линии живота - <span class='no-price'> 1400 руб </span>   &nbsp; <span class="active-color"> 420 руб</span>
+                                        li Зона подмышек - <span class="no-price">2000 руб</span> &nbsp;   <span class="active-color"> 600 руб</span>
+                                        li Зона глубокого бикини - <span class="no-price">4600 руб</span>&nbsp;    <span class="active-color"> 1380 руб</span>
+                                        li Зона рук полностью - <span class="no-price">4400 руб</span>    &nbsp; <span class="active-color"> 1320 руб</span>
+                                        li Зона ног полностью - <span class="no-price">9500 руб</span>&nbsp;    <span class="active-color"> 2850 руб</span>
+                                p(style='margin-top: 3rem;').text-bold (*Цены указаны за услуги на диодном лазере)
+                        .intro-section__img
+                            .intro-section__ceil
+                                span - 70%
+                                span.small на лазерную эпиляцию
+
+        .questions-section
+            .container
+                .questions-section__wrapper
+                    .questions-section__inner.padding-none
+                        .questions-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Обратите внимание',
+                                class: 'questions-section__title',
+                            })
+                        .questions-section__text
+                            p В прайсе лазерной эпиляции есть две актуальные цены на обработку каждой из зон.
+                            p Первая – это цена за услугу по основному прайсу. Вторая – это цена при наличии скидочной карты. Скидочная карта предоставляет скидку 70% на весь прайс эпиляции: на любые зоны, на оба лазера (александритовый и диодный).
+                            p Приобретая карту, вы гарантированно получаете скидку 70% на весь прайс лазерной эпиляции, на оба лазера, на любое количество зон.
+                        .questions-section__btn
+                            a.btn.btn--pink.open-price-popup Подробнее о скидочной карте
+        .price-section
+            .container
+                .more-section__wrapper.slider
+                    .more-section__inner
+                        +sectionTitle({
+                            title: 'Стоимость <span class="remove--mobile">процедур</span>',
+                            subtitle: 'Выберите зону',
+                            class: 'more-section__title',
+                            subclass: 'more-section__subtitle'
+                        })
+                        .more-section__slider-wrapper
+                            .more-section__arrow
+                                .more-section__arrow-prev.slider-2
+                                    +svgIcon({name: 'arrow'})
+                                .more-section__arrow-next.slider-2
+                                    +svgIcon({name: 'arrow'})
+                            .more-section__data.slider.slider-2.slider-data-222
+                                +colData({all: 'price-item', active: 'price-1', text: 'Лицо'})
+                                +colData({all: 'price-item', active: 'price-2', text: 'Интим зона'})
+                                +colData({all: 'price-item', active: 'price-3', text: 'Ноги'})
+                                +colData({all: 'price-item', active: 'price-4', text: 'Руки'})
+                                +colData({all: 'price-item', active: 'price-5', text: 'Спина, живот'})
+            .container
+                - var price1 = {title: 'Лоб', price1: '1100 ₽', price2: '330 ₽', price3: '1140 ₽', price4: '660 ₽'}
+                - var price2 = {title: 'Межбровье', price1: '700 ₽', price2: '210 ₽', price3: '1400 ₽', price4: '420 ₽'}
+                - var price3 = {title: 'Верхняя губа', price1: '1100 ₽', price2: '330 ₽', price3: '2200 ₽', price4: '660 ₽'}
+                - var price4 = {title: 'Виски', price1: '1100 ₽', price2: '330 ₽', price3: '2200 ₽', price4: '660 ₽'}
+                - var price5 = {title: 'Щёки', price1: '1350 ₽', price2: '405 ₽', price3: '2700 ₽', price4: '810 ₽'}
+                - var price6 = {title: 'Щёки (включая виски)', price1: '660 ₽', price2: '4400 ₽', price3: '5400 ₽', price4: '1320 ₽'}
+                - var price7 = {title: 'Подбородок', price1: '330 ₽', price2: '810 ₽', price3: '2200 ₽', price4: '440 ₽'}
+                - var price8 = {title: 'Лицо полностью', price1: '1140 ₽', price2: '810 ₽', price3: '7600 ₽', price4: '2280 ₽'}
+
+                - var price = [price1, price2, price3, price4, price5, price6, price7, price8]
+                - var data = {type: 'table', price: price}
+
+                .price-item.price-1
+                    .price-section__table
+                        .price-section__table-wrapper
+                            .price-section__table-col
+                                .price-section__table-title
+                                    | Диодный лазер
+                                .price-section__table-item
+                                    .price-section__table-inner
+                                        each element in data.price
+                                            +tableData({
+                                                title: element.title,
+                                                price1: element.price1,
+                                                price2: element.price2
+                                            })
+                            .price-section__table-col
+                                .price-section__table-title
+                                    | Александиритовый лазер
+                                .price-section__table-item
+                                    .price-section__table-inner
+                                        each element in data.price
+                                            +tableData({
+                                                title: element.title,
+                                                price1: element.price3,
+                                                price2: element.price4
+                                            })
+                    .price-section__mobile
+                        .price-section__mobile-wrapper
+                            .price-section__mobile-row.price-section__mobile-row--title
+                                .price-section__mobile-col
+                                    | Диодный
+                                .price-section__mobile-col
+                                    | Александритовый
+                            each element in data.price
+                                +mobileRow({
+                                    title: element.title,
+                                    price1: element.price1,
+                                    price2: element.price2,
+                                    price3: element.price3,
+                                    price4: element.price4
+                                })
+                    .price-section__dots
+                        .price-section__dots-wrapper
+                            .price-section__dots-inner
+                                button.price-section__dots-button.no-cart
+                                    .dots
+                                    span Без карты
+                                button.price-section__dots-button.yes-cart
+                                    .dots
+                                    span По скидочной карте
+
+                - var price1 = {title: 'Зона лобка <span>(для женщин)</span>', price1: '2200 ₽', price2: '600 ₽', price3: '4400 ₽', price4: '1320 ₽'}
+                - var price2 = {title: 'Зона лобка <span>(для мужчин)</span>', price1: '2800 ₽', price2: '840 ₽', price3: '5600 ₽', price4: '1680 ₽'}
+                - var price3 = {title: 'Бикини неглубокое <span>(по линии белья)</span>', price1: '3300 ₽', price2: '1380 ₽', price3: '6600 ₽', price4: '1980 ₽'}
+                - var price4 = {title: 'Бикини глубокое <span>(для женщин)*</span>', price1: '4600 ₽', price2: '1380 ₽', price3: '9200 ₽', price4: '2760 ₽'}
+                - var price5 = {title: 'Бикини глубокое <span>(для мужчин)</span>', price1: '5400 ₽', price2: '1620 ₽', price3: '10800 ₽', price4: '3240 ₽'}
+                - var price6 = {title: 'Бикини "экстра" <span>(половые губы, межъягодичная складка)</span>', price1: '2700 ₽', price2: '810 ₽', price3: '5400 ₽', price4: '1620 ₽'}
+                - var price7 = {title: 'Межъягодичная складка', price1: '1700 ₽', price2: '510 ₽', price3: '3400 ₽', price4: '1020 ₽'}
+                - var price8 = {title: 'Ягодицы <span>(женские)</span>', price1: '3700 ₽', price2: '1110 ₽', price3: '7400 ₽', price4: '2220 ₽'}
+                - var price9 = {title: 'Ягодицы <span>(мужские)</span>', price1: '4000 ₽', price2: '1200 ₽', price3: '8000 ₽', price4: '2400 ₽'}
+
+                - var price = [price1, price2, price3, price4, price5, price6, price7, price8, price9]
+                - var data = {type: 'table', price: price}
+                .price-item.price-2
+                    .price-section__table
+                        .price-section__table-wrapper
+                            .price-section__table-col
+                                .price-section__table-title
+                                    | Диодный лазер
+                                .price-section__table-item
+                                    .price-section__table-inner
+                                        each element in data.price
+                                            +tableData({
+                                                title: element.title,
+                                                price1: element.price1,
+                                                price2: element.price2
+                                            })
+                            .price-section__table-col
+                                .price-section__table-title
+                                    | Александиритовый лазер
+                                .price-section__table-item
+                                    .price-section__table-inner
+                                        each element in data.price
+                                            +tableData({
+                                                title: element.title,
+                                                price1: element.price3,
+                                                price2: element.price4
+                                            })
+                        .price-section__table-message
+                            | <span>*</span> В процедуру “Глубокое бикини” входит: половые губы, лобок, межъягодичная складка + неглубокое бикини.
+                    .price-section__mobile
+                        .price-section__mobile-wrapper
+                            .price-section__mobile-row.price-section__mobile-row--title
+                                .price-section__mobile-col
+                                    | Диодный
+                                .price-section__mobile-col
+                                    | Александритовый
+                            each element in data.price
+                                +mobileRow({
+                                    title: element.title,
+                                    price1: element.price1,
+                                    price2: element.price2,
+                                    price3: element.price3,
+                                    price4: element.price4
+                                })
+                    .price-section__dots
+                        .price-section__dots-wrapper
+                            .price-section__dots-inner
+                                button.price-section__dots-button.no-cart
+                                    .dots
+                                    span Без карты
+                                button.price-section__dots-button.yes-cart
+                                    .dots
+                                    span По скидочной карте
+                    .price-section__table-message
+                        | <span>*</span> В процедуру “Глубокое бикини” входит: половые губы, лобок, межъягодичная складка + неглубокое бикини.
+
+                - var price1 = {title: 'Бедра', price1: '5300 ₽', price2: '1590 ₽', price3: '10600 ₽', price4: '3180 ₽'}
+                - var price2 = {title: 'Внутренняя поверхность бедра <span>(наружняя, задняя, передняя)</span>', price1: '3100 ₽', price2: '930 ₽', price3: '6200 ₽', price4: '1860 ₽'}
+                - var price3 = {title: 'Голени', price1: '3700 ₽', price2: '1110 ₽', price3: '7400 ₽', price4: '2220 ₽'}
+                - var price4 = {title: 'Колени', price1: '800 ₽', price2: '240 ₽', price3: '1600 ₽', price4: '480 ₽'}
+                - var price5 = {title: 'Голени + колени', price1: '4400 ₽', price2: '1320 ₽', price3: '8800 ₽', price4: '2640 ₽'}
+                - var price6 = {title: 'Тыльная сторона стопы', price1: '1200 ₽', price2: '360 ₽', price3: '2400 ₽', price4: '480 ₽'}
+                - var price7 = {title: 'Пальцы стопы', price1: '800 ₽', price2: '240 ₽', price3: '1600 ₽', price4: '480 ₽'}
+                - var price8 = {title: 'Ноги полностью <span>(женские)</span>', price1: '9500 ₽', price2: '19000 ₽', price3: '7400 ₽', price4: '5700 ₽'}
+                - var price9 = {title: 'Ноги полностью <span>(мужские)</span>', price1: '11200 ₽', price2: '22400 ₽', price3: '8000 ₽', price4: '6720 ₽'}
+
+                - var price = [price1, price2, price3, price4, price5, price6, price7, price8, price9]
+                - var data = {type: 'table', price: price}
+                .price-item.price-3
+                    .price-section__table
+                        .price-section__table-wrapper
+                            .price-section__table-col
+                                .price-section__table-title
+                                    | Диодный лазер
+                                .price-section__table-item
+                                    .price-section__table-inner
+                                        each element in data.price
+                                            +tableData({
+                                                title: element.title,
+                                                price1: element.price1,
+                                                price2: element.price2
+                                            })
+                            .price-section__table-col
+                                .price-section__table-title
+                                    | Александиритовый лазер
+                                .price-section__table-item
+                                    .price-section__table-inner
+                                        each element in data.price
+                                            +tableData({
+                                                title: element.title,
+                                                price1: element.price3,
+                                                price2: element.price4
+                                            })
+                    .price-section__mobile
+                        .price-section__mobile-wrapper
+                            .price-section__mobile-row.price-section__mobile-row--title
+                                .price-section__mobile-col
+                                    | Диодный
+                                .price-section__mobile-col
+                                    | Александритовый
+                            each element in data.price
+                                +mobileRow({
+                                    title: element.title,
+                                    price1: element.price1,
+                                    price2: element.price2,
+                                    price3: element.price3,
+                                    price4: element.price4
+                                })
+                    .price-section__dots
+                        .price-section__dots-wrapper
+                            .price-section__dots-inner
+                                button.price-section__dots-button.no-cart
+                                    .dots
+                                    span Без карты
+                                button.price-section__dots-button.yes-cart
+                                    .dots
+                                    span По скидочной карте
+
+                - var price1 = {title: 'Подмышки <span>(женские)</span>', price1: '2000 ₽', price2: '600 ₽', price3: '4000 ₽', price4: '1200 ₽'}
+                - var price2 = {title: 'Подмышки <span>(женские)</span>', price1: '2300 ₽', price2: '690 ₽', price3: '4600 ₽', price4: '1380 ₽'}
+                - var price3 = {title: 'Кисти рук <span>(женские)</span>', price1: '800 ₽', price2: '240 ₽', price3: '1600 ₽', price4: '480 ₽'}
+                - var price4 = {title: 'Кисти рук <span>(мужские)</span>', price1: '1900 ₽', price2: '570 ₽', price3: '3800 ₽', price4: '1140 ₽'}
+                - var price5 = {title: 'Плечи <span>(женские)</span>', price1: '2700 ₽', price2: '810 ₽', price3: '5400 ₽', price4: '1620  ₽'}
+                - var price6 = {title: 'Плечи <span>(мужские)</span>', price1: '3400 ₽', price2: '1020 ₽', price3: '6800 ₽', price4: '2040 ₽'}
+                - var price7 = {title: 'Руки до локтя <span>(женские)</span>', price1: '3200 ₽', price2: '960 ₽', price3: '6400 ₽', price4: '1920 ₽'}
+                - var price8 = {title: 'Руки до локтя <span>(мужские)</span>', price1: '3900 ₽', price2: '1170 ₽', price3: '7800 ₽', price4: '2340 ₽'}
+                - var price9 = {title: 'Руки полностью <span>(женские)</span>', price1: '4400 ₽', price2: '1320 ₽', price3: '8800 ₽', price4: '2640 ₽'}
+                - var price10 = {title: 'Руки полностью <span>(мужские)</span>', price1: '5000 ₽', price2: '1500 ₽', price3: '10000 ₽', price4: '3000 ₽'}
+
+                - var price = [price1, price2, price3, price4, price5, price6, price7, price8, price9, price10]
+                - var data = {type: 'table', price: price}
+                .price-item.price-4
+                    .price-section__table
+                        .price-section__table-wrapper
+                            .price-section__table-col
+                                .price-section__table-title
+                                    | Диодный лазер
+                                .price-section__table-item
+                                    .price-section__table-inner
+                                        each element in data.price
+                                            +tableData({
+                                                title: element.title,
+                                                price1: element.price1,
+                                                price2: element.price2
+                                            })
+                            .price-section__table-col
+                                .price-section__table-title
+                                    | Александиритовый лазер
+                                .price-section__table-item
+                                    .price-section__table-inner
+                                        each element in data.price
+                                            +tableData({
+                                                title: element.title,
+                                                price1: element.price3,
+                                                price2: element.price4
+                                            })
+                    .price-section__mobile
+                        .price-section__mobile-wrapper
+                            .price-section__mobile-row.price-section__mobile-row--title
+                                .price-section__mobile-col
+                                    | Диодный
+                                .price-section__mobile-col
+                                    | Александритовый
+                            each element in data.price
+                                +mobileRow({
+                                    title: element.title,
+                                    price1: element.price1,
+                                    price2: element.price2,
+                                    price3: element.price3,
+                                    price4: element.price4
+                                })
+                    .price-section__dots
+                        .price-section__dots-wrapper
+                            .price-section__dots-inner
+                                button.price-section__dots-button.no-cart
+                                    .dots
+                                    span Без карты
+                                button.price-section__dots-button.yes-cart
+                                    .dots
+                                    span По скидочной карте
+
+                - var price1 = {title: 'Декольте', price1: '1200 ₽', price2: '360 ₽', price3: '2400 ₽', price4: '720 ₽'}
+                - var price2 = {title: 'Ореолы', price1: '1000 ₽', price2: '300 ₽', price3: '2000 ₽', price4: '600 ₽'}
+                - var price3 = {title: 'Грудь полностью', price1: '3700 ₽', price2: '1110 ₽', price3: '7400 ₽', price4: '2220 ₽'}
+                - var price4 = {title: 'Белая линия живота', price1: '1400 ₽', price2: '420 ₽', price3: '2800 ₽', price4: '840 ₽'}
+                - var price5 = {title: 'Живот полностью <span>(женский)</span>', price1: '2800 ₽', price2: '840 ₽', price3: '5600 ₽', price4: '1680 ₽'}
+                - var price6 = {title: 'Живот полностью <span>(мужской)</span>', price1: '4400 ₽', price2: '1320 ₽', price3: '8800 ₽', price4: '2640 ₽'}
+                - var price7 = {title: 'Шея ', price1: '1700 ₽', price2: '510 ₽', price3: '3400 ₽', price4: '1020 ₽'}
+                - var price8 = {title: 'Поясница', price1: '1900 ₽', price2: '510 ₽', price3: '3800 ₽', price4: '1140 ₽'}
+                - var price9 = {title: 'Спина полностью <span>(женская)</span>', price1: '6000 ₽', price2: '1800 ₽', price3: '12000 ₽', price4: '3600 ₽'}
+                - var price10 = {title: 'Спина полностью <span>(мужская)</span>', price1: '8000 ₽', price2: '2400 ₽', price3: '16000 ₽', price4: '4800 ₽'}
+
+                - var price = [price1, price2, price3, price4, price5, price6, price7, price8, price9, price10]
+                - var data = {type: 'table', price: price}
+                .price-item.price-5
+                    .price-section__table
+                        .price-section__table-wrapper
+                            .price-section__table-col
+                                .price-section__table-title
+                                    | Диодный лазер
+                                .price-section__table-item
+                                    .price-section__table-inner
+                                        each element in data.price
+                                            +tableData({
+                                                title: element.title,
+                                                price1: element.price1,
+                                                price2: element.price2
+                                            })
+                            .price-section__table-col
+                                .price-section__table-title
+                                    | Александиритовый лазер
+                                .price-section__table-item
+                                    .price-section__table-inner
+                                        each element in data.price
+                                            +tableData({
+                                                title: element.title,
+                                                price1: element.price3,
+                                                price2: element.price4
+                                            })
+                    .price-section__mobile
+                        .price-section__mobile-wrapper
+                            .price-section__mobile-row.price-section__mobile-row--title
+                                .price-section__mobile-col
+                                    | Диодный
+                                .price-section__mobile-col
+                                    | Александритовый
+                            each element in data.price
+                                +mobileRow({
+                                    title: element.title,
+                                    price1: element.price1,
+                                    price2: element.price2,
+                                    price3: element.price3,
+                                    price4: element.price4
+                                })
+                    .price-section__dots
+                        .price-section__dots-wrapper
+                            .price-section__dots-inner
+                                button.price-section__dots-button.no-cart
+                                    .dots
+                                    span Без карты
+                                button.price-section__dots-button.yes-cart
+                                    .dots
+                                    span По скидочной карте
+    .section.section-2
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'удаление сосудов',
+                                subtitle: 'Лазерное',
+                                class: 'price-section__title',
+                                subclass: 'price-section__subtitle'
+                            })
+                        .price-section__data.style-3
+                            // item - REGULAR
+                            +priceRow({
+                                left: '<span class="padding-left">удаление сосудов</span>',
+                                center: '10 минут',
+                                right: '<span class="active-color">1080 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Крылья носа</span>',
+                                center: '10 минут',
+                                right: '<span class="active-color">2160 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Щека </span>',
+                                center: '10 минут',
+                                right: '<span class="active-color">2880 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Одиночный сосуд (1 см)</span>',
+                                center: '10 минут',
+                                right: '<span class="active-color">360 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Локальный участок (1 см2)</span>',
+                                center: '10 минут',
+                                right: '<span class="active-color">720 ₽</span>'
+                            })
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-4.style-3
+                    .price-section__table-inner
+                        .price-section__data-wrapper.style-4
+                            .price-section__data-col.mobile-100
+                                .price-section__titles-wrapper
+                                    +sectionTitle({
+                                        title: 'омоложение ELIT+',
+                                        subtitle: 'ЛАЗЕРНОЕ ',
+                                        class: 'price-section__title',
+                                        subclass: 'price-section__subtitle'
+                                    })
+                                .price-section__data.style-4.style-3
+                                    +priceRow4({
+                                        left: '<span>Лицо</span>',
+                                        right: '<span class="active-color">4800 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Лицо + шея</span>',
+                                        right: '<span class="active-color">7200 ₽</span>'
+                                    })
+                            .price-section__data-col.mobile-100
+                                .price-section__titles-wrapper
+                                    +sectionTitle({
+                                        title: 'АКНЕ ELIT+',
+                                        subtitle: 'ЛАЗЕРНОЕ лечение',
+                                        class: 'price-section__title',
+                                        subclass: 'price-section__subtitle'
+                                    })
+                                .price-section__data.style-4.style-3
+                                    +priceRow4({
+                                        left: '<span>Единичный элемент</span>',
+                                        right: '<span class="active-color">300 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Лицо полностью</span>',
+                                        right: '<span class="active-color">2100 ₽</span>'
+                                    })
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-4.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'ПИГМЕНТНЫХ ДИСХРОМИЙ (ПЯТЕН) ELIT+',
+                                subtitle: 'ЛАЗЕРНОЕ уаление ',
+                                class: 'price-section__title',
+                                subclass: 'price-section__subtitle'
+                            })
+                        .price-section__data-wrapper.style-4.slider-data-0
+                            .price-section__data-col
+                                .price-section__data.style-4.style-3
+                                    +priceRow4({
+                                        left: '<span>Единичный элемент</span>',
+                                        right: '<span class="active-color">8400 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Кисти</span>',
+                                        right: '<span class="active-color">8400 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Лицо</span>',
+                                        right: '<span class="active-color">7900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Лоб</span>',
+                                        right: '<span class="active-color">4300 ₽</span>'
+                                    })
+                            .price-section__data-col
+                                .price-section__data.style-4.style-3
+                                    +priceRow4({
+                                        left: '<span>Носогубный треугольник</span>',
+                                        right: '<span class="active-color">3400 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Носогубный треугольник</span>',
+                                        right: '<span class="active-color">5400 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Шея</span>',
+                                        right: '<span class="active-color">14900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Щека</span>',
+                                        right: '<span class="active-color">10900 ₽</span>'
+                                    })
+                        .price-section__dots.slider-data-0
+    .section.section-3
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Химический пилинг',
+                                class: 'price-section__title',
+                            })
+                        .price-section__data.style-3
+                            // item - REGULAR
+                            +priceRowClean({
+                                left: '<span class="text-bold">Пилинг Time Code (Испания):</span>',
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Light Classic</span>',
+                                center: '10 минут',
+                                right: '<span class="active-color">2160 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Пилинг желтый BASIC</span>',
+                                center: '10 минут',
+                                right: '<span class="active-color">2880 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Пилинг желтый BASIC + Light Classic</span>',
+                                center: '10 минут',
+                                right: '<span class="active-color">360 ₽</span>'
+                            })
+                            +priceRowClean({
+                                left: '<span class="text-bold">Пилинг Mediderma (Испания):</span>',
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Salipeel lic</span>',
+                                center: '30 минут',
+                                right: '<span class="active-color">2100 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Azelac</span>',
+                                center: '30 минут',
+                                right: '<span class="active-color">2100 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Ferulac</span>',
+                                center: '30 минут',
+                                right: '<span class="active-color">2300 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Mandelac</span>',
+                                center: '30 минут',
+                                right: '<span class="active-color">2300 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="text-bold">Пилинг Биорепил - BioRePeelC13 (Италия)</span>',
+                                center: '20 минут',
+                                right: '<span class="active-color">3050 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="text-bold">Пилинг Джесснера</span>',
+                                center: '20 минут',
+                                right: '<span class="active-color">2940 ₽</span>'
+                            })
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Чистка лица',
+                                class: 'price-section__title',
+                            })
+                        .price-section__data.style-3
+                            // item - REGULAR
+                            +priceRow({
+                                left: '<span class="padding-left">Чистка лица атравматичная (Holy Land)</span>',
+                                center: '1 ч 40 мин',
+                                right: '<span class="active-color">1750 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Чистка лица атравматическая + механическая (Holy Land)</span>',
+                                center: '2 ч',
+                                right: '<span class="active-color">2150 ₽</span>'
+                            })
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Массаж лица',
+                                class: 'price-section__title',
+                            })
+                        .price-section__data.style-3
+                            // item - REGULAR
+                            +priceRow({
+                                left: '<span class="padding-left">Испанский миоструктурный (классический) массаж лица</span>',
+                                center: '30 мин',
+                                right: '<span class="active-color">800 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Испанский миоструктурный (классический) массаж лица + уход</span>',
+                                center: '1 ч',
+                                right: '<span class="active-color">1100 ₽</span>'
+                            })
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Уходовые процедуры',
+                                class: 'price-section__title',
+                            })
+                        .price-section__data.style-3
+                            // item - REGULAR
+                            +priceRow({
+                                left: '<span class="padding-left">Bio Repair (антикупероз)</span>',
+                                center: '1 ч 30 мин',
+                                right: '<span class="active-color">1920 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Eyelight + Ginseng&Carrot</span>',
+                                center: '1 ч',
+                                right: '<span class="active-color">1280 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Реабилитация</span>',
+                                center: '40 мин',
+                                right: '<span class="active-color">720 ₽</span>'
+                            })
+    .section.section-4
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Мезотерапия',
+                                class: 'price-section__title',
+                            })
+                        .price-section__data.style-3
+                            // item - REGULAR
+                            +priceRowClean({
+                                left: '<span class="text-bold">Лицо (омоложение, лифтинг кожи)</span>',
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Viscoderm Skinko</span>',
+                                center: '2.5 мл',
+                                right: '<span class="active-color">1900 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Viscoderm Skinko E</span>',
+                                center: '2.5 мл',
+                                right: '<span class="active-color">2500 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Mesoline Shine (Pluryal) </span>',
+                                center: '5 мл',
+                                right: '<span class="active-color">2800 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Mesoline Refresh (Pluryal)</span>',
+                                center: '5 мл',
+                                right: '<span class="active-color">2800 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Mesoline Tight (Pluryal) </span>',
+                                center: '5 мл',
+                                right: '<span class="active-color">2800 ₽</span>'
+                            })
+
+                            +priceRowClean({
+                                left: '<span class="text-bold">Кожа головы</span>',
+                            })
+
+                            +priceRow({
+                                left: '<span class="padding-left">Viscoderm Skinko</span>',
+                                center: '2,5 мл',
+                                right: '<span class="active-color">1900 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Mesoline Hair (Pluryal)</span>',
+                                center: '5 мл',
+                                right: '<span class="active-color">2800 ₽</span>'
+                            })
+
+                            +priceRowClean({
+                                left: '<span class="text-bold">Акне, постакне, стрии, растяжки</span>',
+                            })
+
+                            +priceRow({
+                                left: '<span class="padding-left">Mesoline Clear (Pluryal)</span>',
+                                center: '5 мл',
+                                right: '<span class="active-color">2800 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Viscoderm Skinko</span>',
+                                center: '2.5 мл',
+                                right: '<span class="active-color">1900 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Viscoderm Skinko E</span>',
+                                center: '2,5 мл',
+                                right: '<span class="active-color">2500 ₽</span>'
+                            })
+
+                            +priceRowClean({
+                                left: '<span class="text-bold">Липолитики</span>',
+                            })
+
+                            +priceRow({
+                                left: '<span class="padding-left">Mesoline Bodyfirm (Pluryal)</span>',
+                                center: '5 мл',
+                                right: '<span class="active-color">1400 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Mesoline Bodycontour (Pluryal)</span>',
+                                center: '5 мл',
+                                right: '<span class="active-color">1400 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Mesoline Facecontour (Pluryal)</span>',
+                                center: '5 мл',
+                                right: '<span class="active-color">4100 ₽</span>'
+                            })
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-4.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Контурная пластика',
+                                class: 'price-section__title'
+                            })
+                        .price-section__data-wrapper.style-4.slider-data-2
+                            .price-section__data-col
+                                .price-section__data.style-4.style-3
+                                    +priceRow4({
+                                        left: '<span>Belotero Balance 1 мл</span>',
+                                        right: '<span class="active-color">11900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Belotero Intense 1 мл</span>',
+                                        right: '<span class="active-color">12900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Belotero Lips Contour 0,6 мл</span>',
+                                        right: '<span class="active-color">10900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Belotero Soft 1 <мл></мл></span>',
+                                        right: '<span class="active-color">10900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Belotero Soft 1 мл</span>',
+                                        right: '<span class="active-color">13600 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Juvederm Ultra 3 - 1 мл</span>',
+                                        right: '<span class="active-color">11900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Juvederm Ultra 4 - 1 мл</span>',
+                                        right: '<span class="active-color">12400 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Juvederm ULTRA Smile - 0,55 мл</span>',
+                                        right: '<span class="active-color">8800 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Juvederm Volbella - 1 мл</span>',
+                                        right: '<span class="active-color">14850 ₽</span>'
+                                    })
+                            .price-section__data-col
+                                .price-section__titles-wrapper
+                                .price-section__data.style-4.style-3
+                                    +priceRow4({
+                                        left: '<span>Juvederm Volume - 1 мл</span>',
+                                        right: '<span class="active-color">14900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Neauvia Intense lips - 1 мл</span>',
+                                        right: '<span class="active-color">13600 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Neauvia Intense lv - 1 мл</span>',
+                                        right: '<span class="active-color">13900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Radiesse - 1,5мл</span>',
+                                        right: '<span class="active-color">16900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Success Derm - 1мл</span>',
+                                        right: '<span class="active-color">8500 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Success Touch - 1мл</span>',
+                                        right: '<span class="active-color">7900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Success Ultimate - 1 мл</span>',
+                                        right: '<span class="active-color">9100 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Лонгидаза 1 зона</span>',
+                                        right: '<span class="active-color">2100 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span class="visible-none">Лонгидаза 1 зона</span>',
+                                        right: '<span class="visible-none">2100 ₽</span>'
+                                    })
+                        .price-section__dots.slider-data-2
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-4.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Увеличение губ',
+                                class: 'price-section__title'
+                            })
+                        .price-section__data-wrapper.style-4.slider-data-3
+                            .price-section__data-col
+                                .price-section__data.style-4.style-3
+                                    +priceRow4({
+                                        left: '<span>Juvederm ULTRA Smile - 0,55 мл</span>',
+                                        right: '<span class="active-color">8800 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Juvederm Ultra 3 - 1 мл</span>',
+                                        right: '<span class="active-color">11900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Neauvia Intense lips - 1 мл</span>',
+                                        right: '<span class="active-color">13600 ₽</span>'
+                                    })
+                            .price-section__data-col
+                                .price-section__data.style-4.style-3
+                                    +priceRow4({
+                                        left: '<span>Neauvia Intense lv - 1 мл</span>',
+                                        right: '<span class="active-color">13900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Belotero Lips Contour 0,6 мл</span>',
+                                        right: '<span class="active-color">8900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Belotero Balance 1 мл </span>',
+                                        right: '<span class="active-color">11900 ₽</span>'
+                                    })
+                        .price-section__dots.slider-data-3
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-4.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Биоревитализация',
+                                class: 'price-section__title'
+                            })
+                        .price-section__data-wrapper.style-4.slider-data-4
+                            .price-section__data-col
+                                .price-section__data.style-4.style-3
+                                    +priceRow4({
+                                        left: '<span>Aquashine 2 мл</span>',
+                                        right: '<span class="active-color">8400 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Aquashine BR 2 мл</span>',
+                                        right: '<span class="active-color">8400 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Belotero Hydro 1мл</span>',
+                                        right: '<span class="active-color">7900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>HYALUFORM 1% 1,5мл</span>',
+                                        right: '<span class="active-color">4300 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Innea 2мл</span>',
+                                        right: '<span class="active-color">8200 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Meso-Wharton 1.5 мл</span>',
+                                        right: '<span class="active-color">9900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Meso-Xantin 1.5 мл</span>',
+                                        right: '<span class="active-color">9900 ₽</span>'
+                                    })
+                            .price-section__data-col
+                                .price-section__data.style-4.style-3
+                                    +priceRow4({
+                                        left: '<span>NCTF 135 (Filorga) 3 мл</span>',
+                                        right: '<span class="active-color">3400 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>NCTF 135HA (Filorga) 3 мл</span>',
+                                        right: '<span class="active-color">5400 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Profhilo 2 мл</span>',
+                                        right: '<span class="active-color">14900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Revi Silk 1 мл</span>',
+                                        right: '<span class="active-color">10900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Revi Silk 2 мл</span>',
+                                        right: '<span class="active-color">14900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Revi Strong 2 мл</span>',
+                                        right: '<span class="active-color">16900 ₽</span>'
+                                    })
+                                    +priceRow4({
+                                        left: '<span>Постинъекционная маска</span>',
+                                        right: '<span class="active-color">750 ₽</span>'
+                                    })
+                        .price-section__dots.slider-data-4
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-3.style-5
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Ботулинотерапия</span>',
+                                class: 'price-section__title',
+                            })
+                            .price-section__data.style-3.style-5
+                                +priceRow9({
+                                    left: '<span>Внутримышечное введение препарата <span class="text-bold">«Релатокс»</span> (коррекция морщин) 1 ед.</span>',
+                                    right: '<span class="active-color">260 ₽</span>'
+                                })
+                                +priceRow9({
+                                    left: '<span>Внутримышечное введение препарата <span class="text-bold">«Ксеомин»</span> (коррекция морщин) 1 ед.</span>',
+                                    right: '<span class="active-color">280 ₽</span>'
+                                })
+                                +priceRow9({
+                                    left: '<span>Лечение гипергидроза (повышенная потливость) препаратом <span class="text-bold">«Диспорт»</span></span>',
+                                    right: '<span class="active-color">14000 - 21000 ₽</span>'
+                                })
+
+mixin priceRow4(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean4(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}
+
+mixin priceRow(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-center !{object.center}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}
+mixin yesList(object)
+    li.close
+        img(src="images/yes-check--white.png").icon
+        span !{object.text}
+mixin colData(object)
+    .more-section__col
+        a.more-section__link(href=object.link data-all=object.all data-active=object.active) !{object.text}
+mixin priceRow4(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean4(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}
+mixin tableData(object)
+    .price-section__table-row
+        .price-section__table-text !{object.title}
+        .price-section__table-price
+            .price-section__table-price-col
+                span.no-cart #{object.price1}
+            .price-section__table-price-col
+                span.yes-cart #{object.price2}
+mixin mobileRow(object)
+    .price-section__mobile-row
+        .price-section__mobile-title !{object.title}
+        .price-section__mobile-data
+            .price-section__mobile-col
+                span.no-cart !{object.price1}
+                span.yes-cart !{object.price2}
+            .price-section__mobile-col
+                span.no-cart !{object.price3}
+                span.yes-cart !{object.price4}
+mixin priceRow9(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean9(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}

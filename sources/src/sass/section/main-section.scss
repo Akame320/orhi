@@ -1,0 +1,482 @@
+.slick-track {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.main-section {
+  margin-top: 13rem;
+  position: relative;
+  transition: all 0.2s linear;
+
+  @media screen and (max-width: $desctop-xs) {
+    margin-top: 9.3rem;
+  }
+
+  @media screen and (max-width: $mobile-screen) {
+    margin-top: 0;
+    padding-top: 11rem;
+  }
+
+  &.active {
+    margin-top: 8rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      margin-top: 4.3rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      margin-top: 0;
+      padding-top: 11rem;
+    }
+  }
+
+  &__slider {
+
+  }
+
+  &__slide {
+    position: relative;
+  }
+
+  &__slide-bg {
+    position: relative;
+    z-index: 1;
+
+    img,
+    source {
+      width: 100%;
+      height: auto;
+
+      @media screen and (max-width: $mobile-screen) {
+        height: 75rem;
+        max-height: 75rem;
+      }
+    }
+  }
+
+  &__slide-inner {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 10;
+    color: white;
+    transform: translateY(-50%);
+  }
+
+  &__slide-data {
+
+  }
+
+  &__slide-title {
+    font-size: 10rem;
+    max-width: 65.4rem;
+    width: 100%;
+    line-height: 7rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 5rem;
+      max-width: 33.4rem;
+      line-height: 4.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      text-align: center;
+      font-size: 5.6rem;
+      margin-left: auto;
+      line-height: 4rem;
+      margin-right: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    span {
+      font-weight: 200;
+      font-size: 6.4rem;
+
+      @media screen and (max-width: $table-screen) {
+        font-size: 3.4rem;
+      }
+
+      @media screen and (max-width: $mobile-screen) {
+        font-size: 3.7rem;
+      }
+    }
+  }
+
+  &__slide-subtitle {
+    font-size: 2rem;
+    font-weight: 400;
+    max-width: 52rem;
+    margin-bottom: 1.5rem;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.4rem;
+      max-width: 32rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2rem;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 36.7rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__slide-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media screen and (max-width: $mobile-screen) {
+      justify-content: center;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+
+    top: auto;
+    bottom: 1.8rem;
+  }
+
+  &__dots-inner {
+    width: max-content;
+    transform: translateY(-50%);
+    visibility: hidden;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    .slick-dots {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+      visibility: visible;
+
+
+      li {
+        list-style-type: none;
+
+        margin-bottom: 2rem;
+
+        @media screen and (max-width: $desctop-xs) {
+          margin-bottom: 1rem;
+        }
+
+        @media screen and (max-width: $table-screen) {
+          margin-bottom: 0;
+        }
+
+        @media screen and (max-width: $mobile-screen) {
+          margin: 0 2rem;
+        }
+
+        &.slick-active button {
+          background-color: #af0753;
+        }
+      }
+
+      button {
+        width: 1.2rem;
+        height: 1.2rem;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background-color: #777777;
+        transition: all 0.2s linear;
+        outline: none;
+        border: none;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        font-size: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.slider-li {
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    position: relative;
+
+    display: inline-block;
+
+    list-style-type: none;
+
+    font-weight: 500;
+
+    margin-bottom: 1rem;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+
+      border-radius: 50%;
+
+      background: #274e9b;
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 10;
+
+      transform: translateY(-60%);
+    }
+  }
+}
+
+
+.slider__btn {
+  display: block;
+
+  padding: 3rem 4rem;
+
+  background: rgb(150, 74, 170);
+  background: linear-gradient(135deg, rgba(150, 74, 170, 1) 36%, rgba(78, 105, 170, 1) 50%);
+
+  border-radius: 15px;
+
+  width: max-content;
+}
+
+.slide-1 {
+  position: relative;
+
+  &__bg {
+    width: 100%;
+    height: auto;
+
+    source, img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateY(-50%);
+
+    width: 100%;
+
+    @media screen and (max-width: $mobile-screen) {
+      top: 6rem;
+      transform: translateY(0);
+    }
+  }
+
+  &__inner {
+    width: 100%;
+
+    color: white;
+  }
+
+  &__title {
+    font-size: 6rem;
+    font-weight: 700;
+
+    color: white;
+
+    padding: 1.7rem 2rem 1rem 2rem;
+
+    border-radius: 15px;
+
+    background: rgb(150, 74, 170);
+    background: linear-gradient(135deg, rgba(150, 74, 170, 1) 36%, rgba(78, 105, 170, 1) 50%);
+
+    width: max-content;
+
+    margin-bottom: 3.5rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 4.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 2.5rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 4.5rem;
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+
+    font-size: 2.4rem;
+
+    color: #1e0f00;
+
+    margin-bottom: 3.5rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      margin-bottom: 2.5rem;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__list {
+    margin-bottom: 3.5rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      margin-bottom: 2.5rem;
+
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+
+    li {
+      font-size: 2.6rem;
+      text-transform: uppercase;
+      color: #1e0f00;
+
+      padding-left: 3rem;
+
+      margin-right: 3rem;
+
+      @media screen and (max-width: $table-screen) {
+        font-size: 1.6rem;
+      }
+
+      @media screen and (max-width: $mobile-screen) {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+
+        max-width: 28rem;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:after {
+        width: 1.5rem;
+        height: 1.5rem;
+
+        @media screen and (max-width: $mobile-screen) {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    font-size: 2.4rem;
+    font-weight: 500;
+
+    vertical-align: middle;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 2rem;
+      padding: 2rem 4rem;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      padding: 1.5rem 4rem;
+      font-size: 1.3rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      display: none;
+
+      font-size: 1.6rem;
+
+      padding: 1rem 4rem;
+
+      background: rgb(41, 183, 73);
+      background: linear-gradient(135deg, rgba(41, 183, 73, 1) 36%, rgba(21, 149, 52, 1) 50%);
+    }
+  }
+}
+
+.slide-2__title {
+  @media screen and (max-width: $mobile-screen) {
+    max-width: 32rem;
+  }
+}
+
+.slide-2__subtitle {
+  max-width: 40rem;
+}
+
+.slide-2__list {
+  max-width: 66rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  @media screen and (max-width: $mobile-screen) {
+    flex-direction: column;
+  }
+
+  li {
+    display: block;
+
+    @media screen and (max-width: $mobile-screen) {
+      max-width: 34rem;
+
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.slide-3__title{
+  max-width: 77.5rem;
+  
+  @media screen and (max-width: $desctop-xs) {
+    max-width: 52.5rem;
+    font-size: 3.5rem;
+  }
+  
+  @media screen and (max-width: $table-screen) {
+    max-width: 36.5rem;
+    font-size: 2.2rem;
+  }
+}
+
+.slide-3__list{
+  max-width: 63rem;
+}

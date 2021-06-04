@@ -1,0 +1,15 @@
+mixin sertificateCol(object)
+    .sertificate-section__col
+        .sertificate-section__col-inner
+            .sertificate-section__col-subtitle !{object.subtitle}
+            .sertificate-section__col-title !{object.title}
+section.sertificate-section
+    .container
+        +sectionTitle({title: 'Сертификат', class: 'sertificate-section__title'})
+    .container
+        .sertificate-section__wrapper
+            .sertificate-section__inner
+                +sertificateCol({title: 'на любую <br> сумму', subtitle: 'Может быть'})
+                +sertificateCol({title: 'срока <br> годности', subtitle: 'не имеет'})
+                +sertificateCol({title: 'на любые товары  <br> и услуги клиники', subtitle: 'Распространяется'})
+

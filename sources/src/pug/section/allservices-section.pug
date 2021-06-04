@@ -1,0 +1,39 @@
+mixin allservicesSlide(object)
+    .allservices-section__slide.bg-vertical__wrapper
+        a(href=object.href).allservices-section__slide-inner.bg-vertical__inner
+            .allservices-section__slide-img
+                +setImg({
+                    webp: object.img + '-pc.webp',
+                    img: object.img + '-pc.jpg',
+                    set: object.img + '-mb'
+                })
+            .allservices-section__slide-title !{object.title}
+section.allservices-section
+    .container
+        .allservices-section__wrapper
+            .allservices-section__inner
+                .allservices-section__titles-wrapper
+                    +sectionTitle({
+                        title: 'услуги',
+                        subtitle: 'доступные в клинике',
+                        class: 'allservices-section__title',
+                        subclass: 'allservices-section__subtitle'
+                    })
+                .allservices-section__data
+                    .allservices-section__arrow
+                        .allservices-section__arrow-prev
+                            +svgIcon({name: "arrow"})
+                        .allservices-section__arrow-next
+                            +svgIcon({name: 'arrow'})
+                    .allservices-section__slider.slide-1
+                        +allservicesSlide({title: 'Лазерная  <br> эпиляция',    href: 'Laser-ep.html', img: 'images/content/allservices-section/0'})
+                        +allservicesSlide({title: 'Увеличение <br> губ',        href: 'LipAugmentation.html', img: 'images/content/allservices-section/1'})
+                        +allservicesSlide({title: 'Контурная <br> пластика',    href: 'ContourPlastic.html', img: 'images/content/allservices-section/3'})
+                        +allservicesSlide({title: 'Массаж <br> лица',           href: 'MassageFace.html', img: 'images/content/allservices-section/4'})
+                        +allservicesSlide({title: 'Удаление сосудов',           href: 'RemovalBloodVessels.html', img: 'images/content/allservices-section/5'})
+                        +allservicesSlide({title: 'Эстетическая косметология',  href: 'Aesthetic.html', img: 'images/content/allservices-section/6'})
+                        +allservicesSlide({title: 'Чистка лица',                href: 'CleanFace.html', img: 'images/content/allservices-section/7'})
+                        +allservicesSlide({title: 'Химический пилинг',          href: 'ChemicalPeeling.html', img: 'images/content/allservices-section/8'})
+                        +allservicesSlide({title: 'Инъекционная косметология',  href: 'InjectionCosmetology.html', img: 'images/content/allservices-section/10'})
+                        +allservicesSlide({title: 'Мезотерапия',               href: 'Mesotherapy.html', img: 'images/content/allservices-section/11'})
+

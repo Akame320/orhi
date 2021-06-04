@@ -1,0 +1,184 @@
+.popup {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(00, 00, 00, 0.7);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  visibility: hidden;
+  opacity: 0;
+
+  @media screen and (max-width: $mobile-screen) {
+    padding: 2rem;
+  }
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__wrapper {
+    background-color: #fff;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 66rem;
+    max-height: 50rem;
+
+    border-radius: 3rem;
+
+    position: relative;
+
+    padding: 4rem;
+    margin: 0;
+
+    @media screen and (max-width: $desctop-xs) {
+      padding: 3rem;
+
+      max-width: 50rem;
+      max-height: 40rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      padding: 3rem;
+
+      max-height: none;
+      height: auto;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  &__title {
+    width: 100%;
+
+    margin-bottom: 3rem;
+    margin-top: 0;
+
+    font-weight: 700;
+    font-size: 1.8rem;
+
+    text-align: left;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    max-width: 58rem;
+
+    margin-bottom: 3rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__close {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    left: auto;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+
+    @media screen and (max-width: $desctop-xs) {
+      top: 2rem;
+      right: 2rem;
+
+      width: 2rem;
+      height: 2rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      top: 3rem;
+      right: 3rem;
+    }
+
+    &:hover .icon {
+      fill: $color-main;
+    }
+
+    .icon {
+      width: 100%;
+      height: 100%;
+
+      fill: $text-color;
+
+      transition: all 0.1s linear;
+    }
+  }
+
+  &__list {
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    li {
+      width: max-content;
+      margin-bottom: 1.5rem;
+
+      cursor: pointer;
+
+      font-size: 1.6rem;
+      font-weight: 400;
+
+      color: $text-color;
+
+      list-style-type: none;
+
+      @media screen and (max-width: $desctop-xs) {
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+      }
+
+      @media screen and (max-width: $mobile-screen) {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+    }
+
+    li.active {
+      color: $color-main;
+      font-weight: 700;
+    }
+  }
+}

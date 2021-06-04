@@ -1,0 +1,44 @@
+extends base/_layout
+block head
+    title О нашем центре в Пензе - Orhi
+    meta(property="og:title" content='О нашем центре в Пензе - Orhi')
+
+    meta(name="keywords" content='orhi, пенза orhi, орхи, лазерная эпиляция, центр orhi, салон orhi, отзывы об orhi, orhi отзывы, медицинский центр, косметология')
+
+    meta(name="description" content='Orhi - это врачи с высшим медицинским образованием. Самые безопасные и мощные системы лазерной эпиляции. Скидочные карты - карта даёт скидку на весь прайс 70%.')
+    meta(property="og:description" content='Orhi - это врачи с высшим медицинским образованием. Самые безопасные и мощные системы лазерной эпиляции. Скидочные карты - карта даёт скидку на весь прайс 70%.')
+
+    meta(property="og:url" content='https://orhi-epil.ru/About.html')
+
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}], 'Лазерная косметология')
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/laserCosmetology/0-pc.webp',
+                            img: 'images/content/intro-section/laserCosmetology/0-pc.jpg',
+                            set: 'images/content/intro-section/laserCosmetology/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Лазерная косметология',
+                                class: 'intro-section__title',
+                            })
+                        .intro-section__text
+                            p Сегодня - возможности косметологии практически безграничны. <br> С помощью современных технологий можно деликатно решать многие проблемы кожи.
+                            p Лазерные системы позволяют это сделать без инвазивного вмешательства, что сокращает период реабилитации и сводит риск осложнений к минимуму.
+                            p В медицинском центре «Orhi» врачи-косметологи с помощью лазерной терапии успешно лечат проблемы акне, пигментации, сосудистых патологий и старания кожи.
+                            p Процедуры выполняются на медицинском неодимовом лазере последнего поколения - CynoSure Elite+. Это - уникальный аппарат американского производства, зарекомендовавший себя как стандарт качества и эффективности во всем мире.
+                            p Результативность его применения сложно переоценить. Уникальность процедур заключается в том, что лазерный луч проникает в глубокие слои кожи, не затрагивая окружающие ткани.
+                            p Кроме того, каждая процедура персонализирована для каждого пациента: специалист подбирает параметры воздействия индивидуально, в зависимости от показаний и характеристик организма.
+    - item1 = {text: 'Удаление пигментных пятен', link: "laserRejuvenation.html"}
+    - item2 = {text: 'Лазерное омоложение', link: "BiorevitalizationLaser.html"}
+    - item3 = {text: 'Удаление сосудов', link: "RemovalBloodVessels.html"}
+    - items = [item1, item2, item3]
+    - data = {items: items}
+    include section/more-section

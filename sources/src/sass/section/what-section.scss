@@ -1,0 +1,231 @@
+.what-section {
+  margin: 4.5rem 0;
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 85rem;
+    z-index: 1;
+
+    @media screen and (max-width: $desctop-xs) {
+      max-width: 60rem;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      margin-left: auto;
+      margin-right: auto;
+      position: static;
+    }
+
+    img, source {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__wrapper {
+    top: 0;
+    z-index: 10;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $table-screen) {
+      flex-direction: column;
+    }
+  }
+
+  &__titles-wrapper {
+    width: 100%;
+    max-width: 950 / 1680 * 100%;
+
+    @media screen and (max-width: $table-screen) {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 10;
+
+    @media screen and (max-width: $table-screen) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    z-index: 10;
+
+    @media screen and (max-width: $table-screen) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__data {
+    width: 100%;
+    max-width: 735 / 1680 * 100%;
+    padding-top: 5rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      max-width: 53.75%;
+      padding-top: 2rem;
+    }
+    
+    @media screen and (max-width: $table-screen) { 
+        max-width: 100%;
+    }
+
+  }
+
+  &__data-title {
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 2rem;
+    }
+    
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 2.2rem;
+    }
+
+    & .small {
+      font-size: 1.8rem;
+
+      @media screen and (max-width: $desctop-xs) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__data-subtitle {
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__data-strong {
+    color: $color-main;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 1.9rem;
+    }
+
+    .small {
+      text-transform: none;
+      font-size: 1.8rem;
+
+      @media screen and (max-width: $desctop-xs) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__data-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: -2rem;
+    margin-bottom: 4rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      margin-bottom: 3rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      margin-left: 0;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    li {
+      list-style-type: none;
+      display: block;
+      width: max-content;
+
+      border-right: 2px solid $text-color;
+      padding-right: 2rem;
+      padding-left: 2rem;
+
+      margin-bottom: 1.2rem;
+      
+      @media screen and (max-width: $mobile-screen) {
+        padding: 0;
+        padding-right: 0;
+
+        width: auto;
+
+        border-right: none;
+
+        font-size: 1.7rem;
+
+        margin-bottom: 0.5rem;
+
+        text-transform: lowercase;
+
+        display: inline;
+
+        &:first-child{
+          text-transform: none;
+        }
+      }
+
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+
+      span{
+        display: none;
+        @media screen and (max-width: $table-screen) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  &__data-text {
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  &__btn{
+    margin-top: 3rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.container.position-static {
+  position: static;
+}

@@ -1,0 +1,49 @@
+extends base/_layout
+block head
+    title Эстетическая косметология в Пензе - Orhi
+    meta(property="og:title" content='Эстетическая косметология в Пензе - Orhi')
+
+    meta(name="keywords" content='эстетическая косметология, эстетическая косметология пенза')
+
+    meta(name="description" content='Наша клиника выполнит все виды косметологических услуг по эстетической косметологии.')
+    meta(property="og:description" content='Наша клиника выполнит все виды косметологических услуг по эстетической косметологии.')
+
+    meta(property="og:url" content='https://orhi-epil.ru/Aesthetic.html')
+block page
+    section.intro-section
+            .container
+                .intro-section__wrapper
+                    .intro-section__breadcumps
+                        +breadcrumbs([{text: 'Главная', link: 'index.html'}], 'Эстетическая косметология')
+                    .intro-section__inner
+                        .intro-section__img
+                            +setImg({
+                                webp: 'images/content/intro-section/Aesthetic/0-pc.webp',
+                                img: 'images/content/intro-section/Aesthetic/0-pc.jpg',
+                                set: 'images/content/intro-section/Aesthetic/0-mb'
+                            })
+                        .intro-section__data
+                            .intro-section__titles-wrapper.intro-section__titles-reverce
+                                +sectionTitle({
+                                   title: 'Эстетическая',
+                                   class: 'intro-section__title',
+                                   subtitle: 'косметология',
+                                   subclass: 'intro-section__subtitle',
+                                })
+                            .intro-section__text
+                                h3 Косметология по лицу
+                                p Во все времена женщины старались следить за состоянием кожи лица, чтобы сохранить молодость и красоту. К счастью, в современном мире существует множество безопасных и эффективных методов, чтобы достигнуть этой цели.
+                                p При регулярном посещении кабинета косметолога можно решить проблемы неровного тона и тусклости кожи, фотостарения, воспалений, акне, появления морщин, сухости, жирного блеска, потери упругости и многих других.
+                                p Специалисты медицинского центра «Orhi» помогут сохранить красоту и молодость лица, подобрав для вас индивидуальный косметологический курс по типу кожи и существующим проблемам.
+                                h3 Домашний уход
+                                p Одним из самых важных этапов в уходе за кожей лица – является домашний уход. К сожалению, далеко не все уделяют ему достаточное внимание, а зря.
+                                p Только комплексный и регулярный подход к решению кожных проблем позволит добиться уверенного и стойкого результата.
+                                p В «Orhi» представлен широкий ассортимент профессиональной косметики для домашнего ухода: израильской фирмы Holy Land и испанской фирмы Sesderma.
+
+    - item1 = {text: 'Чистка лица', link: "CleanFace.html"}
+    - item2 = {text: 'Пилинги', link: "ChemicalPeeling.html"}
+    - item3 = {text: 'Массаж лица', link: "MassageFace.html"}
+    - item4 = {text: 'Уходовые процедуры', link: "CareProcedures.html"}
+    - items = [item1, item2, item3, item4]
+    - data = {items: items, removeTitle: true}
+    include section/more-section

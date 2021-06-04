@@ -1,0 +1,46 @@
+mixin howCol(object)
+    .how-section__col
+        .how-section__col-inner
+            .how-section__col-number !{object.number}
+            .how-section__col-text !{object.text}
+            .how-section__col-img
+                +setImg({
+                    webp: object.img + '-pc.webp',
+                    img: object.img + '-pc.jpg',
+                    set: object.img + '-mb',
+            })
+section.how-section
+    .container
+        .how-section__wrapper
+            .how-section__inner
+                .how-section__titles-wrapper
+                    +sectionTitle({
+                        title: "как происходит процедура",
+                        subtitle: "Коагуляция сосудов с помощью неодимового лазера – это самый современный и безопасный способ борьбы с сосудистыми сеточками и куперозом. <br>  <span>Суть процедуры заключается в следующем:</span>",
+                        class: "how-section__title",
+                        subclass: "how-section__subtitle",
+                    })
+                .how-section__data-wrapper
+                    .how-section__data
+                        +howCol({
+                            number: '01',
+                            text: 'Врач опрSеделяет объем обрабатываемой зоны и начинает процедуру',
+                            img: 'images/content/how-section/0'
+                        })
+                        +howCol({
+                            number: '02',
+                            text: 'Луч лазера проникает через кожу в сосуд',
+                            img: 'images/content/how-section/1'
+                        })
+                        +howCol({
+                            number: '03',
+                            text: 'Происходит спайка капилляра – и кровь туда больше не поступает ',
+                            img: 'images/content/how-section/2'
+                        })
+                    .how-section__dots0-mb
+                    .how-section__arrow
+                        .how-section__arrow-prev
+                            +svgIcon({name: 'arrow--transparent'})
+                        .how-section__arrow-next
+                            +svgIcon({name: 'arrow--transparent'})
+

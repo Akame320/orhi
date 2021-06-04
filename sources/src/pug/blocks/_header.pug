@@ -1,0 +1,104 @@
+header.header
+	.header__top(id='header-top')
+		.container
+			.header__top-inner
+				.header__top-location
+					.select-region(style='background-image: url("images/region-bg-pc.png")' id='select-region')
+						.select-region__row
+							span Ваш город
+							.select-region__text
+								+svgIcon({name: 'mark'})
+								span.select-region__text-out
+									| г. Санкт-Петербург ?
+						.select-region__row
+							.select-region__button-yes.close-select-region Да
+							.select-region__button-no.open-popup-region Выбрать другой
+					.header__top-item.header__top-item--small.header__top-item--pointer.open-popup-region
+						.header__top-icon
+							+svgIcon({name: 'mark'})
+						.header__top-text
+							| г. Пенза
+						.header__top-icon.header__top-icon--small.remove--mobile.icon--rotate
+							+svgIcon({name: 'arrow'})
+					.header__top-item.open-popup-region
+						.header__top-text
+							| ул. Максима Горького, дом 41
+						.header__top-icon.arrow
+							+svgIcon({name: 'arrow--transparent'})
+				.header__top-inf
+					.header__top-item.header__top-item--remove
+						a.header__top-link.open-price-popup Скидочная карта
+					.header__top-item.header__top-item--remove
+						a(href='Sertificat.html').header__top-link Подарочные сертификаты
+					.header__top-item.remove--mobile
+						.header__top-icon
+							+svgIcon({name: 'tel'})
+						a(href='tel: +7(8412)994131').header__top-link +7 (8412) 99-41-31
+						.header__top-text.ehader__top-text--small.header__top-item--remove
+							| (c 9:00 до 21:00)
+	.header__bot.header__bot--small(id='header__bot')
+		.container
+			.header__inner
+				a(href="index.html").logo
+					+svgIcon({name: 'logo'})
+					span
+						| Медицинский центр
+						| лазерной эпиляции
+						| и косметологии
+				.menu-block
+					a.menu-toggle
+						span.line.top
+						span.line.mid
+						span.line.bot
+					.menu-list
+						ul.menu
+							li
+								a(href="index.html") Главная
+							li.click-menu
+								a() Услуги
+									.arrow
+										+svgIcon({name: 'arrow--transparent'})
+								.sub-menu__wrapper
+									ul.sub-menu__inner
+										li
+											a(href='Laser-ep.html') Лазерная эпиляция
+										li
+											a(href='laserCosmetology.html') Лазерная косметология
+										li
+											a(href='Aesthetic.html') Эстетическая косметология
+										li
+											a(href='InjectionCosmetology.html') Инъекционная косметология
+							li
+								a(href="Price.html") Прайс
+							li
+								a(href="About.html") О компании
+							li
+								a(href="Contacts.html") Контакты
+						.menu-inf
+							.menu-inf__row.flex-center
+								a.menu-inf__row-text.open-price-popup Скидочная карта
+							.menu-inf__row.flex-center
+								a(href='Sertificat.html').menu-inf__row-text Подарочные сертификаты
+							.menu-inf__row.remove--mobile
+								+svgIcon({name: 'mark'})
+								.menu-inf__row-arrow
+									+svgIcon({name: 'arrow'})
+								.menu-inf__row-data.text-left
+									.menu-inf__row-text г. Пенза
+									.menu-inf__row-text.menu-inf--light ул. Максима Горького, дом 41
+							.menu-inf__row
+								+svgIcon({name: 'tel'})
+								.menu-inf__row-data.text-left
+									a(href='tel: +7(8412)994131').menu-inf__row-text +7 (8412) 99-41-31
+									.menu-inf__row-text.menu-inf--light (c 9:30 до 21:00)
+
+					.menu-btn
+						a(href="tel: +7(8412)994131")
+							+svgIcon({name: 'header-tel'})
+		//header__inner
+	//container
+//header
+include ../section/popup
+<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+
+

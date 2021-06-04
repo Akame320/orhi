@@ -1,0 +1,226 @@
+.ceil-section {
+  padding: 4.5rem 0;
+  margin-top: 10rem;
+
+  &__inner {
+    display: flex;
+    align-items: stretch;
+
+    margin-left: -2rem;
+    margin-right: -2rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      margin-left: 0;
+      margin-right: 0;
+      flex-direction: column;
+    }
+  }
+
+  &__cart-wrapper {
+    width: 50%;
+    padding: 2rem;
+
+    padding-top: 0;
+
+    @media screen and (max-width: $table-screen) {
+      padding: 1rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      width: 100%;
+      padding-bottom: 8rem;
+
+      &:last-child{
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__cart {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: $main-gradient;
+
+    border-radius: 3rem;
+
+    padding: 3rem;
+    padding-bottom: 7.5rem;
+
+    color: white;
+
+    @media screen and (max-width: $desctop-xs) {
+      padding-bottom: 3rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      padding: 2rem;
+      padding-bottom: 3rem;
+    }
+  }
+
+  &__cart-title {
+    background-color: #E0E0E0;
+
+    padding: 3rem 10rem;
+    padding-bottom: 2rem;
+
+    width: max-content;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 3rem 3rem 0px 0px;
+
+    transform: translateY(-100%);
+
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    color: #8A8A8A;
+
+    margin-top: -3rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 1.9rem;
+      padding: 1.7rem 8rem 1.3rem;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.4rem;
+
+      padding: 2rem 6.5rem;
+      padding-bottom: 1.5rem;
+
+      border-radius: 2rem 2rem 0 0;
+      margin-top: -3rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      margin-top: -2rem;
+      font-size: 1.7rem;
+      padding: 2rem 5.4rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__cart-img {
+    width: 80%;
+    height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+
+
+    @media screen and (max-width: $mobile-screen) {
+      width: 100%;
+    }
+
+    img, source {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__cart-data {
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: $table-screen) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__cart-text {
+    width: 100%;
+    font-size: 1.5rem;
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.1rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 1.5rem;
+    }
+
+    &.text--uppercase {
+      text-transform: uppercase;
+      margin-bottom: 1.7rem;
+      font-size: 2.4rem;
+
+      @media screen and (max-width: $desctop-xs) {
+        font-size: 1.6rem;
+        margin-bottom: 0.7rem;
+      }
+    }
+  }
+
+  &__cart-offer {
+    font-weight: 700;
+    font-size: 6rem;
+    text-transform: uppercase;
+    margin-bottom: 1.4rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 3.2rem;
+      margin-bottom: 0.7rem;
+    }
+    
+    @media screen and (max-width: $table-screen) {
+      font-size: 2.7rem;
+    }
+  }
+
+  &__cart-suboffer {
+    font-weight: 700;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    margin-bottom: 1.4rem;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 2.2rem;
+    }
+    
+    @media screen and (max-width: $table-screen) {
+      font-size: 1.3rem;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      margin-bottom: 0.7rem;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__cart-imgText {
+    font-size: 26rem;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+
+    @media screen and (max-width: $desctop-xs) {
+      font-size: 14.7rem;
+    }
+
+    @media screen and (max-width: $table-screen) {
+      font-size: 13rem;
+    }
+  }
+
+  &__btn{
+    padding-left: 2rem;
+  }
+
+}
+
+.big--offer{
+  max-width: 40rem;
+}

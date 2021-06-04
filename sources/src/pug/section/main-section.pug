@@ -1,0 +1,88 @@
+mixin main-section__item0()
+    .main-section__slide
+        .main-section__slide-bg
+            +setImg({
+                webp: 'images/mainSection-bg-pc.webp',
+                img: 'images/mainSection-bg-pc.jpg',
+                set: 'images/mainSection-bg-mb',
+                alt: 'Orhi'
+            })
+        .main-section__slide-inner
+            .container
+                .main-section__slide-data
+                    .main-section__slide-title
+                        | Скидка 70% <br>
+                        | <span>на первый визит</span>
+                    .main-section__slide-subtitle
+                        | Скидка предоставляется каждому новому пациенту,
+                        | любое количество зон, любой лазер
+                    .main-section__slide-btn
+                        a().btn.btn--white Подробнее
+mixin main-section__item1()
+    .slide-1
+        .slide-1__bg
+            +setImg({
+                webp: 'images/content/main-section/0-pc.webp',
+                img: 'images/content/main-section/0-pc.jpg',
+                set: 'images/content/main-section/0-mb',
+                alt: 'Orhi'
+            })
+        .slide-1__wrapper
+            .container
+                .slide-1__inner.slider-li
+                    .slide-1__title СКИДКА 70%
+                    .slide-1__subtitle на лазерную эпиляцию! <br> Каждому новому клиенту.
+                    ul.slide-1__list
+                       li Любой лазер
+                       li Любое количество зон
+                    a(href='Laser-ep.html').slide-1__btn.slider__btn  ПОДРОБНЕЕ
+                    a(href='https://wa.me/78412994131' target='_blamk').slide-1__btn.slider__btn.active-mobile  Написать в What’s App
+mixin main-section__item2()
+    .slide-1
+        .slide-1__bg
+            +setImg({
+                webp: 'images/content/main-section/1-pc.webp',
+                img: 'images/content/main-section/1-pc.jpg',
+                set: 'images/content/main-section/1-mb',
+                alt: 'Orhi'
+            })
+        .slide-1__wrapper
+            .container
+                .slide-1__inner.slider-li
+                    .slide-1__title.slide-2__title Лазерное омоложение elit +
+                    .slide-1__subtitle.slide-2__subtitle Эффективное омоложение и увлажнение кожи
+                    ul.slide-1__list.slide-2__list
+                        li без боли
+                        li без уколов
+                        li без папул
+                        li без шелушения
+                        li без восстановления
+                    a(href='BiorevitalizationLaser.html').slide-1__btn.slider__btn  ПОДРОБНЕЕ
+                    a(href='https://wa.me/78412994131' target='_blamk').slide-1__btn.slider__btn.active-mobile  Написать в What’s App
+mixin main-section__item3()
+    .slide-1
+        .slide-1__bg
+            +setImg({
+                webp: 'images/content/main-section/2-pc.webp',
+                img: 'images/content/main-section/2-pc.jpg',
+                set: 'images/content/main-section/2-mb',
+                alt: 'Orhi'
+            })
+        .slide-1__wrapper
+            .container
+                .slide-1__inner.slider-li
+                    .slide-1__title.slide-3__title Лазерное удаление сосудистой сеточки ELIT+
+                    ul.slide-1__list.slide-3__list
+                        li Быстро. Безболезненно. Эффективно.
+                        li Комфортное удаление сосудов на лице и теле.
+                    .slide-1__subtitle.slide-2__subtitle Заметный результат после первой процедуры!
+                    a(href='RemovalBloodVessels.html').slide-1__btn.slider__btn  ПОДРОБНЕЕ
+                    a(href='https://wa.me/78412994131' target='_blamk').slide-1__btn.slider__btn.active-mobile  Написать в What’s App
+.main-section
+    .main-section__slider.main-slider-js
+       +main-section__item1()
+       +main-section__item2()
+       +main-section__item3()
+    .main-section__dots
+        .container
+            .main-section__dots-inner

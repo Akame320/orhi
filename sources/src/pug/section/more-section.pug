@@ -1,0 +1,13 @@
+mixin colData(object)
+    .more-section__col
+        a.more-section__link(href=object.link) !{object.text}
+section.more-section
+    .container
+        .more-section__wrapper
+            .more-section__inner
+                if(!data.removeTitle)
+                    .more-section__title
+                        h2.title Подробнее о
+                .more-section__data
+                    each element in data.items
+                        +colData({text: element.text, link: element.link})

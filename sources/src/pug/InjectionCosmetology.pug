@@ -1,0 +1,42 @@
+extends base/_layout
+block head
+    title Инъекционная косметология в Пензе - Orhi
+    meta(property="og:title" content='Инъекционная косметология в Пензе - Orhi')
+    meta(name="keywords" content='инъекционная косметология, инъекционна косметология пенза')
+    meta(name="description" content='Наши опытные врачи помогут решить проблемы с помощью инъекционной косметологии.')
+    meta(property="og:description" content='Наши опытные врачи помогут решить проблемы с помощью инъекционной косметологии.')
+    meta(property="og:url" content='https://orhi-epil.ru/InjectionCosmetology.html')
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}], 'Инъекционная косметология')
+                    .intro-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Инъекционная косметология',
+                            class: 'intro-section__title',
+                        })
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/InjectionCosmetology/0-pc.webp',
+                            img: 'images/content/intro-section/InjectionCosmetology/0-pc.jpg',
+                            set: 'images/content/intro-section/InjectionCosmetology/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__text
+                            h5 Устранение морщин
+                            p Главный враг красоты женщин это морщины. Как правило, появление морщин происходит из-за недостаточного увлажнения кожи и воздействия уф-лучей.
+                            p Биоревитализация - современный способ глубокого увлажнения кожи и профилактики появления мелких морщин. Данная методика позволит улучшить цвет и текстуру кожи, повысит эластичность, поможет убрать темные круги под глазами. Состав препарата для каждого пациента подбирается индивидуально, от этого зависит желаемый результат.
+                            p Наилучший результат в борьбе с появлением морщин связанных с губительной мимической активностью, дают инъекции ботулотоксина.
+                            h5 Инъекции красоты
+                            p Самыми популярными услугами в контурной пластике по-прежнему остаются: увеличение губ, коррекция скул, устранение асимметрии лица. Процедуру выполняют филлерами на основе гиалуроновой кислоты.
+    - var item1 = {text: 'Мезотерапия', link: 'Mesotherapy.html'}
+    - var item2 = {text: 'Контурная пластика', link: 'ContourPlastic.html'}
+    - var item3 = {text: 'Увеличение губ', link: 'LipAugmentation.html'}
+    - var item4 = {text: 'Биоревитализация', link: 'Biorevitalization.html'}
+    - var item5 = {text: 'Ботулинотерапия', link: 'BotulinumTherapy.html'}
+    - var items = [item1, item2, item3, item4, item5]
+    - var data = {items: items}
+    include section/more-section

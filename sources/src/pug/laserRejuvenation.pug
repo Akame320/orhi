@@ -1,0 +1,131 @@
+extends base/_layout
+block head
+    title Лазерное омоложение (биоревитализация) Elit+
+    meta(property="og:title" content='О нашем центре в Пензе - Orhi')
+
+    meta(name="keywords" content='orhi, пенза orhi, орхи, лазерная эпиляция, центр orhi, салон orhi, отзывы об orhi, orhi отзывы, медицинский центр, косметология')
+
+    meta(name="description" content='Orhi - это врачи с высшим медицинским образованием. Самые безопасные и мощные системы лазерной эпиляции. Скидочные карты - карта даёт скидку на весь прайс 70%.')
+    meta(property="og:description" content='Orhi - это врачи с высшим медицинским образованием. Самые безопасные и мощные системы лазерной эпиляции. Скидочные карты - карта даёт скидку на весь прайс 70%.')
+
+    meta(property="og:url" content='https://orhi-epil.ru/About.html')
+
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}], 'о нашщем центре')
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/laserRejuvenation/0-pc.webp',
+                            img: 'images/content/intro-section/laserRejuvenation/0-pc.jpg',
+                            set: 'images/content/intro-section/laserRejuvenation/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Лазерное удаление пигментных пятен',
+                                class: 'intro-section__title',
+                            })
+                        .intro-section__text
+                            p Хочется начать с того, что пигментные пятна – чаще всего абсолютно безвредное явление для кожи. Они выделяются более темным цветом и могут локализоваться на любом участке лица и тела.
+                            p Гиперпигментация встречается как у мужчин, так и у женщин, в любом возрасте.
+                            p Однако чаще всего с таким явлением сталкиваются зрелые и пожилые люди.
+
+    - var cartTitle = 'Почему появляется пигментация?'
+    - var cartSubtitle = 'Основных причин несколько:'
+
+    - var list1 = 'Генетическая предрасположенность'
+    - var list2 = 'Злоупотребление загаром'
+    - var list3 = 'Прием гормональных лекарств'
+    - var list4 = 'Пренебрежение солнцезащитными средствами'
+    - var list5 = 'Несоблюдение рекомендаций по уходу за кожей после косметологических процедур'
+    - var lists = [list1, list2, list3, list4, list5]
+    - var text1 = 'Пигментные пятна можно удалять различными способами. Эффективными процедурами, которые дают стойкий и видимый результат, являются: химический пилинг, мезотерапия, биоревитализация, отбеливающие маски.'
+    - var text2 = 'В клинике «Orhi» также доступна новая процедура по удалению пигментных пятен – лазерная коррекция Elit+. Уже после первой обработки – виден явный эффект осветления. А в случае, если пигментное пятно умеренно яркое – дополнительной коррекции и вовсе не понадобится.'
+    - var texts = [text1, text2]
+
+    - var cart1 = [{ title: cartTitle, subtitle: cartSubtitle, lists: lists, styleType: 'check'}, {texts: texts,}]
+
+    - var cartTitle = 'Как проходит процедура.'
+
+    - var text1 = 'Процедура удаления пигментных пятен проходит на медицинском лазерном аппарате.'
+    - var text2 = 'В ходе работы лазера вы чувствуете умеренное тепло.'
+    - var text3 = 'Луч воздействует на участок кожи с повышенным содержанием меланина – тем самым осветляя его.'
+    - var text4 = 'Коррекция проходит быстро и комфортно. Для защиты глаз все время процедуры пациент находится в специальных очках.'
+    - var texts = [text1, text2, text3, text4]
+
+    - var cart2 = [{texts: texts, title: cartTitle, styleType: 'check'}]
+
+    - var cartTitle = 'Преимущества'
+    - var cartSubtitle = 'лазерного удаления пигментных пятен Elit+.'
+
+    - var list1 = 'почти полное отсутствие противопоказаний'
+    - var list2 = 'отсутствие реабилитации'
+    - var list3 = 'безболезненность'
+    - var list4 = 'отсутствие побочных реакций'
+    - var list5 = 'эффективность и стойкий эффект'
+    - var list = [list1, list2, list3, list4, list5]
+
+    - var text1 = 'Чтобы эффект после лазерного удаления гиперпигментации продлился как моно дольше – нужно соблюдать ряд простых правил по уходу за кожей.'
+    - var texts = [text1]
+    - var list21 = '1 Избегать солнечного воздействия на обработанную зону на срок 30 дней.'
+    - var list22 = '2 Пользоваться солнцезащитными средствами с фактором защиты 50+'
+    - var list23 = '3 Не посещать сауну и баню в течение двух недель.'
+    - var list24 = '4 После приема душа – не тереть кожу, а промакивать полотенцем.'
+    - var list25 = '5 Не пользоваться спиртосодержащей косметикой в течение 14 дней после процедуры.'
+    - var lists2 = [list21, list22, list23, list24, list25]
+
+    - var cart3 = [{lists: list, title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}, {texts: texts, lists: lists2}]
+
+    - var cartsData = [cart1, cart2, cart3]
+    include section/cart-section
+
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость <span class="remove--mobile">лазерного удаления пигментных пятен Elit+:</span>',
+                            class: 'price-section__title',
+                        })
+                    .price-section__data.style-3
+                        +priceRow({
+                            left: 'Единичный элемент ',
+                            right: '<span class="active-color">600 ₽</span>'
+                        })
+                        +priceRow({
+                            left: 'Кисти ',
+                            right: '<span class="active-color">2.600 ₽</span>'
+                        })
+                        +priceRow({
+                            left: 'Лицо ',
+                            right: '<span class="active-color">7.300 ₽</span>'
+                        })
+                        +priceRow({
+                            left: 'Лоб ',
+                            right: '<span class="active-color">2.200 ₽</span>'
+                        })
+                        +priceRow({
+                            left: 'Носогубный треугольник ',
+                            right: '<span class="active-color">2.900 ₽</span>'
+                        })
+                        +priceRow({
+                            left: 'Подбородок ',
+                            right: '<span class="active-color">3.200 ₽</span>'
+                        })
+                        +priceRow({
+                            left: 'Шея ',
+                            right: '<span class="active-color">2.900 ₽</span>'
+                        })
+                        +priceRow({
+                            left: 'Щека ',
+                            right: '<span class="active-color">1.800 ₽</span>'
+                        })
+mixin priceRow(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-right !{object.right}

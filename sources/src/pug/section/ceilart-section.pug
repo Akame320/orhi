@@ -1,0 +1,17 @@
+.popup-section(id='popup-price')
+    .popup-section__wrapper
+        .popup-section__close.close-price-popup
+            +svgIcon({name: 'close'})
+        .popup-section__inner
+            .popup-section__img
+                picture
+                    source(srcset='images/content/popup-section/0-pc.webp' type='image/webp')
+                    source(srcset='images/content/popup-section/0-pc' + '.webp' type='image/webp')
+                    img(src='images/content/popup-section/0-pc.png')
+            .popup-section__title скидочная карта
+            .popup-section__text
+                p Скидочные карты предоставляют для вас скидку 70%          на весь прайс лазерной эпиляции.
+                p Приобретая карту, вы гарантированно получаете скидку 70% на весь прайс лазерной эпиляции, на оба лазера, на любое количество зон. Поэтому – гораздо выгоднее делать лазерную эпиляцию при наличии скидочной карты.
+                p К покупке доступны два вида скидочных карт: на 4 месяца 1500 руб, 8 месяцев 2500 руб и на 18 месяцев 4500 руб.
+            .popup-section__btn
+                button.btn.btn--pink.fz-small Купить скидочную карту

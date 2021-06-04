@@ -1,0 +1,48 @@
+mixin advantagesCol(object)
+    .advantages-section__col
+        .advantages-section__col-inner
+            .advantages-section__col-img
+                +setImg({
+                    webp: object.img + '-pc.webp',
+                    img: object.img + '-pc.jpg',
+                    set: object.img + '-mb',
+                })
+        .advantages-section__col-title !{object.title}
+        .advantages-section__col-text !{object.text}
+section.advantages-section
+    .container
+        .advantages-section__wrapper
+            .advantages-section__inner
+                .advantages-section__titles-wrapper
+                    +sectionTitle({
+                        title: 'Кому подойдет?',
+                        subtitle: 'тому, кто:',
+                        class: 'advantages-section__title',
+                        subclass: 'advantages-section__subtitle'
+                    })
+                .advantages-section__data
+                    +advantagesCol({
+                        title: 'Трепетно следит',
+                        text: 'за своим внешним видом и любит ухаживать за собой',
+                        img: 'images/content/advantages-section/0'
+                    })
+                    +advantagesCol({
+                        title: 'Хочет пройти',
+                        text: 'курс лазерной эпиляции на качественном медицинском оборудовании в сопровождении врача',
+                        img: 'images/content/advantages-section/1'
+                    })
+                    +advantagesCol({
+                        title: 'Уделяет внимание',
+                        text: 'состоянию кожи лица и тела - и посещают кабинет косметолога',
+                        img: 'images/content/advantages-section/2'
+                    })
+                    +advantagesCol({
+                        title: 'Серьезно относится',
+                        text: 'к своему здоровью и выбирает только профессиональные центры для выполнения эстетических процедур',
+                        img: 'images/content/advantages-section/3'
+                    })
+                    +advantagesCol({
+                        title: 'Хочет продлить',
+                        text: 'молодость и красоту, а также ценит высокий сервис и качество услуг',
+                        img: 'images/content/advantages-section/4'
+                    })
