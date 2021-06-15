@@ -33,23 +33,11 @@ block page
                             p Хочется начать с того, что пигментные пятна – чаще всего абсолютно безвредное явление для кожи. Они выделяются более темным цветом и могут локализоваться на любом участке лица и тела.
                             p Гиперпигментация встречается как у мужчин, так и у женщин, в любом возрасте.
                             p Однако чаще всего с таким явлением сталкиваются зрелые и пожилые люди.
+                            p Пигментные пятна можно удалять различными способами. Эффективными процедурами, которые дают стойкий и видимый результат, являются: химический пилинг, мезотерапия, биоревитализация, отбеливающие маски.
+                            p В клинике «Orhi» также доступна новая процедура по удалению пигментных пятен – лазерная коррекция Elit+. Уже после первой обработки – виден явный эффект осветления. А в случае, если пигментное пятно умеренно яркое – дополнительной коррекции и вовсе не понадобится.
 
-    - var cartTitle = 'Почему появляется пигментация?'
-    - var cartSubtitle = 'Основных причин несколько:'
-
-    - var list1 = 'Генетическая предрасположенность'
-    - var list2 = 'Злоупотребление загаром'
-    - var list3 = 'Прием гормональных лекарств'
-    - var list4 = 'Пренебрежение солнцезащитными средствами'
-    - var list5 = 'Несоблюдение рекомендаций по уходу за кожей после косметологических процедур'
-    - var lists = [list1, list2, list3, list4, list5]
-    - var text1 = 'Пигментные пятна можно удалять различными способами. Эффективными процедурами, которые дают стойкий и видимый результат, являются: химический пилинг, мезотерапия, биоревитализация, отбеливающие маски.'
-    - var text2 = 'В клинике «Orhi» также доступна новая процедура по удалению пигментных пятен – лазерная коррекция Elit+. Уже после первой обработки – виден явный эффект осветления. А в случае, если пигментное пятно умеренно яркое – дополнительной коррекции и вовсе не понадобится.'
-    - var texts = [text1, text2]
-
-    - var cart1 = [{ title: cartTitle, subtitle: cartSubtitle, lists: lists, styleType: 'check'}, {texts: texts,}]
-
-    - var cartTitle = 'Как проходит процедура.'
+    - var cartTitle = 'Как происходит'
+    - var cartSubtitle = 'Процедура. '
 
     - var text1 = 'Процедура удаления пигментных пятен проходит на медицинском лазерном аппарате.'
     - var text2 = 'В ходе работы лазера вы чувствуете умеренное тепло.'
@@ -57,10 +45,10 @@ block page
     - var text4 = 'Коррекция проходит быстро и комфортно. Для защиты глаз все время процедуры пациент находится в специальных очках.'
     - var texts = [text1, text2, text3, text4]
 
-    - var cart2 = [{texts: texts, title: cartTitle, styleType: 'check'}]
+    - var cart1 = [{texts: texts, title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}]
 
-    - var cartTitle = 'Преимущества'
-    - var cartSubtitle = 'лазерного удаления пигментных пятен Elit+.'
+    - var cartTitle = 'ПРЕИМУЩЕСТВА'
+    - var cartSubtitle = 'ЛАЗЕРНОГО УДАЛЕНИЯ ПИГМЕНТНЫХ ПЯТЕН ELIT+.'
 
     - var list1 = 'почти полное отсутствие противопоказаний'
     - var list2 = 'отсутствие реабилитации'
@@ -69,63 +57,104 @@ block page
     - var list5 = 'эффективность и стойкий эффект'
     - var list = [list1, list2, list3, list4, list5]
 
-    - var text1 = 'Чтобы эффект после лазерного удаления гиперпигментации продлился как моно дольше – нужно соблюдать ряд простых правил по уходу за кожей.'
+    - var cart2 = [{lists: list, title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}]
+
+    - var cartTitle = 'Рекомендации'
+    - var cartSubtitle = 'ПОСЛЕ ОПЕРАЦИИ'
+
+    - var text1 = 'Чтобы эффект после лазерного удаления гиперпигментации продлился как можно дольше – нужно соблюдать ряд простых правил по уходу за кожей.'
     - var texts = [text1]
-    - var list21 = '1 Избегать солнечного воздействия на обработанную зону на срок 30 дней.'
-    - var list22 = '2 Пользоваться солнцезащитными средствами с фактором защиты 50+'
-    - var list23 = '3 Не посещать сауну и баню в течение двух недель.'
-    - var list24 = '4 После приема душа – не тереть кожу, а промакивать полотенцем.'
-    - var list25 = '5 Не пользоваться спиртосодержащей косметикой в течение 14 дней после процедуры.'
+    - var list21 = 'Избегать солнечного воздействия на обработанную зону на срок 30 дней.'
+    - var list22 = 'Пользоваться солнцезащитными средствами с фактором защиты 50+'
+    - var list23 = 'Не посещать сауну и баню в течение двух недель.'
+    - var list24 = 'После приема душа – не тереть кожу, а промакивать полотенцем.'
+    - var list25 = 'Не пользоваться спиртосодержащей косметикой в течение 14 дней после процедуры.'
     - var lists2 = [list21, list22, list23, list24, list25]
 
-    - var cart3 = [{lists: list, title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}, {texts: texts, lists: lists2}]
+    - var cart3 = [{title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}, {texts: texts, lists: lists2}]
 
     - var cartsData = [cart1, cart2, cart3]
     include section/cart-section
 
+    section.list-section
+        .container
+            .list-section__wrapper.bg-wrapper
+                .list-section__inner.bg-inner
+                    .list-section__titles-wrapper
+                        .list-section__title ПОЧЕМУ ПОЯВЛЯЕТСЯ ПИГМЕНТАЦИЯ?
+                        .list-section__subtitle ОСНОВНЫХ ПРИЧИН НЕСКОЛЬКО:
+                    .list-section__data
+                        ul.list-section__list
+                            li
+                                img(src='images/no-check.png').icon
+                                | Генетическая предрасположенность
+                            li
+                                img(src='images/no-check.png').icon
+                                | Злоупотребление загаром
+                            li
+                                img(src='images/no-check.png').icon
+                                | Прием гормональных лекарств
+                        ul.list-section__list
+                            li
+                                img(src='images/no-check.png').icon
+                                | Пренебрежение солнцезащитными средствами
+                            li
+                                img(src='images/no-check.png').icon
+                                | Несоблюдение рекомендаций по уходу за кожей после косметологических процедур
     section.price-section
         .container
-            .price-section__table-wrapper.style-3
+            .price-section__table-wrapper.style-4.style-3
                 .price-section__table-inner
                     .price-section__titles-wrapper
                         +sectionTitle({
-                            title: 'Стоимость <span class="remove--mobile">лазерного удаления пигментных пятен Elit+:</span>',
+                            title: 'ПИГМЕНТНЫХ ДИСХРОМИЙ (ПЯТЕН) ELIT+',
+                            subtitle: 'ЛАЗЕРНОЕ уаление ',
                             class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
                         })
-                    .price-section__data.style-3
-                        +priceRow({
-                            left: 'Единичный элемент ',
-                            right: '<span class="active-color">600 ₽</span>'
-                        })
-                        +priceRow({
-                            left: 'Кисти ',
-                            right: '<span class="active-color">2.600 ₽</span>'
-                        })
-                        +priceRow({
-                            left: 'Лицо ',
-                            right: '<span class="active-color">7.300 ₽</span>'
-                        })
-                        +priceRow({
-                            left: 'Лоб ',
-                            right: '<span class="active-color">2.200 ₽</span>'
-                        })
-                        +priceRow({
-                            left: 'Носогубный треугольник ',
-                            right: '<span class="active-color">2.900 ₽</span>'
-                        })
-                        +priceRow({
-                            left: 'Подбородок ',
-                            right: '<span class="active-color">3.200 ₽</span>'
-                        })
-                        +priceRow({
-                            left: 'Шея ',
-                            right: '<span class="active-color">2.900 ₽</span>'
-                        })
-                        +priceRow({
-                            left: 'Щека ',
-                            right: '<span class="active-color">1.800 ₽</span>'
-                        })
-mixin priceRow(object)
+                    .price-section__data-wrapper.style-4.slider-data-0
+                        .price-section__data-col
+                            .price-section__data.style-4.style-3
+                                +priceRow4({
+                                    left: '<span>Единичный элемент</span>',
+                                    right: '<span class="active-color">8400 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Кисти</span>',
+                                    right: '<span class="active-color">8400 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Лицо</span>',
+                                    right: '<span class="active-color">7900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Лоб</span>',
+                                    right: '<span class="active-color">4300 ₽</span>'
+                                })
+                        .price-section__data-col
+                            .price-section__data.style-4.style-3
+                                +priceRow4({
+                                    left: '<span>Носогубный треугольник</span>',
+                                    right: '<span class="active-color">3400 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Носогубный треугольник</span>',
+                                    right: '<span class="active-color">5400 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Шея</span>',
+                                    right: '<span class="active-color">14900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Щека</span>',
+                                    right: '<span class="active-color">10900 ₽</span>'
+                                })
+                    .price-section__dots.slider-data-0
+
+mixin priceRow4(object)
     .price-section__row
         .price-section__col.price-section__col-left !{object.left}
         .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean4(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}

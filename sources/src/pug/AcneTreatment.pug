@@ -1,0 +1,609 @@
+extends base/_layout
+block head
+    title акне
+    meta(property="og:title" content='Мезотерапия в Пензе. Мезотерапия кожи лица, тела и волосистой части головы - "Orhi"')
+    meta(name="keywords" content='мезотерапия, пенза, мезотерапия цена')
+    meta(name="description" content='Мезотерапия в Пензе. Омоложение лица и тела ✅ Мгновенный результат ✅ Доступные цены ✅ Консультация косметолога. Узнай на сайте!')
+    meta(property="og:description" content='Мезотерапия в Пензе. Омоложение лица и тела ✅ Мгновенный результат ✅ Доступные цены ✅ Консультация косметолога. Узнай на сайте!')
+    meta(property="og:url" content='https://orhi-epil.ru/Mesotherapy.html')
+block page
+    section.intro-section
+        .container
+            .intro-section__wrapper
+                .intro-section__breadcumps
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}, {text: 'ЛАЗЕРНАЯ КОСМЕТОЛОГИЯ', link: 'laserCosmetology.html'}], 'ЛЕЧЕНИЕ АКНЕ')
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/AcneTreatment/0-pc.webp',
+                            img: 'images/content/AcneTreatment/0-pc.jpg',
+                            set: 'images/content/AcneTreatment/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Лечение акне',
+                                class: 'intro-section__title',
+                                subtitle: 'Что такое',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p Вне распространенного убеждения, акне – это проблема отнюдь не только переходного возраста и периода гормональной перестройки организма во время полового созревания.
+                            p Это заболевание, которое может проявляться и в юном, и в зрелом возрасте. Доставляет немало проблем и порождает комплексы.
+                            p Для него характерно наличие открытых и закрытых комедонов, а также воспалительных элементов в виде пустул, папул, узлов. Чувство жжения, зуда, тянущее ощущение в местах воспалений – очень неприятны, не говоря уже о внешнем неэстетическом проявлении болезни.
+                            p В развитии акне большую роль играет наследственность и генетически предопределенный тип секреции сальных желез.
+                            p Однако это не значит, что проблема не поддается лечению.
+
+
+    section.questions-section.style-2
+        .container
+            .questions-section__wrapper
+                .questions-section__inner
+                    .questions-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Какой эффект',
+                            class: 'questions-section__title',
+                        })
+                    .questions-section__text
+                        p В борьбе с акне крайне важен комплексный подход и совместные усилия врача и пациента. Только в таком случае проблему можно решить эффективно.
+                        p В медицинском центре «Orhi» опытные врачи-косметологи проводят программное лечение проблемы акне.
+    section.intro-section(style="margin-top: 0").pb
+        .container
+            .intro-section__wrapper
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/CleanFace/0-pc.webp',
+                            img: 'images/content/intro-section/CleanFace/0-pc.jpg',
+                            set: 'images/content/intro-section/CleanFace/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'базовый уход за кожей',
+                                class: 'intro-section__title',
+                                subtitle: 'чистка лица - это',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p Основа основ ухода за кожей лица – это чистка. Именно правильное очищение кожи способствует тому, чтобы кожа выглядела подтянутой, свежей и юной.
+                            p В центре «Orhi» врачи-косметологи выполняют атравматичную чистку лица по типу кожи. При необходимости по показанием возможно проведение механической чистки.
+                            h4 ЭФФЕКТ ОТ ПРОЦЕДУРЫ
+                            p Предварительная подготовка, комплексное воздействие на кожу, длительный разогревающий эффект, отсутствие воздействия на мелкие сосуды, антисептический, увлажняющий и регенерирующий эффекты, восстановление защитной функции кожи – все это обеспечивают яркий, стойкий и выраженный эстетический эффект, который проявляется сразу после проведения процедуры и сохраняется в течение длительного времени.
+                            p Медицинский центр «Orhi» выполняет процедуры чистки лица на профессиональной израильской косметике Holy Land.
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость <span class="remove--mobile">процедур</span>',
+                            subtitle: 'Чистка лица',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data.style-3
+                        +priceRow({
+                            left: 'Чистка лица атравматичная (Holy Land)',
+                            center: '1 ч 40 мин',
+                            right: '<span class="active-color">1750 ₽</span>'
+                        })
+                        +priceRow({
+                            left: 'Чистка лица атравматическая + механическая (Holy Land)',
+                            center: '2 ч',
+                            right: '<span class="active-color">2150 ₽</span>'
+                        })
+
+    section.intro-section(style="margin-top: 0").pb
+        .container
+            .intro-section__wrapper
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/ChemicalPeeling/0-pc.webp',
+                            img: 'images/content/intro-section/ChemicalPeeling/0-pc.jpg',
+                            set: 'images/content/intro-section/ChemicalPeeling/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'химический пилинг',
+                                class: 'intro-section__title',
+                                subtitle: 'ДЛЯ ЧЕГО ОН НУЖЕН, КАКИМ БЫВАЕТ И КОМУ ЕГО СТОИТ СДЕЛАТЬ',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p Сегодня всё больше девушек и женщин уделяют особое внимание состоянию кожи лица, и эта тенденция не может не радовать.
+                            p Свежий вид, гладкая юная кожа, невидимые поры – всё это более чем реально при правильном комплексном уходе.
+                            p Сегодня мы хотим подробнее рассказать непосредственно о такой косметологической процедуре, как химический пилинг.
+                            h3 ЧТО ТАКОЕ ХИМИЧЕСКИЙ ПИЛИНГ?
+                            p Химический пилинг кожи лица, по сути – это воздействие на кожу специальным препаратом, в ходе которого происходит активный процесс отшелушивания верхнего слоя эпидермиса, стимулирование естественного процесса обновления кожи.
+                            p С помощью пилинга удаётся добиться потрясающего эффекта улучшения качества кожи: исчезают мимические морщины, сужаются поры, кожа приходит в тонус, улучшается ее тон, уходят пигментация и следы от акне.
+                            p В «Orhi» врачи-косметологи выполняют процедуры химических пилингов на профессиональной косметологической косметике. Это испанская косметика фирм Sesderma и TimeCode.
+
+    .section.section-3
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Химический пилинг',
+                                class: 'price-section__title',
+                            })
+                        .price-section__data.style-3
+                            // item - REGULAR
+                            +priceRowClean({
+                                left: '<span class="text-bold">Пилинг Time Code (Испания):</span>',
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Light Classic</span>',
+                                center: '10 минут',
+                                right: '<span class="active-color">2160 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Пилинг желтый BASIC</span>',
+                                center: '10 минут',
+                                right: '<span class="active-color">2880 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Пилинг желтый BASIC + Light Classic</span>',
+                                center: '10 минут',
+                                right: '<span class="active-color">360 ₽</span>'
+                            })
+                            +priceRowClean({
+                                left: '<span class="text-bold">Пилинг Mediderma (Испания):</span>',
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Salipeel lic</span>',
+                                center: '30 минут',
+                                right: '<span class="active-color">2100 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Azelac</span>',
+                                center: '30 минут',
+                                right: '<span class="active-color">2100 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Ferulac</span>',
+                                center: '30 минут',
+                                right: '<span class="active-color">2300 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Mandelac</span>',
+                                center: '30 минут',
+                                right: '<span class="active-color">2300 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="text-bold">Пилинг Биорепил - BioRePeelC13 (Италия)</span>',
+                                center: '20 минут',
+                                right: '<span class="active-color">3050 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="text-bold">Пилинг Джесснера</span>',
+                                center: '20 минут',
+                                right: '<span class="active-color">2940 ₽</span>'
+                            })
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Чистка лица',
+                                class: 'price-section__title',
+                            })
+                        .price-section__data.style-3
+                            // item - REGULAR
+                            +priceRow({
+                                left: '<span class="padding-left">Чистка лица атравматичная (Holy Land)</span>',
+                                center: '1 ч 40 мин',
+                                right: '<span class="active-color">1750 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Чистка лица атравматическая + механическая (Holy Land)</span>',
+                                center: '2 ч',
+                                right: '<span class="active-color">2150 ₽</span>'
+                            })
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Массаж лица',
+                                class: 'price-section__title',
+                            })
+                        .price-section__data.style-3
+                            // item - REGULAR
+                            +priceRow({
+                                left: '<span class="padding-left">Испанский миоструктурный (классический) массаж лица</span>',
+                                center: '30 мин',
+                                right: '<span class="active-color">800 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Испанский миоструктурный (классический) массаж лица + уход</span>',
+                                center: '1 ч',
+                                right: '<span class="active-color">1100 ₽</span>'
+                            })
+        section.price-section
+            .container
+                .price-section__table-wrapper.style-3
+                    .price-section__table-inner
+                        .price-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Уходовые процедуры',
+                                class: 'price-section__title',
+                            })
+                        .price-section__data.style-3
+                            // item - REGULAR
+                            +priceRow({
+                                left: '<span class="padding-left">Bio Repair (антикупероз)</span>',
+                                center: '1 ч 30 мин',
+                                right: '<span class="active-color">1920 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Eyelight + Ginseng&Carrot</span>',
+                                center: '1 ч',
+                                right: '<span class="active-color">1280 ₽</span>'
+                            })
+                            +priceRow({
+                                left: '<span class="padding-left">Реабилитация</span>',
+                                center: '40 мин',
+                                right: '<span class="active-color">720 ₽</span>'
+                            })
+
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость процедур',
+                            subtitle: 'Мезотерапия',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data.style-3
+                        // item - BOLD
+                        +priceRowClean({
+                            left: '<span class="text-bold">Лицо (омоложение, лифтинг кожи)</span>'
+                        })
+                        // item - REGULAR
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">1900 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko E</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">2500 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Shine (Pluryal) </span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Refresh (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Tight (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        // item - BOLD
+                        +priceRowClean({
+                            left: '<span class="text-bold">Кожа головы</span> '
+                        })
+                        // item - REGULAR
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">1900 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Hair (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        // item - BOLD
+                        +priceRowClean({
+                            left: '<span class="text-bold">Акне, постакне, стрии, растяжки</span> '
+                        })
+                        // item - REGULAR
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Clear (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">1900 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko E</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">2500 ₽</span>'
+                        })
+                        // item - BOLD
+                        +priceRowClean({
+                            left: '<span class="text-bold">Липолитики</span>'
+                        })
+                        // item - REGULAR
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Bodyfirm (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">1400 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Bodycontour (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">1400 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Facecontour (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">4100 ₽</span>'
+                        })
+
+    section.intro-section(style="margin-top: 0").pb
+        .container
+            .intro-section__wrapper
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/Mesotherapy/0-pc.webp',
+                            img: 'images/content/intro-section/Mesotherapy/0-pc.jpg',
+                            set: 'images/content/intro-section/Mesotherapy/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Мезотерапия?',
+                                class: 'intro-section__title',
+                                subtitle: 'Что такое',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p Это косметологическая процедура, которая подразумевает проведение инъекции препаратов для устранения конкретных проблем кожи.
+                            p В средний слой кожи вводятся индивидуально подобранные коктейли, которые состоят из минералов, коллагена, витаминов, аминокислот и других веществ.
+                            p Для инъекции используется тонкая игла, проникающая на глубину от 1,5 до 3,9 мм .
+                            p Процедура позволяет повысить микроциркуляцию кожи, улучшить эластичность и тонус в зоне введения инъекций.
+                            p Специалисты нашего мед. центра работают на высококачественных итальянских препаратах фирмы «IBSA Farmaceutici».
+                            p «Viscoderm SKINKO»  и «SKINKO E» предназначены для коррекции первых признаков и выраженных признаков старения, лечения акне и себореи, улучшения состояния волос и кожи волосистой части головы.
+                            p <span class="text-uppercase">Средний курс</span> мезотерапии подбирается индивидуально после консультации.
+                            p Однако средний курс обычно включает в себя 5-8 процедур с интервалом 7-10дней.
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость процедур',
+                            subtitle: 'Мезотерапия',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data.style-3
+                        // item - BOLD
+                        +priceRowClean({
+                            left: '<span class="text-bold">Лицо (омоложение, лифтинг кожи)</span>'
+                        })
+                        // item - REGULAR
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">1900 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko E</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">2500 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Shine (Pluryal) </span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Refresh (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Tight (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        // item - BOLD
+                        +priceRowClean({
+                            left: '<span class="text-bold">Кожа головы</span> '
+                        })
+                        // item - REGULAR
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">1900 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Hair (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        // item - BOLD
+                        +priceRowClean({
+                            left: '<span class="text-bold">Акне, постакне, стрии, растяжки</span> '
+                        })
+                        // item - REGULAR
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Clear (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">2800 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">1900 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Viscoderm Skinko E</span>',
+                            center: '2,5 мл',
+                            right: '<span class="active-color">2500 ₽</span>'
+                        })
+                        // item - BOLD
+                        +priceRowClean({
+                            left: '<span class="text-bold">Липолитики</span>'
+                        })
+                        // item - REGULAR
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Bodyfirm (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">1400 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Bodycontour (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">1400 ₽</span>'
+                        })
+                        +priceRow({
+                            left: '<span class="padding-left">Mesoline Facecontour (Pluryal)</span>',
+                            center: '5 мл',
+                            right: '<span class="active-color">4100 ₽</span>'
+                        })
+    section.intro-section(style="margin-top: 0").pb
+        .container
+            .intro-section__wrapper
+                .intro-section__inner
+                    .intro-section__img
+                        +setImg({
+                            webp: 'images/content/intro-section/Biorevitalization/0-pc.webp',
+                            img: 'images/content/intro-section/Biorevitalization/0-pc.jpg',
+                            set: 'images/content/intro-section/Biorevitalization/0-mb'
+                        })
+                    .intro-section__data
+                        .intro-section__titles-wrapper
+                            +sectionTitle({
+                                title: 'Биоревитализация',
+                                class: 'intro-section__title',
+                                subtitle: 'Что такое',
+                                subclass: 'intro-section__subtitle'
+                            })
+                        .intro-section__text
+                            p Биоревитализация лица – это процедура внутрикожного введения высоких концентраций активных веществ, позволяющая значительно улучшить внешний вид кожи, увеличить ее упругость, а также добиться лифтинг-эффекта и уменьшения глубины морщин.
+                            p Чаще всего для этого используется гиалуроновая кислота, витамины, микроэлементы, аминокислоты, а в более зрелом возрасте – компоненты для интенсивного лифтинга кожи, например, пептиды, ДНК-РНК комплексы.
+                            h3 КАК ПОДБИРАЕТСЯ СОСТАВ ДЛЯ ПРОЦЕДУРЫ?
+                            p Состав препарата для каждого пациента подбирается индивидуально.
+                            p Для этого учитывается множество факторов: возраст пациента, состояние кожи лица, тип старения кожи. К примеру, при мелкоморщинистом и деформационном типах старения будут показаны совершенно различные препараты.
+    section.price-section
+        .container
+            .price-section__table-wrapper.style-4.style-3
+                .price-section__table-inner
+                    .price-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Стоимость <span class="remove--mobile">процедур</span>',
+                            subtitle: 'Биоревитализация',
+                            class: 'price-section__title',
+                            subclass: 'price-section__subtitle'
+                        })
+                    .price-section__data-wrapper.style-4.slider-data-1
+                        .price-section__data-col
+                            .price-section__data.style-4.style-3
+                                +priceRow4({
+                                    left: '<span>Aquashine 2 мл</span>',
+                                    right: '<span class="active-color">8400 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Aquashine BR 2 мл</span>',
+                                    right: '<span class="active-color">8400 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Belotero Hydro 1мл</span>',
+                                    right: '<span class="active-color">7900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>HYALUFORM 1% 1,5мл</span>',
+                                    right: '<span class="active-color">4300 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Innea 2мл</span>',
+                                    right: '<span class="active-color">8200 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Meso-Wharton 1.5 мл</span>',
+                                    right: '<span class="active-color">9900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Meso-Xantin 1.5 мл</span>',
+                                    right: '<span class="active-color">9900 ₽</span>'
+                                })
+                        .price-section__data-col
+                            .price-section__data.style-4.style-3
+                                +priceRow4({
+                                    left: '<span>NCTF 135 (Filorga) 3 мл</span>',
+                                    right: '<span class="active-color">3400 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>NCTF 135HA (Filorga) 3 мл</span>',
+                                    right: '<span class="active-color">5400 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Profhilo 2 мл</span>',
+                                    right: '<span class="active-color">14900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Revi Silk 1 мл</span>',
+                                    right: '<span class="active-color">10900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Revi Silk 2 мл</span>',
+                                    right: '<span class="active-color">14900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Revi Strong 2 мл</span>',
+                                    right: '<span class="active-color">16900 ₽</span>'
+                                })
+                                +priceRow4({
+                                    left: '<span>Постинъекционная маска</span>',
+                                    right: '<span class="active-color">750 ₽</span>'
+                                })
+                    .price-section__dots.slider-data-1
+    section.questions-section.style-2
+        .container
+            .questions-section__wrapper
+                .questions-section__inner
+                    .questions-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'В заключении важно еще раз обратить ваше внимание.',
+                            class: 'questions-section__title',
+                        })
+                    .questions-section__text
+                        p Эффективное лечение акне должно проводиться в комплексе и по индивидуальному назначению вашего лечащего врача-косметолога
+mixin priceRow(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-center !{object.center}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}
+mixin yesList(object)
+    li.close
+        img(src="images/yes-check--white.png").icon
+        span !{object.text}
+mixin priceRow(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-center !{object.center}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRow4(object)
+    .price-section__row
+        .price-section__col.price-section__col-left !{object.left}
+        .price-section__col.price-section__col-right !{object.right}
+mixin priceRowClean4(object)
+    .price-section__row.flex-start
+        .price-section__col.price-section__col-left !{object.left}

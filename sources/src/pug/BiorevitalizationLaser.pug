@@ -15,7 +15,7 @@ block page
         .container
             .intro-section__wrapper
                 .intro-section__breadcumps
-                    +breadcrumbs([{text: 'Главная', link: 'index.html'}], 'о нашщем центре')
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}], 'лазерное омоложение')
                 .intro-section__inner
                     .intro-section__img
                         +setImg({
@@ -32,15 +32,37 @@ block page
                                 subclass: 'intro-section__subtitle'
                             })
                         .intro-section__text
-                            p Современная косметология предоставляет широкий спектр возможностей для сохранения и продления молодости кожи лица. Но не каждая девушка или женщина готова терпеть боль от инъекций и идти на радикальные меры, чтобы поддержать тонус и красоту. Уколы, хирургические методики, агрессивные воздействия лазерными аппаратами – подчас это внушает страх и ужас. <br> К счастью, прогресс не стоит на месте. <br> С помощью современных медицинских лазерных систем – стало доступно безболезненное и эффективное омоложение кожи. Как раз такую процедуру мы оказываем в клинике «Orhi».
-                            h3 Лазерное омоложение без уколов и боли.
+                            p Современная косметология предоставляет широкий спектр возможностей для сохранения и продления молодости кожи лица. Но не каждая девушка или женщина готова терпеть боль от инъекций и идти на радикальные меры, чтобы поддержать тонус и красоту. <br> Уколы, хирургические методики, агрессивные воздействия лазерными аппаратами – подчас это внушает страх и ужас.
+                            h3 Лазерное омоложение без уколов и боли
                             p Это действительно уникальная процедура лазерного омоложения. Она выполняется на американском неодимовом лазере Elite+.
                             p В ходе процедуры происходит воздействие лазерного луча на низкомолекулярную гиалуроновую кислоту, которая предварительно наносится на лицо. Таким образом препарат попадает в глубокие слои кожи. А благодаря прогреву тканей – достигается особый эстетический эффект, который заметен сразу после процедуры.
-                            h3 Как проходит сеанс омоложения.
-                            p Врач проводит процедуру демакияжа и дезинфекции кожи. Сразу после – наносит на кожу гель с гиалуроновой кислотой. <br> Перед процедурой пациент в строго обязательном порядке надевает специальные защитные очки на глаза. <br> После предварительной подготовки – начинается непосредственная работа лазера. <br> Вы чувствуете приятное тепло, умеренный прогрев. <br> Процедура лазерного омоложения занимает в общей сложности около 20 минут.
 
-    - var cartTitle = 'Когда виден эффект?'
-    - var cartSubtitle = ''
+    //section.questions-section
+    //    .container
+    //        .questions-section__wrapper.bg-wrapper
+    //            .questions-section__inner.bg-inner
+    //                .questions-section__titles-wrapper
+    //                    +sectionTitle({
+    //                        title: 'Лазерное омоложение без уколов и боли.',
+    //                        class: 'questions-section__title title--small',
+    //                    })
+    //                .questions-section__text
+    //                    p Это действительно уникальная процедура лазерного омоложения. Она выполняется на американском неодимовом лазере Elite+.
+    //                    p В ходе процедуры происходит воздействие лазерного луча на низкомолекулярную гиалуроновую кислоту, которая предварительно наносится на лицо. Таким образом препарат попадает в глубокие слои кожи. А благодаря прогреву тканей – достигается особый эстетический эффект, который заметен сразу после процедуры.
+    - var cartTitle = 'Как проходит'
+    - var cartSubtitle = 'сеанс омоложения'
+
+    - var text1 = 'Врач проводит процедуру демакияжа и дезинфекции кожи. Сразу после – наносит на кожу гель с гиалуроновой кислотой.'
+    - var text2 = 'Перед процедурой пациент в строго обязательном порядке надевает специальные защитные очки на глаза.'
+    - var text3 = 'После предварительной подготовки – начинается непосредственная работа лазера.'
+    - var text4 = 'Вы чувствуете приятное тепло, умеренный прогрев.'
+    - var text5 = 'Процедура лазерного омоложения занимает в общей сложности около 20 минут.'
+    - var texts = [text1, text2, text3, text4, text5]
+
+    - var cart1 = [{texts: texts, title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}]
+
+    - var cartTitle = 'эффект'
+    - var cartSubtitle = 'когда виден'
 
     - var text1 = 'Эффект от проведенной процедуры заметен уже после первого сеанса.'
     - var text2 = 'Более того, ее можно выполнять «на выход» - перед важными мероприятиями, к примеру.'
@@ -49,7 +71,7 @@ block page
     - var text5 = 'Средний курс составляет 5-10 процедур с интервалом 1-2 недели.'
     - var texts = [text1, text2, text3, text4, text5]
 
-    - var cart1 = [{texts: texts, title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}]
+    - var cart2 = [{texts: texts, title: cartTitle, subtitle: cartSubtitle}]
 
     - var cartTitle = 'Показания'
     - var cartSubtitle = 'к ПРОВЕДЕНИЮ ПРОЦЕДУРЫ'
@@ -61,28 +83,33 @@ block page
     - var list5 = 'расширенные поры'
     - var list6 = 'тусклый цвет лица'
     - var list7 = 'потребность в быстрой регенерации кожи (после пилингов, шлифовок и т.д.)'
-    - var text1 = 'Во время сеанса вы  не почувствуете никакого дискомфорта - только приятное умеренное тепло.'
-    - var text2 = 'А по окончании - коже не грозит шелушение и негативное воздействие ультрафиолета.'
     - var list = [list1, list2, list3, list4, list5, list6, list7]
-    - var texts = [text1, text2]
 
-    - var cart2 = [{lists: list, texts: texts, title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}]
-
-    - var cartTitle = 'Преимущества'
-    - var cartSubtitle = 'Лазерного омоложение Elit+'
-
-    - var list1 = 'без боли'
-    - var list2 = 'без уколов'
-    - var list3 = 'без папул'
-    - var list4 = 'без шелушения'
-    - var list5 = 'без восстановления'
-    - var list = [list1, list2, list3, list4, list5]
-
-    - var cart3 = [{lists: list, texts: texts, title: cartTitle, subtitle: cartSubtitle, styleType: 'close'}]
+    - var cart3 = [{lists: list,title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}]
 
     - var cartsData = [cart1, cart2, cart3]
 
     include section/cart-section
+
+    section.questions-section.style-2
+        .container
+            .questions-section__wrapper
+                .questions-section__inner
+                    .questions-section__titles-wrapper
+                        +sectionTitle({
+                            title: 'Какой эффект',
+                            class: 'questions-section__title',
+                        })
+                    .questions-section__text
+                        p Во время сеанса вы  не почувствуете никакого дискомфорта - только приятное умеренное тепло
+                        p А по окончании - коже не грозит шелушение и негативное воздействие ультрафиолета.
+                        p Лазерное омоложение Elit+ - это уникальная эстетическая процедура
+                        ul.list-mark
+                            +yesList({text: 'Без боли'})
+                            +yesList({text: 'Без уколов'})
+                            +yesList({text: 'Без папул'})
+                            +yesList({text: 'Без шелушения'})
+                            +yesList({text: 'Без восстановления'})
     section.price-section
         .container
             .price-section__table-wrapper.style-4.style-3
@@ -129,3 +156,7 @@ mixin priceRow4(object)
 mixin priceRowClean4(object)
     .price-section__row.flex-start
         .price-section__col.price-section__col-left !{object.left}
+mixin yesList(object)
+    li.close
+        img(src="images/yes-check--white.png").icon
+        span !{object.text}
