@@ -15,7 +15,7 @@ block page
         .container
             .intro-section__wrapper
                 .intro-section__breadcumps
-                    +breadcrumbs([{text: 'Главная', link: 'index.html'}], 'о нашщем центре')
+                    +breadcrumbs([{text: 'Главная', link: 'index.html'}], 'Лазерное омоложение Elit+')
                 .intro-section__inner
                     .intro-section__img
                         +setImg({
@@ -26,13 +26,24 @@ block page
                     .intro-section__data
                         .intro-section__titles-wrapper
                             +sectionTitle({
-                                title: 'Лазерное удаление пигментных пятен',
+                                title: 'пигментных пятен Elit+',
                                 class: 'intro-section__title',
+                                subtitle: 'Лазерное удаление',
+                                subclass: 'intro-section__subtitle',
                             })
                         .intro-section__text
                             p Хочется начать с того, что пигментные пятна – чаще всего абсолютно безвредное явление для кожи. Они выделяются более темным цветом и могут локализоваться на любом участке лица и тела.
                             p Гиперпигментация встречается как у мужчин, так и у женщин, в любом возрасте.
                             p Однако чаще всего с таким явлением сталкиваются зрелые и пожилые люди.
+                            h3 Почему появляется пигментация?
+                            p Основных причин несколько:
+                            ul
+                                li Генетическая предрасположенность
+                                li Злоупотребление загаром
+                                li Прием гормональных лекарств
+                                li Пренебрежение солнцезащитными средствами
+                                li Несоблюдение рекомендаций по уходу за кожей после косметологических процедур
+                            br
                             p Пигментные пятна можно удалять различными способами. Эффективными процедурами, которые дают стойкий и видимый результат, являются: химический пилинг, мезотерапия, биоревитализация, отбеливающие маски.
                             p В клинике «Orhi» также доступна новая процедура по удалению пигментных пятен – лазерная коррекция Elit+. Уже после первой обработки – виден явный эффект осветления. А в случае, если пигментное пятно умеренно яркое – дополнительной коррекции и вовсе не понадобится.
 
@@ -60,7 +71,7 @@ block page
     - var cart2 = [{lists: list, title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}]
 
     - var cartTitle = 'Рекомендации'
-    - var cartSubtitle = 'ПОСЛЕ ОПЕРАЦИИ'
+    - var cartSubtitle = 'и уход за кожей после'
 
     - var text1 = 'Чтобы эффект после лазерного удаления гиперпигментации продлился как можно дольше – нужно соблюдать ряд простых правил по уходу за кожей.'
     - var texts = [text1]
@@ -73,42 +84,17 @@ block page
 
     - var cart3 = [{title: cartTitle, subtitle: cartSubtitle, styleType: 'check'}, {texts: texts, lists: lists2}]
 
-    - var cartsData = [cart1, cart2, cart3]
+    - var cartsData = [cart1, cart3, cart2]
     include section/cart-section
 
-    section.list-section
-        .container
-            .list-section__wrapper.bg-wrapper
-                .list-section__inner.bg-inner
-                    .list-section__titles-wrapper
-                        .list-section__title ПОЧЕМУ ПОЯВЛЯЕТСЯ ПИГМЕНТАЦИЯ?
-                        .list-section__subtitle ОСНОВНЫХ ПРИЧИН НЕСКОЛЬКО:
-                    .list-section__data
-                        ul.list-section__list
-                            li
-                                img(src='images/no-check.png').icon
-                                | Генетическая предрасположенность
-                            li
-                                img(src='images/no-check.png').icon
-                                | Злоупотребление загаром
-                            li
-                                img(src='images/no-check.png').icon
-                                | Прием гормональных лекарств
-                        ul.list-section__list
-                            li
-                                img(src='images/no-check.png').icon
-                                | Пренебрежение солнцезащитными средствами
-                            li
-                                img(src='images/no-check.png').icon
-                                | Несоблюдение рекомендаций по уходу за кожей после косметологических процедур
     section.price-section
         .container
             .price-section__table-wrapper.style-4.style-3
                 .price-section__table-inner
                     .price-section__titles-wrapper
                         +sectionTitle({
-                            title: 'ПИГМЕНТНЫХ ДИСХРОМИЙ (ПЯТЕН) ELIT+',
-                            subtitle: 'ЛАЗЕРНОЕ уаление ',
+                            title: 'Стоимость процедур',
+                            subtitle: 'лазерное удаление пигментных пятен Elit+ ',
                             class: 'price-section__title',
                             subclass: 'price-section__subtitle'
                         })

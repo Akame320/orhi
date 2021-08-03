@@ -2,7 +2,7 @@
   "_args": [
     [
       "rangeslider.js@2.3.3",
-      "C:\\Users\\Ruzen\\WebstormProjects\\templates\\sources"
+      "/home/ruzen/WebstormProjects/test/orhi/sources"
     ]
   ],
   "_from": "rangeslider.js@2.3.3",
@@ -26,7 +26,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/rangeslider.js/-/rangeslider.js-2.3.3.tgz",
   "_spec": "2.3.3",
-  "_where": "C:\\Users\\Ruzen\\WebstormProjects\\templates\\sources",
+  "_where": "/home/ruzen/WebstormProjects/test/orhi/sources",
   "author": {
     "name": "André Ruffert",
     "url": "http://andreruffert.com"

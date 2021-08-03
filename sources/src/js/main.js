@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('.menu-toggle').on('click', function () {
         $(this).toggleClass('active');
         $('.menu-list').slideToggle(300)
-        if(!$(this).hasClass('active')){
+        if (!$(this).hasClass('active')) {
             $('.click-menu').find('.sub-menu__wrapper').slideUp(300)
         }
     })
@@ -17,10 +17,55 @@ $(document).ready(function () {
         slidesToShow: 1
     })
 
+    if($('.selector__slide-inner')[0]){
+        $('.selector__slide-inner').on('click', function () {
+            selectorClick(this)
+        })
 
-    $('.click-menu').on('click', function (){
+        function selectorClick(thisClick) {
+            let str = $(thisClick).attr('data-active');
+            $('.selector__slide-inner').removeClass('active');
+            $(thisClick).addClass('active');
+            $('.selector-main-active').removeClass('selector-main-active')
+            $(str).addClass('selector-main-active')
+        }
+
+        if ($(window).innerWidth() < 1025) {
+            $('.selector__slider').slick({
+                slidesToShow: 2,
+                nextArrow: $('.selector__arrow.selector__arrow-next'),
+                prevArrow: $('.selector__arrow.selector__arrow-prev'),
+                appendDots: $('.selector__dots'),
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    },
+                ]
+            })
+
+            $('.selector__slider').on('afterChange', function (currentSlide) {
+                var beforeActiveElem = $('.selector__slider').find('.slick-active').eq(0).find('.selector__slide-inner')[0];
+                var thisClick = $(beforeActiveElem);
+                selectorClick(thisClick)
+            })
+
+            var beforeActiveElem = $('.selector__slider').find('.slick-active').eq(0).find('.selector__slide-inner')[0];
+            var thisClick = $(beforeActiveElem);
+            selectorClick(thisClick)
+        } else {
+            $('.selector__slide-inner')[0].click();
+        }
+    }
+
+    $('.click-menu').on('click', function () {
         $(this).find('.sub-menu__wrapper').slideToggle(300)
     })
+
 
 
     $('.reviews-section__slider').slick({
@@ -363,7 +408,7 @@ $(document).ready(function () {
     })
 
 
-    if(!localStorage.getItem('visit')){
+    if (!localStorage.getItem('visit')) {
         $('#select-region').addClass('active')
         localStorage.setItem('visit', true);
     }
@@ -382,7 +427,7 @@ $(document).ready(function () {
         path = path.replace(/\/$/, "");
         path = decodeURIComponent(path);
 
-        $(".menu-list a").each(function() {
+        $(".menu-list a").each(function () {
             var href = $(this).attr('href');
             if (path.indexOf(href) !== -1) {
                 $(this).addClass('active');
@@ -396,11 +441,11 @@ $(document).ready(function () {
     getDB.open('POST', '../php/getDB.php');
     getDB.send();
     getDB.responseType = "json";
-    getDB.onload = () =>{
+    getDB.onload = () => {
         allCities = getDB.response;
 
         var outElem = '';
-        for(var elem of allCities){
+        for (var elem of allCities) {
             str = '';
             str += `<li><a href="${elem.link}">${elem.name}</a></li>`
 
